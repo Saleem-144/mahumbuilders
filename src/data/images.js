@@ -106,14 +106,19 @@ export const images = {
   },
 };
 
+// `likeCount` is placeholder data for the carousel's hover overlay (see
+// MediaCarousel) — a realistic-looking figure, not a real social metric.
+// When real photography/footage replaces an entry, just update its
+// `likeCount` here; nothing in the component needs to change. Omit the
+// field entirely to hide the overlay for a given item.
 export const carouselMedia = [
-  { type: "image", ...images.detailStair },
-  { type: "image", ...images.interiorLiving },
-  { type: "image", ...images.commercialFacade },
-  { type: "image", ...images.interiorBath },
-  { type: "image", ...images.villaExterior },
-  { type: "image", ...images.officeReception },
-  { type: "image", ...images.detailMaterial },
-  { type: "image", ...images.poolTerrace },
-  // To add real footage later: { type: "video", src: "/media/site-walkthrough.mp4", poster: images.heroExterior.src, alt: "..." }
+  { type: "image", ...images.detailStair, likeCount: 68 },
+  { type: "image", ...images.interiorLiving, likeCount: 92 },
+  { type: "image", ...images.commercialFacade, likeCount: 54 },
+  { type: "image", ...images.interiorBath, likeCount: 101 },
+  { type: "image", ...images.villaExterior, likeCount: 77 },
+  { type: "image", ...images.officeReception, likeCount: 63 },
+  { type: "image", ...images.detailMaterial, likeCount: 88 },
+  { type: "image", ...images.poolTerrace, likeCount: 95 },
+  // To add real footage later: { type: "video", src: "/media/site-walkthrough.mp4", poster: images.heroExterior.src, alt: "...", likeCount: 0 }
 ];

@@ -19,4 +19,8 @@ export const company = {
     label: "/mahumbuilders",
     url: "https://facebook.com/mahumbuilders",
   },
+  instagram: {
+    label: "@mahumbuilders",
+    url: "https://www.instagram.com/mahumbuilders?igsi=MW9sOGdnMnJnOTJpYg%3D%3D",
+  },
 };

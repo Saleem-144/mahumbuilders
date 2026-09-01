@@ -13,7 +13,10 @@ export default function MediaSection() {
         />
       </div>
 
-      <div className="container-edit mt-14">
+      {/* Edge-to-edge: breaks out of container-edit's max-width/padding so
+          the track itself runs flush to both viewport edges, while the
+          heading above stays inside the normal content container. */}
+      <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-14 w-screen">
         <MediaCarousel items={carouselMedia} />
       </div>
     </section>

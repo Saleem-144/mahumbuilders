@@ -5,6 +5,7 @@ import SectionHeading from "../../components/SectionHeading/SectionHeading";
 import ServiceCard from "../../components/ServiceCard/ServiceCard";
 import { RevealGroup } from "../../components/Reveal/Reveal";
 import CTA from "../../components/CTA/CTA";
+import HowWeDeliver from "../../components/HowWeDeliver/HowWeDeliver";
 import { services, interiorRevamp, turnkeyStages } from "../../data/services";
 import { images } from "../../data/images";
 
@@ -50,7 +51,7 @@ export default function Services() {
       {/* Turnkey approach */}
       <section className="border-t border-[color:var(--color-line)] bg-[color:var(--color-ink)] py-16 text-[color:var(--color-paper)] sm:py-20">
         <div className="container-edit">
-          <SectionHeading light eyebrow="How We Deliver" title="The Turn-Key Approach" />
+          <SectionHeading light eyebrow="Our Approach" title="The Turn-Key Approach" />
           <div className="mt-10 divide-y divide-[color:var(--color-line-dark)] border-t border-[color:var(--color-line-dark)]">
             {turnkeyStages.map((stage) => (
               <Reveal key={stage.number}>
@@ -66,6 +67,8 @@ export default function Services() {
           </div>
         </div>
       </section>
+
+      <HowWeDeliver />
 
       <CTA
         eyebrow="Ready When You Are"

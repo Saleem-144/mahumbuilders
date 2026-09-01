@@ -8,7 +8,7 @@ export default function ApproachSection() {
       <div className="container-edit">
         <SectionHeading
           light
-          eyebrow="How We Deliver"
+          eyebrow="Our Approach"
           title="The Turn-Key Approach"
           description="A single point of accountability from the first site visit to the final handover."
         />

@@ -4,7 +4,11 @@ import Photo from "../Photo/Photo";
 import { RevealItem } from "../Reveal/Reveal";
 import { cn } from "../../lib/cn";
 
-export default function ProjectCard({ project, size = "md" }) {
+export default function ProjectCard({ project, size = "md", variant = "default" }) {
+  if (variant === "editorial") {
+    return <EditorialProjectCard project={project} />;
+  }
+
   return (
     <RevealItem>
       <Link to={`/projects/${project.slug}`} className="group block">
@@ -36,6 +40,51 @@ export default function ProjectCard({ project, size = "md" }) {
 
         {project.category && (
           <span className="mt-3 inline-block eyebrow text-[color:var(--color-brass)]">{project.category}</span>
+        )}
+      </Link>
+    </RevealItem>
+  );
+}
+
+/**
+ * Denser, editorial portfolio-grid treatment used only by the /projects
+ * listing (see ProjectGrid's `variant` prop). Smaller, more landscape
+ * imagery and stable metadata beneath — the image is the only thing that
+ * moves on hover, everything a visitor needs to scan (title, location,
+ * year, category) is always visible, never hover-gated.
+ */
+function EditorialProjectCard({ project }) {
+  return (
+    <RevealItem>
+      <Link to={`/projects/${project.slug}`} className="group block">
+        <div className="relative aspect-[4/3] overflow-hidden">
+          <Photo
+            src={project.cover.src}
+            alt={project.cover.alt}
+            fallback={project.title}
+            zoom={false}
+            className="h-full w-full"
+            imgClassName="transition-transform duration-500 ease-out group-hover:scale-[1.025]"
+          />
+          {/* Subtle dark scrim + "View Project" — image-only hover, no layout shift */}
+          <div className="pointer-events-none absolute inset-0 bg-[color:var(--color-ink)]/0 transition-colors duration-500 ease-out group-hover:bg-[color:var(--color-ink)]/20" />
+          <span className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-500 ease-out group-hover:opacity-100">
+            <span className="inline-flex items-center gap-1.5 text-xs font-medium uppercase tracking-[0.14em] text-[color:var(--color-paper)]">
+              View Project
+              <ArrowUpRight size={13} strokeWidth={1.75} />
+            </span>
+          </span>
+        </div>
+
+        <div className="mt-4 flex items-baseline justify-between gap-4">
+          <h3 className="font-display text-lg font-medium text-[color:var(--color-ink)] sm:text-xl">
+            {project.title}
+          </h3>
+          <span className="shrink-0 text-sm text-[color:var(--color-mist)]">{project.year}</span>
+        </div>
+        <p className="mt-1 text-sm text-[color:var(--color-mist)]">{project.location}</p>
+        {project.category && (
+          <span className="mt-2 inline-block eyebrow text-[color:var(--color-brass)]">{project.category}</span>
         )}
       </Link>
     </RevealItem>
