@@ -37,6 +37,7 @@ export default function MobileMenu({ open, onClose, location }) {
               >
                 <Link
                   to={link.path}
+                  onClick={onClose}
                   className={cn(
                     "font-display block border-b border-[color:var(--color-line-dark)] py-5 text-4xl font-medium sm:text-5xl",
                     location === link.path ? "text-[color:var(--color-brass-light)]" : "text-[color:var(--color-paper)]"

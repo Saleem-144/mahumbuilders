@@ -4,7 +4,7 @@ import { carouselMedia } from "../../../data/images";
 
 export default function MediaSection() {
   return (
-    <section className="border-t border-[color:var(--color-line)] py-24 sm:py-32">
+    <section className="border-t border-[color:var(--color-line)] py-10 sm:py-14 lg:py-16">
       <div className="container-edit">
         <SectionHeading
           eyebrow="From Site to Structure"

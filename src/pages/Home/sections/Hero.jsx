@@ -39,7 +39,7 @@ export default function Hero() {
           loading="eager"
           className="hero-figure h-full w-full"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[color:var(--color-ink)] via-[color:var(--color-ink)]/45 to-[color:var(--color-ink)]/25" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[color:var(--color-ink)] via-[color:var(--color-ink)]/62 to-[color:var(--color-ink)]/38" />
         {/* Independent top scrim so the fixed header stays legible regardless
             of how bright the underlying photo is, even before the section's
             main gradient has much effect near the very top. */}

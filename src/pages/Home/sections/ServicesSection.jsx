@@ -6,7 +6,7 @@ import { services } from "../../../data/services";
 
 export default function ServicesSection() {
   return (
-    <section className="border-t border-[color:var(--color-line)] py-20 sm:py-28">
+    <section className="border-t border-[color:var(--color-line)] py-10 sm:py-14 lg:py-16">
       <div className="container-edit">
         <div className="flex flex-col items-start justify-between gap-8 sm:flex-row sm:items-end">
           <SectionHeading

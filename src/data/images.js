@@ -82,7 +82,7 @@ export const images = {
   mountainWide: {
     src: u("photo-1506905925346-21bda4d32df4", 2000),
     alt: "Wide mountain range landscape",
-    fallback: "Bahrban Hunza — Site",
+    fallback: "Mountain Site",
   },
   mountainSnow: {
     src: u("photo-1506905925346-21bda4d32df4", 1600),

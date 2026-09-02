@@ -45,7 +45,7 @@ export default function ProjectDetails() {
         </div>
       </section>
 
-      <section className="py-16 sm:py-20">
+      <section className="py-10 sm:py-14 lg:py-16">
         <div className="container-edit grid grid-cols-1 gap-14 lg:grid-cols-[1fr_1.3fr] lg:gap-20">
           <ProjectMeta project={project} />
           <Reveal delay={0.05}>
@@ -78,7 +78,7 @@ export default function ProjectDetails() {
         </section>
       )}
 
-      <section className="border-t border-[color:var(--color-line)] py-24 sm:py-32">
+      <section className="border-t border-[color:var(--color-line)] py-10 sm:py-14 lg:py-16">
         <div className="container-edit">
           <div className="flex items-end justify-between">
             <span className="eyebrow">Related Projects</span>

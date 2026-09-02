@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "../../router/Router";
 import { navLinks, company } from "../../data/nav";
 import Button from "../Button/Button";
@@ -52,10 +52,14 @@ export default function Header() {
         )}
       >
         <div className="container-edit flex h-[76px] items-center justify-between sm:h-[88px]">
-          <Link to="/" className="flex items-baseline gap-2 shrink-0">
+          <Link
+            to="/"
+            onClick={() => setMenuOpen(false)}
+            className="flex items-baseline gap-1.5 shrink-0 sm:gap-2"
+          >
             <span
               className={cn(
-                "font-display text-xl font-medium tracking-tight sm:text-[1.375rem] transition-colors duration-300",
+                "font-display text-lg font-medium tracking-tight sm:text-xl lg:text-[1.375rem] transition-colors duration-300",
                 light ? "text-[color:var(--color-paper)]" : "text-[color:var(--color-ink)]"
               )}
             >
@@ -63,7 +67,7 @@ export default function Header() {
             </span>
             <span
               className={cn(
-                "hidden text-[0.6875rem] uppercase tracking-[0.2em] sm:inline transition-colors duration-300",
+                "text-[0.5625rem] uppercase tracking-[0.16em] sm:text-[0.6875rem] sm:tracking-[0.2em] transition-colors duration-300",
                 light ? "text-[color:var(--color-mist-light)]" : "text-[color:var(--color-mist)]"
               )}
             >
@@ -96,30 +100,32 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-4">
-            <Button
-              to="/contact"
-              variant="ghost"
-              icon={false}
-              className={cn(
-                "hidden sm:inline-flex !py-2.5 !px-5 text-xs transition-colors duration-300",
-                light && "!border-[color:var(--color-line-dark)] !text-[color:var(--color-paper)] hover:!border-[color:var(--color-paper)]"
-              )}
-            >
-              {`Enquire — ${company.phones[0]}`}
-            </Button>
+            <div className="hidden sm:inline-flex">
+              <Button
+                to="/contact"
+                variant="ghost"
+                icon={false}
+                className={cn(
+                  "!py-2.5 !px-5 text-xs transition-colors duration-300",
+                  light && "!border-[color:var(--color-line-dark)] !text-[color:var(--color-paper)] hover:!border-[color:var(--color-paper)]"
+                )}
+              >
+                {`Enquire — ${company.phones[0]}`}
+              </Button>
+            </div>
             <button
               type="button"
-              aria-label="Open menu"
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
               aria-expanded={menuOpen}
-              onClick={() => setMenuOpen(true)}
+              onClick={() => setMenuOpen((v) => !v)}
               className={cn(
                 "flex h-11 w-11 items-center justify-center rounded-full border transition-colors duration-300 lg:hidden",
-                light
+                light && !menuOpen
                   ? "border-[color:var(--color-line-dark)] text-[color:var(--color-paper)]"
                   : "border-[color:var(--color-line)] text-[color:var(--color-ink)]"
               )}
             >
-              <Menu size={19} strokeWidth={1.6} />
+              {menuOpen ? <X size={19} strokeWidth={1.6} /> : <Menu size={19} strokeWidth={1.6} />}
             </button>
           </div>
         </div>

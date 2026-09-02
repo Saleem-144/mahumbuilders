@@ -21,7 +21,7 @@ export default function About() {
       />
 
       {/* Company Introduction */}
-      <section className="py-24 sm:py-32">
+      <section className="py-10 sm:py-14 lg:py-16">
         <div className="container-edit grid grid-cols-1 items-start gap-14 lg:grid-cols-2 lg:gap-20">
           <Reveal className="aspect-[4/3] overflow-hidden lg:aspect-auto lg:h-[420px]">
             <Photo src={images.aboutFacade.src} alt={images.aboutFacade.alt} fallback={images.aboutFacade.fallback} className="h-full w-full" />
@@ -49,7 +49,7 @@ export default function About() {
       </section>
 
       {/* History / Journey */}
-      <section className="border-t border-[color:var(--color-line)] bg-[color:var(--color-paper-dim)] py-24 sm:py-32">
+      <section className="border-t border-[color:var(--color-line)] bg-[color:var(--color-paper-dim)] py-10 sm:py-14 lg:py-16">
         <div className="container-edit">
           <SectionHeading eyebrow="Our Journey" title="From Humble Beginning to an Enduring Legacy" />
 
@@ -86,7 +86,7 @@ export default function About() {
       </section>
 
       {/* Statistics */}
-      <section className="border-t border-[color:var(--color-line)] py-20 sm:py-24">
+      <section className="border-t border-[color:var(--color-line)] py-10 sm:py-14 lg:py-16">
         <div className="container-edit">
           <p className="eyebrow mb-10">By the Numbers</p>
           <RevealGroup className="grid grid-cols-2 gap-y-10 sm:grid-cols-5">
@@ -100,7 +100,7 @@ export default function About() {
       <Leadership />
 
       {/* Philosophy / Vision */}
-      <section className="border-t border-[color:var(--color-line)] bg-[color:var(--color-ink)] py-24 text-[color:var(--color-paper)] sm:py-32">
+      <section className="border-t border-[color:var(--color-line)] bg-[color:var(--color-ink)] py-10 text-[color:var(--color-paper)] sm:py-14 lg:py-16">
         <div className="container-edit max-w-3xl">
           <Reveal>
             <span className="eyebrow text-[color:var(--color-mist-light)]">Company Philosophy</span>

@@ -18,7 +18,7 @@ export default function Services() {
         description="MAHUM understands the complexities inherent in any construction project — offering a comprehensive suite of turn-key solutions designed to take the stress out of each client's journey, from land acquisition to final handover."
       />
 
-      <section className="py-20 sm:py-28">
+      <section className="py-10 sm:py-14 lg:py-16">
         <div className="container-edit">
           <RevealGroup className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s) => (
@@ -29,7 +29,7 @@ export default function Services() {
       </section>
 
       {/* Interior Revamp callout */}
-      <section className="border-t border-[color:var(--color-line)] py-24 sm:py-32">
+      <section className="border-t border-[color:var(--color-line)] py-10 sm:py-14 lg:py-16">
         <div className="container-edit grid grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-20">
           <Reveal className="order-2 aspect-[16/11] overflow-hidden lg:order-1">
             <Photo src={images.officeInterior.src} alt={images.officeInterior.alt} fallback={images.officeInterior.fallback} className="h-full w-full" />
@@ -49,7 +49,7 @@ export default function Services() {
       </section>
 
       {/* Turnkey approach */}
-      <section className="border-t border-[color:var(--color-line)] bg-[color:var(--color-ink)] py-16 text-[color:var(--color-paper)] sm:py-20">
+      <section className="border-t border-[color:var(--color-line)] bg-[color:var(--color-ink)] py-10 text-[color:var(--color-paper)] sm:py-14 lg:py-16">
         <div className="container-edit">
           <SectionHeading light eyebrow="Our Approach" title="The Turn-Key Approach" />
           <div className="mt-10 divide-y divide-[color:var(--color-line-dark)] border-t border-[color:var(--color-line-dark)]">

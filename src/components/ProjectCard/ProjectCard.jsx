@@ -14,8 +14,8 @@ export default function ProjectCard({ project, size = "md", variant = "default" 
       <Link to={`/projects/${project.slug}`} className="group block">
         <div
           className={cn(
-            "overflow-hidden",
-            size === "lg" ? "aspect-[4/5] sm:aspect-[16/10]" : "aspect-[4/5]"
+            "overflow-hidden rounded-2xl",
+            size === "lg" ? "aspect-[4/5] sm:aspect-[16/10]" : "aspect-[5/6]"
           )}
         >
           <Photo src={project.cover.src} alt={project.cover.alt} fallback={project.title} className="h-full w-full" />
@@ -37,10 +37,6 @@ export default function ProjectCard({ project, size = "md", variant = "default" 
             />
           </div>
         </div>
-
-        {project.category && (
-          <span className="mt-3 inline-block eyebrow text-[color:var(--color-brass)]">{project.category}</span>
-        )}
       </Link>
     </RevealItem>
   );
@@ -83,9 +79,6 @@ function EditorialProjectCard({ project }) {
           <span className="shrink-0 text-sm text-[color:var(--color-mist)]">{project.year}</span>
         </div>
         <p className="mt-1 text-sm text-[color:var(--color-mist)]">{project.location}</p>
-        {project.category && (
-          <span className="mt-2 inline-block eyebrow text-[color:var(--color-brass)]">{project.category}</span>
-        )}
       </Link>
     </RevealItem>
   );

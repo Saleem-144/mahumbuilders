@@ -5,7 +5,7 @@ import { images } from "../../../data/images";
 
 export default function AboutSection() {
   return (
-    <section className="py-24 sm:py-32">
+    <section className="py-10 sm:py-14 lg:py-16">
       <div className="container-edit grid grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-20">
         <Reveal className="order-2 aspect-[4/3] overflow-hidden lg:order-1 lg:aspect-auto lg:h-full lg:max-h-[420px]">
           <Photo src={images.aboutFacade.src} alt={images.aboutFacade.alt} fallback={images.aboutFacade.fallback} className="h-full w-full" />

@@ -4,7 +4,7 @@ import { turnkeyStages } from "../../../data/services";
 
 export default function ApproachSection() {
   return (
-    <section className="bg-[color:var(--color-ink)] py-16 text-[color:var(--color-paper)] sm:py-20">
+    <section className="bg-[color:var(--color-ink)] py-10 text-[color:var(--color-paper)] sm:py-14 lg:py-16">
       <div className="container-edit">
         <SectionHeading
           light

@@ -37,7 +37,7 @@ export default function Contact() {
         description="Tell us about your development or construction project — our team will be in touch."
       />
 
-      <section className="py-24 sm:py-32">
+      <section className="py-10 sm:py-14 lg:py-16">
         <div className="container-edit grid grid-cols-1 gap-16 lg:grid-cols-[0.9fr_1.3fr] lg:gap-20">
           <Reveal className="space-y-10">
             <div className="flex items-start gap-4">

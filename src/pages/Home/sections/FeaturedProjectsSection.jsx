@@ -5,7 +5,7 @@ import { featuredProjects } from "../../../data/projects";
 
 export default function FeaturedProjectsSection() {
   return (
-    <section className="border-t border-[color:var(--color-line)] py-24 sm:py-32">
+    <section className="border-t border-[color:var(--color-line)] py-10 sm:py-14 lg:py-16">
       <div className="container-edit">
         <div className="flex flex-col items-start justify-between gap-8 sm:flex-row sm:items-end">
           <SectionHeading
@@ -18,7 +18,7 @@ export default function FeaturedProjectsSection() {
           </Button>
         </div>
 
-        <div className="mt-16">
+        <div className="mt-10 sm:mt-16">
           <ProjectGrid projects={featuredProjects} columns={3} />
         </div>
       </div>

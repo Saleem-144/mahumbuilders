@@ -2,6 +2,7 @@ import { RouterProvider, Switch, Route, ScrollToTop } from "./router/Router";
 import SmoothScroll from "./components/SmoothScroll/SmoothScroll";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import BackToTop from "./components/BackToTop/BackToTop";
 
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
@@ -41,6 +42,7 @@ function App() {
           </Switch>
         </main>
         <Footer />
+        <BackToTop />
       </SmoothScroll>
     </RouterProvider>
   );

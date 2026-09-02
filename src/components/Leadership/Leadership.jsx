@@ -4,11 +4,11 @@ import { leadership } from "../../data/leadership";
 
 export default function Leadership() {
   return (
-    <section className="border-t border-[color:var(--color-line)] py-24 sm:py-32">
+    <section className="border-t border-[color:var(--color-line)] py-10 sm:py-14 lg:py-16">
       <div className="container-edit">
         <SectionHeading eyebrow="Meet the Team" title="Leadership" />
 
-        <div className="mt-16 grid grid-cols-1 gap-14 sm:grid-cols-2 sm:gap-10 lg:gap-16">
+        <div className="mt-10 grid grid-cols-1 gap-10 sm:mt-16 sm:grid-cols-2 sm:gap-10 lg:gap-16">
           {leadership.map((person) => (
             <Reveal key={person.slug} className="flex gap-6 sm:gap-8">
               <div className="w-28 shrink-0 overflow-hidden bg-[color:var(--color-stone)] sm:w-36">

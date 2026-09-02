@@ -21,7 +21,7 @@ export default function HowWeDeliver() {
   const last = deliveryStages.length - 1;
 
   return (
-    <section className="border-t border-[color:var(--color-line)] py-24 sm:py-32">
+    <section className="border-t border-[color:var(--color-line)] py-10 sm:py-14 lg:py-16">
       <div className="container-edit">
         <SectionHeading
           eyebrow="How We Deliver"
