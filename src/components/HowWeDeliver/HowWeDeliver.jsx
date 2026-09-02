@@ -7,12 +7,10 @@ import { cn } from "../../lib/cn";
  * "How We Deliver" — MAHUM's five-stage delivery process, read as a single
  * connected journey rather than a set of cards.
  *
- * - Desktop (lg+): a hairline rule runs the width of the section with a tick
- *   at each stage. Odd stages (01 / 03 / 05) sit above the rule, even stages
- *   (02 / 04) sit below it, each joined to its tick by a short connector —
- *   closer to an elevation drawing than a card grid. The final stage
- *   (05 — Deliver) carries a permanent brass accent marking the handover
- *   moment; every other stage takes the same accent on hover only.
+ * - Desktop (lg+): each stage alternates above/below a shared centerline,
+ *   joined to it by a short connector — closer to an elevation drawing
+ *   than a card grid. Every stage (including the final handover) takes a
+ *   brass accent on hover only, never permanently.
  * - Tablet (sm–lg, incl. ~834px): a static 3+2 grid beneath a single rule.
  * - Mobile (<sm): a genuine vertical process, each stage joined to the next
  *   by a short connecting rule.
@@ -31,14 +29,9 @@ export default function HowWeDeliver() {
 
         {/* Desktop — connected horizontal timeline */}
         <div className="relative mt-28 hidden lg:block">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-x-0 top-1/2 h-px bg-[color:var(--color-line)]"
-          />
           <RevealGroup className="relative grid grid-cols-5" stagger={0.1}>
             {deliveryStages.map((stage, i) => {
               const above = i % 2 === 0;
-              const isLast = i === last;
               return (
                 <RevealItem key={stage.number} y={above ? -14 : 14} className="relative">
                   <div
@@ -48,14 +41,7 @@ export default function HowWeDeliver() {
                     )}
                     style={{ minHeight: "12rem" }}
                   >
-                    <span
-                      className={cn(
-                        "font-display block text-[3.25rem] font-light leading-none transition-colors duration-300 xl:text-6xl",
-                        isLast
-                          ? "text-[color:var(--color-brass)]"
-                          : "text-[color:var(--color-ink)] group-hover:text-[color:var(--color-brass)]"
-                      )}
-                    >
+                    <span className="font-display block text-[3.25rem] font-light leading-none text-[color:var(--color-ink)] transition-colors duration-300 group-hover:text-[color:var(--color-brass)] xl:text-6xl">
                       {stage.number}
                     </span>
                     <p className="eyebrow mt-4">{stage.name}</p>
@@ -69,24 +55,11 @@ export default function HowWeDeliver() {
                     <span
                       aria-hidden="true"
                       className={cn(
-                        "absolute left-1/2 w-px -translate-x-1/2 transition-colors duration-300",
-                        isLast
-                          ? "bg-[color:var(--color-brass)]"
-                          : "bg-[color:var(--color-line)] group-hover:bg-[color:var(--color-brass-light)]",
+                        "absolute left-1/2 w-px -translate-x-1/2 bg-[color:var(--color-line)] transition-colors duration-300 group-hover:bg-[color:var(--color-brass-light)]",
                         above ? "bottom-0 h-16" : "top-0 h-16"
                       )}
                     />
                   </div>
-
-                  <span
-                    aria-hidden="true"
-                    className={cn(
-                      "absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full transition-colors duration-300",
-                      isLast
-                        ? "h-2.5 w-2.5 bg-[color:var(--color-brass)]"
-                        : "h-1.5 w-1.5 bg-[color:var(--color-mist-light)] group-hover:bg-[color:var(--color-brass)]"
-                    )}
-                  />
                 </RevealItem>
               );
             })}
