@@ -1,0 +1,438 @@
+{
+  "slug": "courtyard-home",
+  "images": [
+    {
+      "id": "asa-7809-as-smart-object-1-copy",
+      "src": "/portfolio-web/courtyard-home/asa-7809-as-smart-object-1-copy-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/asa-7809-as-smart-object-1-copy-960.webp",
+      "w": 2000,
+      "h": 1325,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/ASA_7809%20as%20Smart%20Object-1%20copy.jpg"
+    },
+    {
+      "id": "asa-7809",
+      "src": "/portfolio-web/courtyard-home/asa-7809-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/asa-7809-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/ASA_7809.JPG"
+    },
+    {
+      "id": "basement-i",
+      "src": "/portfolio-web/courtyard-home/basement-i-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/basement-i-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Basement%20(I).JPG"
+    },
+    {
+      "id": "basement-ii",
+      "src": "/portfolio-web/courtyard-home/basement-ii-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/basement-ii-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Basement%20(II).JPG"
+    },
+    {
+      "id": "bath-i",
+      "src": "/portfolio-web/courtyard-home/bath-i-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/bath-i-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Bath%20(I).JPG"
+    },
+    {
+      "id": "bath-ii",
+      "src": "/portfolio-web/courtyard-home/bath-ii-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/bath-ii-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Bath%20(II).JPG"
+    },
+    {
+      "id": "bath-iii",
+      "src": "/portfolio-web/courtyard-home/bath-iii-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/bath-iii-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Bath%20(III).JPG"
+    },
+    {
+      "id": "bath-iv",
+      "src": "/portfolio-web/courtyard-home/bath-iv-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/bath-iv-960.webp",
+      "w": 596,
+      "h": 900,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Bath%20(IV).JPG"
+    },
+    {
+      "id": "bath-v",
+      "src": "/portfolio-web/courtyard-home/bath-v-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/bath-v-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Bath%20(V).JPG"
+    },
+    {
+      "id": "bath-vi",
+      "src": "/portfolio-web/courtyard-home/bath-vi-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/bath-vi-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Bath%20(VI).JPG"
+    },
+    {
+      "id": "bath-vii",
+      "src": "/portfolio-web/courtyard-home/bath-vii-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/bath-vii-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Bath%20(VII).JPG"
+    },
+    {
+      "id": "bath-viii",
+      "src": "/portfolio-web/courtyard-home/bath-viii-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/bath-viii-960.webp",
+      "w": 596,
+      "h": 900,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Bath%20(VIII).JPG"
+    },
+    {
+      "id": "bath-viiii",
+      "src": "/portfolio-web/courtyard-home/bath-viiii-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/bath-viiii-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Bath%20(VIIII).JPG"
+    },
+    {
+      "id": "bath-viiiii",
+      "src": "/portfolio-web/courtyard-home/bath-viiiii-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/bath-viiiii-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Bath%20(VIIIII).JPG"
+    },
+    {
+      "id": "chandlier",
+      "src": "/portfolio-web/courtyard-home/chandlier-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/chandlier-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Chandlier.JPG"
+    },
+    {
+      "id": "corridor",
+      "src": "/portfolio-web/courtyard-home/corridor-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/corridor-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Corridor.JPG"
+    },
+    {
+      "id": "courtyard-i",
+      "src": "/portfolio-web/courtyard-home/courtyard-i-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/courtyard-i-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Courtyard%20(I).JPG"
+    },
+    {
+      "id": "courtyard-ii",
+      "src": "/portfolio-web/courtyard-home/courtyard-ii-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/courtyard-ii-960.webp",
+      "w": 596,
+      "h": 900,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Courtyard%20(II).JPG"
+    },
+    {
+      "id": "courtyard-iii",
+      "src": "/portfolio-web/courtyard-home/courtyard-iii-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/courtyard-iii-960.webp",
+      "w": 596,
+      "h": 900,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Courtyard%20(III).JPG"
+    },
+    {
+      "id": "courtyard-iv",
+      "src": "/portfolio-web/courtyard-home/courtyard-iv-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/courtyard-iv-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Courtyard%20(IV).JPG"
+    },
+    {
+      "id": "courtyard-v",
+      "src": "/portfolio-web/courtyard-home/courtyard-v-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/courtyard-v-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Courtyard%20(V).JPG"
+    },
+    {
+      "id": "dining",
+      "src": "/portfolio-web/courtyard-home/dining-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/dining-960.webp",
+      "w": 596,
+      "h": 900,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Dining.JPG"
+    },
+    {
+      "id": "drawing-i",
+      "src": "/portfolio-web/courtyard-home/drawing-i-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/drawing-i-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Drawing%20(I).JPG"
+    },
+    {
+      "id": "drawing-ii",
+      "src": "/portfolio-web/courtyard-home/drawing-ii-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/drawing-ii-960.webp",
+      "w": 596,
+      "h": 900,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Drawing%20(II).JPG"
+    },
+    {
+      "id": "drawing-iii",
+      "src": "/portfolio-web/courtyard-home/drawing-iii-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/drawing-iii-960.webp",
+      "w": 596,
+      "h": 900,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Drawing%20(III).JPG"
+    },
+    {
+      "id": "elevation-i",
+      "src": "/portfolio-web/courtyard-home/elevation-i-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/elevation-i-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Elevation%20(I).JPG"
+    },
+    {
+      "id": "elevation-ii",
+      "src": "/portfolio-web/courtyard-home/elevation-ii-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/elevation-ii-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Elevation%20(II).JPG"
+    },
+    {
+      "id": "elevation-iii",
+      "src": "/portfolio-web/courtyard-home/elevation-iii-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/elevation-iii-960.webp",
+      "w": 596,
+      "h": 900,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Elevation%20(III).JPG"
+    },
+    {
+      "id": "elevation-iv",
+      "src": "/portfolio-web/courtyard-home/elevation-iv-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/elevation-iv-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Elevation%20(IV).JPG"
+    },
+    {
+      "id": "elevation-v",
+      "src": "/portfolio-web/courtyard-home/elevation-v-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/elevation-v-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Elevation%20(V).JPG"
+    },
+    {
+      "id": "elevation-vi",
+      "src": "/portfolio-web/courtyard-home/elevation-vi-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/elevation-vi-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Elevation%20(VI).JPG"
+    },
+    {
+      "id": "elevation-vii",
+      "src": "/portfolio-web/courtyard-home/elevation-vii-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/elevation-vii-960.webp",
+      "w": 596,
+      "h": 900,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Elevation%20(VII).JPG"
+    },
+    {
+      "id": "elevation-viii",
+      "src": "/portfolio-web/courtyard-home/elevation-viii-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/elevation-viii-960.webp",
+      "w": 2000,
+      "h": 1442,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Elevation%20(VIII).jpg"
+    },
+    {
+      "id": "elevation-vxi",
+      "src": "/portfolio-web/courtyard-home/elevation-vxi-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/elevation-vxi-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Elevation%20(VXI).JPG"
+    },
+    {
+      "id": "elevation",
+      "src": "/portfolio-web/courtyard-home/elevation-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/elevation-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Elevation.JPG"
+    },
+    {
+      "id": "entrance-lobby",
+      "src": "/portfolio-web/courtyard-home/entrance-lobby-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/entrance-lobby-960.webp",
+      "w": 596,
+      "h": 900,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Entrance%20Lobby.JPG"
+    },
+    {
+      "id": "entrance",
+      "src": "/portfolio-web/courtyard-home/entrance-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/entrance-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Entrance.JPG"
+    },
+    {
+      "id": "kitchen-i",
+      "src": "/portfolio-web/courtyard-home/kitchen-i-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/kitchen-i-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Kitchen%20(I).JPG"
+    },
+    {
+      "id": "kitchen-ii",
+      "src": "/portfolio-web/courtyard-home/kitchen-ii-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/kitchen-ii-960.webp",
+      "w": 2000,
+      "h": 1325,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Kitchen%20(II).jpg"
+    },
+    {
+      "id": "kitchen-iii",
+      "src": "/portfolio-web/courtyard-home/kitchen-iii-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/kitchen-iii-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Kitchen%20(III).JPG"
+    },
+    {
+      "id": "kitchen-iv",
+      "src": "/portfolio-web/courtyard-home/kitchen-iv-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/kitchen-iv-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Kitchen%20(IV).JPG"
+    },
+    {
+      "id": "kitchen-v",
+      "src": "/portfolio-web/courtyard-home/kitchen-v-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/kitchen-v-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Kitchen%20(V).JPG"
+    },
+    {
+      "id": "kitchen-vi",
+      "src": "/portfolio-web/courtyard-home/kitchen-vi-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/kitchen-vi-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Kitchen%20(VI).JPG"
+    },
+    {
+      "id": "main-gate",
+      "src": "/portfolio-web/courtyard-home/main-gate-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/main-gate-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Main%20gate.JPG"
+    },
+    {
+      "id": "master-bath-i",
+      "src": "/portfolio-web/courtyard-home/master-bath-i-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/master-bath-i-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Master%20Bath%20(I).JPG"
+    },
+    {
+      "id": "master-bath-ii",
+      "src": "/portfolio-web/courtyard-home/master-bath-ii-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/master-bath-ii-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Master%20Bath%20(II).JPG"
+    },
+    {
+      "id": "master-bath-iii",
+      "src": "/portfolio-web/courtyard-home/master-bath-iii-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/master-bath-iii-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Master%20Bath%20(III).JPG"
+    },
+    {
+      "id": "master-bed-i",
+      "src": "/portfolio-web/courtyard-home/master-bed-i-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/master-bed-i-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Master%20Bed%20(I).JPG"
+    },
+    {
+      "id": "master-bed-ii",
+      "src": "/portfolio-web/courtyard-home/master-bed-ii-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/master-bed-ii-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Master%20Bed%20(II).JPG"
+    },
+    {
+      "id": "master-bed-iii",
+      "src": "/portfolio-web/courtyard-home/master-bed-iii-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/master-bed-iii-960.webp",
+      "w": 900,
+      "h": 596,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Master%20Bed%20(III).JPG"
+    },
+    {
+      "id": "master-bed-iv",
+      "src": "/portfolio-web/courtyard-home/master-bed-iv-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/master-bed-iv-960.webp",
+      "w": 596,
+      "h": 900,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Master%20Bed%20(IV).JPG"
+    },
+    {
+      "id": "powder",
+      "src": "/portfolio-web/courtyard-home/powder-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/powder-960.webp",
+      "w": 596,
+      "h": 900,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Powder.JPG"
+    },
+    {
+      "id": "staircase-i",
+      "src": "/portfolio-web/courtyard-home/staircase-i-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/staircase-i-960.webp",
+      "w": 596,
+      "h": 900,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Staircase%20(I).JPG"
+    },
+    {
+      "id": "staircase-ii",
+      "src": "/portfolio-web/courtyard-home/staircase-ii-2000.webp",
+      "thumb": "/portfolio-web/courtyard-home/staircase-ii-960.webp",
+      "w": 596,
+      "h": 900,
+      "original": "/PORTFOLIO/COURTYARD%20HOME/Staircase%20(II).JPG"
+    }
+  ],
+  "videos": []
+}

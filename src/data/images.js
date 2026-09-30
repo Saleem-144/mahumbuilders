@@ -5,6 +5,8 @@
 // Each entry carries a `fallback` label rendered by <Photo /> if the remote
 // image ever fails to load, so the layout never shows a broken-image icon.
 
+import { portfolioImage } from "./portfolio";
+
 const u = (id, w = 1600) =>
   `https://images.unsplash.com/${id}?q=80&w=${w}&auto=format&fit=crop`;
 
@@ -104,21 +106,58 @@ export const images = {
     alt: "Dramatic mountain landscape at golden hour",
     fallback: "MAHUM Builders",
   },
+  // Real client photography (public/PORTFOLIO → public/portfolio-web).
+  constructionFrame: {
+    ...portfolioImage(
+      "bahrban-hunza",
+      "progress-wip-2",
+      "Steel structural frame rising on concrete piers during construction at Bahrban, Hunza"
+    ),
+    fallback: "Construction Execution",
+  },
+  // "Two Ways We Build" (Developments section).
+  ownDevelopmentBahrban: {
+    ...portfolioImage(
+      "bahrban-hunza",
+      "progress-264a6ebd-bb0b-47dc-8b69-f99d1e418eab",
+      "Bahrban, Hunza — gabled cabins with full-height glazing rising among poplars in the mountain valley"
+    ),
+    fallback: "MAHUM Development",
+  },
+  clientProjectDusk: {
+    ...portfolioImage(
+      "casa-solara",
+      "49",
+      "Turn-key residence at dusk — timber-screened upper floor above a lit stone boundary wall"
+    ),
+    fallback: "Client Project",
+  },
 };
 
-// `likeCount` is placeholder data for the carousel's hover overlay (see
-// MediaCarousel) — a realistic-looking figure, not a real social metric.
-// When real photography/footage replaces an entry, just update its
-// `likeCount` here; nothing in the component needs to change. Omit the
-// field entirely to hide the overlay for a given item.
+// Home page "Life at MAHUM" carousel — the client's own photography, each
+// card captioned with its project and what it shows (`label` / `tag`).
+// `likeCount` is placeholder data for the hover overlay — a realistic-looking
+// figure, not a real social metric. Omit it to hide the overlay for a card.
+const card = (slug, id, label, tag, alt, likeCount) => ({
+  type: "image",
+  ...portfolioImage(slug, id, alt),
+  fallback: `${label} — ${tag}`,
+  label,
+  tag,
+  likeCount,
+});
+
 export const carouselMedia = [
-  { type: "image", ...images.detailStair, likeCount: 68 },
-  { type: "image", ...images.interiorLiving, likeCount: 92 },
-  { type: "image", ...images.commercialFacade, likeCount: 54 },
-  { type: "image", ...images.interiorBath, likeCount: 101 },
-  { type: "image", ...images.villaExterior, likeCount: 77 },
-  { type: "image", ...images.officeReception, likeCount: 63 },
-  { type: "image", ...images.detailMaterial, likeCount: 88 },
-  { type: "image", ...images.poolTerrace, likeCount: 95 },
-  // To add real footage later: { type: "video", src: "/media/site-walkthrough.mp4", poster: images.heroExterior.src, alt: "...", likeCount: 0 }
+  card("casa-solara", "51", "Casa Solara", "Exterior", "Casa Solara at dusk, lit timber-screened facade", 68),
+  card("casa-solara", "9", "Casa Solara", "Interior", "Casa Solara floating timber staircase in a double-height hall", 92),
+  card("house-82b", "31", "House 82B", "Exterior", "House 82B at dusk, cantilevered upper volume", 54),
+  card("house-82b", "43", "House 82B", "Interior", "House 82B timber staircase with glass balustrade", 101),
+  card("pool-house", "asa-8943", "Pool House", "Courtyard", "Pool House courtyard pool beneath timber screens", 77),
+  card("stone-villa", "5", "Stone Villa", "Exterior", "Stone Villa stone-clad facade and glass balcony", 63),
+  card("stone-villa", "11", "Stone Villa", "Interior", "Stone Villa bathroom with backlit mirror and stone basin", 88),
+  card("vsurfaces", "2", "VSurfaces", "Exterior", "VSurfaces building at dusk with illuminated signage", 95),
+  card("vsurfaces", "10", "VSurfaces", "Interior", "VSurfaces open-tread staircase lined with planting", 71),
+  card("tabbani-house", "17", "Tabbani House", "Interior", "Tabbani House cantilevered timber staircase", 84),
+  card("courtyard-home", "elevation-vii", "Courtyard Home", "Exterior", "Courtyard Home at dusk, timber-screened upper floor", 59),
+  card("bahrban-hunza", "progress-wip-19", "Bahrban Hunza", "Construction", "Bahrban cabin under construction in the Hunza valley", 90),
 ];

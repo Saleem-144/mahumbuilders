@@ -1,0 +1,634 @@
+{
+  "slug": "bahrban-hunza",
+  "images": [
+    {
+      "id": "aerial-aerial-view",
+      "group": "aerial",
+      "src": "/portfolio-web/bahrban-hunza/aerial-aerial-view-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/aerial-aerial-view-960.webp",
+      "w": 2000,
+      "h": 1125,
+      "original": "/PORTFOLIO/BAHRBAN/AERIAL%20VIDEOGRAPHY/AERIAL%20VIEW.JPG"
+    },
+    {
+      "id": "aerial-clear-aerial-view-of-land",
+      "group": "aerial",
+      "src": "/portfolio-web/bahrban-hunza/aerial-clear-aerial-view-of-land-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/aerial-clear-aerial-view-of-land-960.webp",
+      "w": 2000,
+      "h": 1125,
+      "original": "/PORTFOLIO/BAHRBAN/AERIAL%20VIDEOGRAPHY/CLEAR%20AERIAL%20VIEW%20OF%20LAND.JPG"
+    },
+    {
+      "id": "aerial-direct-view-of-location",
+      "group": "aerial",
+      "src": "/portfolio-web/bahrban-hunza/aerial-direct-view-of-location-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/aerial-direct-view-of-location-960.webp",
+      "w": 2000,
+      "h": 1125,
+      "original": "/PORTFOLIO/BAHRBAN/AERIAL%20VIDEOGRAPHY/DIRECT%20VIEW%20OF%20LOCATION.JPG"
+    },
+    {
+      "id": "aerial-dji-0048",
+      "group": "aerial",
+      "src": "/portfolio-web/bahrban-hunza/aerial-dji-0048-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/aerial-dji-0048-960.webp",
+      "w": 2000,
+      "h": 1125,
+      "original": "/PORTFOLIO/BAHRBAN/AERIAL%20VIDEOGRAPHY/DJI_0048.JPG"
+    },
+    {
+      "id": "aerial-dji-0069",
+      "group": "aerial",
+      "src": "/portfolio-web/bahrban-hunza/aerial-dji-0069-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/aerial-dji-0069-960.webp",
+      "w": 2000,
+      "h": 1125,
+      "original": "/PORTFOLIO/BAHRBAN/AERIAL%20VIDEOGRAPHY/DJI_0069.JPG"
+    },
+    {
+      "id": "aerial-high-altitude-view",
+      "group": "aerial",
+      "src": "/portfolio-web/bahrban-hunza/aerial-high-altitude-view-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/aerial-high-altitude-view-960.webp",
+      "w": 1125,
+      "h": 2000,
+      "original": "/PORTFOLIO/BAHRBAN/AERIAL%20VIDEOGRAPHY/HIGH%20ALTITUDE%20VIEW.JPG"
+    },
+    {
+      "id": "aerial-land-aerial-view",
+      "group": "aerial",
+      "src": "/portfolio-web/bahrban-hunza/aerial-land-aerial-view-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/aerial-land-aerial-view-960.webp",
+      "w": 2000,
+      "h": 1125,
+      "original": "/PORTFOLIO/BAHRBAN/AERIAL%20VIDEOGRAPHY/LAND%20AERIAL%20VIEW.JPG"
+    },
+    {
+      "id": "aerial-rear-view-attabad",
+      "group": "aerial",
+      "src": "/portfolio-web/bahrban-hunza/aerial-rear-view-attabad-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/aerial-rear-view-attabad-960.webp",
+      "w": 2000,
+      "h": 1125,
+      "original": "/PORTFOLIO/BAHRBAN/AERIAL%20VIDEOGRAPHY/REAR%20VIEW%20(ATTABAD).JPG"
+    },
+    {
+      "id": "progress-0e07e631-5ddb-426e-8dc4-a7c56359cc6c",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-0e07e631-5ddb-426e-8dc4-a7c56359cc6c-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-0e07e631-5ddb-426e-8dc4-a7c56359cc6c-960.webp",
+      "w": 1280,
+      "h": 1249,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/0e07e631-5ddb-426e-8dc4-a7c56359cc6c.jpg"
+    },
+    {
+      "id": "progress-1bfe7d71-1fd9-4405-bcc1-ab049b984d71",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-1bfe7d71-1fd9-4405-bcc1-ab049b984d71-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-1bfe7d71-1fd9-4405-bcc1-ab049b984d71-960.webp",
+      "w": 1280,
+      "h": 959,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/1bfe7d71-1fd9-4405-bcc1-ab049b984d71.jpg"
+    },
+    {
+      "id": "progress-1d8d8383-2757-4923-b324-9c33f6844fab",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-1d8d8383-2757-4923-b324-9c33f6844fab-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-1d8d8383-2757-4923-b324-9c33f6844fab-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/1d8d8383-2757-4923-b324-9c33f6844fab.jpg"
+    },
+    {
+      "id": "progress-1fe99023-7b62-4953-9a8c-b3e2c9397999",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-1fe99023-7b62-4953-9a8c-b3e2c9397999-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-1fe99023-7b62-4953-9a8c-b3e2c9397999-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/1fe99023-7b62-4953-9a8c-b3e2c9397999.jpg"
+    },
+    {
+      "id": "progress-3b77730f-2ac3-448f-b4b5-ce775801bde3",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-3b77730f-2ac3-448f-b4b5-ce775801bde3-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-3b77730f-2ac3-448f-b4b5-ce775801bde3-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/3b77730f-2ac3-448f-b4b5-ce775801bde3.jpg"
+    },
+    {
+      "id": "progress-3c41d327-e30a-48b5-abfc-126189a16fec",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-3c41d327-e30a-48b5-abfc-126189a16fec-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-3c41d327-e30a-48b5-abfc-126189a16fec-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/3c41d327-e30a-48b5-abfc-126189a16fec.jpg"
+    },
+    {
+      "id": "progress-3d745af2-ffa3-4007-8ae9-660e79a43252",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-3d745af2-ffa3-4007-8ae9-660e79a43252-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-3d745af2-ffa3-4007-8ae9-660e79a43252-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/3d745af2-ffa3-4007-8ae9-660e79a43252.jpg"
+    },
+    {
+      "id": "progress-4b216d69-d903-4c6b-b064-30e041eed0e7",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-4b216d69-d903-4c6b-b064-30e041eed0e7-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-4b216d69-d903-4c6b-b064-30e041eed0e7-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/4b216d69-d903-4c6b-b064-30e041eed0e7.jpg"
+    },
+    {
+      "id": "progress-4ba9235e-e4c3-467a-9a9f-7f648f6f0dce",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-4ba9235e-e4c3-467a-9a9f-7f648f6f0dce-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-4ba9235e-e4c3-467a-9a9f-7f648f6f0dce-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/4ba9235e-e4c3-467a-9a9f-7f648f6f0dce.jpg"
+    },
+    {
+      "id": "progress-5b31e496-e6a3-4058-b02e-71f8837d5001",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-5b31e496-e6a3-4058-b02e-71f8837d5001-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-5b31e496-e6a3-4058-b02e-71f8837d5001-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/5b31e496-e6a3-4058-b02e-71f8837d5001.jpg"
+    },
+    {
+      "id": "progress-5c7aacb2-f1b3-484b-b57f-7fa9e41f9f7f",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-5c7aacb2-f1b3-484b-b57f-7fa9e41f9f7f-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-5c7aacb2-f1b3-484b-b57f-7fa9e41f9f7f-960.webp",
+      "w": 1043,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/5c7aacb2-f1b3-484b-b57f-7fa9e41f9f7f.jpg"
+    },
+    {
+      "id": "progress-6ac4d910-b5e8-46f7-a575-d5cfb824a8ff",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-6ac4d910-b5e8-46f7-a575-d5cfb824a8ff-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-6ac4d910-b5e8-46f7-a575-d5cfb824a8ff-960.webp",
+      "w": 1002,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/6ac4d910-b5e8-46f7-a575-d5cfb824a8ff.jpg"
+    },
+    {
+      "id": "progress-20a16ed6-2f83-46e6-8094-c4864fab0fe1",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-20a16ed6-2f83-46e6-8094-c4864fab0fe1-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-20a16ed6-2f83-46e6-8094-c4864fab0fe1-960.webp",
+      "w": 1280,
+      "h": 1187,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/20a16ed6-2f83-46e6-8094-c4864fab0fe1.jpg"
+    },
+    {
+      "id": "progress-47dffa45-ebf3-421c-80af-e6534ba76a84",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-47dffa45-ebf3-421c-80af-e6534ba76a84-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-47dffa45-ebf3-421c-80af-e6534ba76a84-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/47dffa45-ebf3-421c-80af-e6534ba76a84.jpg"
+    },
+    {
+      "id": "progress-65d09882-5ebf-46c4-b07c-95ec589103e8",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-65d09882-5ebf-46c4-b07c-95ec589103e8-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-65d09882-5ebf-46c4-b07c-95ec589103e8-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/65d09882-5ebf-46c4-b07c-95ec589103e8.jpg"
+    },
+    {
+      "id": "progress-71c65e27-78cc-4f6d-9b5d-643147dbcc7b",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-71c65e27-78cc-4f6d-9b5d-643147dbcc7b-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-71c65e27-78cc-4f6d-9b5d-643147dbcc7b-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/71c65e27-78cc-4f6d-9b5d-643147dbcc7b.jpg"
+    },
+    {
+      "id": "progress-090ee4ab-4a44-40bc-953b-bfde5c6602da",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-090ee4ab-4a44-40bc-953b-bfde5c6602da-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-090ee4ab-4a44-40bc-953b-bfde5c6602da-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/090ee4ab-4a44-40bc-953b-bfde5c6602da.jpg"
+    },
+    {
+      "id": "progress-264a6ebd-bb0b-47dc-8b69-f99d1e418eab",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-264a6ebd-bb0b-47dc-8b69-f99d1e418eab-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-264a6ebd-bb0b-47dc-8b69-f99d1e418eab-960.webp",
+      "w": 1280,
+      "h": 960,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/264a6ebd-bb0b-47dc-8b69-f99d1e418eab.jpg"
+    },
+    {
+      "id": "progress-679c7fa9-efcf-4e97-801e-231835b4b196",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-679c7fa9-efcf-4e97-801e-231835b4b196-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-679c7fa9-efcf-4e97-801e-231835b4b196-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/679c7fa9-efcf-4e97-801e-231835b4b196.jpg"
+    },
+    {
+      "id": "progress-731b8702-38ee-4f73-99b3-7834fe7589a2",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-731b8702-38ee-4f73-99b3-7834fe7589a2-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-731b8702-38ee-4f73-99b3-7834fe7589a2-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/731b8702-38ee-4f73-99b3-7834fe7589a2.jpg"
+    },
+    {
+      "id": "progress-985ebbaa-a130-4a10-a684-b36a457e6978",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-985ebbaa-a130-4a10-a684-b36a457e6978-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-985ebbaa-a130-4a10-a684-b36a457e6978-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/985ebbaa-a130-4a10-a684-b36a457e6978.jpg"
+    },
+    {
+      "id": "progress-1618e923-cbc3-4228-b753-889e4e2d2dd4",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-1618e923-cbc3-4228-b753-889e4e2d2dd4-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-1618e923-cbc3-4228-b753-889e4e2d2dd4-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/1618e923-cbc3-4228-b753-889e4e2d2dd4.jpg"
+    },
+    {
+      "id": "progress-9232ba4d-ffb6-4e58-a4db-15ed92643df0",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-9232ba4d-ffb6-4e58-a4db-15ed92643df0-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-9232ba4d-ffb6-4e58-a4db-15ed92643df0-960.webp",
+      "w": 1280,
+      "h": 960,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/9232ba4d-ffb6-4e58-a4db-15ed92643df0.jpg"
+    },
+    {
+      "id": "progress-9598a4d4-83d5-45ad-a5c0-605762a929ab",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-9598a4d4-83d5-45ad-a5c0-605762a929ab-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-9598a4d4-83d5-45ad-a5c0-605762a929ab-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/9598a4d4-83d5-45ad-a5c0-605762a929ab.jpg"
+    },
+    {
+      "id": "progress-0446861c-b671-4729-ad72-c496e68907e7",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-0446861c-b671-4729-ad72-c496e68907e7-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-0446861c-b671-4729-ad72-c496e68907e7-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/0446861c-b671-4729-ad72-c496e68907e7.jpg"
+    },
+    {
+      "id": "progress-6705261d-adb8-4696-9d8b-5082e213346a",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-6705261d-adb8-4696-9d8b-5082e213346a-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-6705261d-adb8-4696-9d8b-5082e213346a-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/6705261d-adb8-4696-9d8b-5082e213346a.jpg"
+    },
+    {
+      "id": "progress-9571396a-5cfa-4b30-8a27-e6352cd7497a",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-9571396a-5cfa-4b30-8a27-e6352cd7497a-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-9571396a-5cfa-4b30-8a27-e6352cd7497a-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/9571396a-5cfa-4b30-8a27-e6352cd7497a.jpg"
+    },
+    {
+      "id": "progress-25428517-853f-423c-a1d0-1e5bf0a73e07",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-25428517-853f-423c-a1d0-1e5bf0a73e07-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-25428517-853f-423c-a1d0-1e5bf0a73e07-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/25428517-853f-423c-a1d0-1e5bf0a73e07.jpg"
+    },
+    {
+      "id": "progress-b67eadbe-655a-4cc2-80de-03aea91e9e61",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-b67eadbe-655a-4cc2-80de-03aea91e9e61-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-b67eadbe-655a-4cc2-80de-03aea91e9e61-960.webp",
+      "w": 1280,
+      "h": 960,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/b67eadbe-655a-4cc2-80de-03aea91e9e61.jpg"
+    },
+    {
+      "id": "progress-b1401461-47e9-44ef-b3e2-84f2254a4f3e",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-b1401461-47e9-44ef-b3e2-84f2254a4f3e-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-b1401461-47e9-44ef-b3e2-84f2254a4f3e-960.webp",
+      "w": 1280,
+      "h": 960,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/b1401461-47e9-44ef-b3e2-84f2254a4f3e.jpg"
+    },
+    {
+      "id": "progress-c6198f3e-19d5-4390-8bf5-c1b0621a628d",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-c6198f3e-19d5-4390-8bf5-c1b0621a628d-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-c6198f3e-19d5-4390-8bf5-c1b0621a628d-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/c6198f3e-19d5-4390-8bf5-c1b0621a628d.jpg"
+    },
+    {
+      "id": "progress-cde391d4-b665-437b-9161-8e349f8d6aa4",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-cde391d4-b665-437b-9161-8e349f8d6aa4-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-cde391d4-b665-437b-9161-8e349f8d6aa4-960.webp",
+      "w": 1017,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/cde391d4-b665-437b-9161-8e349f8d6aa4.jpg"
+    },
+    {
+      "id": "progress-ce46d3e1-0f7a-440c-b8bc-6b52ae00f632",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-ce46d3e1-0f7a-440c-b8bc-6b52ae00f632-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-ce46d3e1-0f7a-440c-b8bc-6b52ae00f632-960.webp",
+      "w": 1280,
+      "h": 960,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/ce46d3e1-0f7a-440c-b8bc-6b52ae00f632.jpg"
+    },
+    {
+      "id": "progress-d20cdea8-7969-4bf3-8e99-4e0237f2ebdb",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-d20cdea8-7969-4bf3-8e99-4e0237f2ebdb-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-d20cdea8-7969-4bf3-8e99-4e0237f2ebdb-960.webp",
+      "w": 1280,
+      "h": 808,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/d20cdea8-7969-4bf3-8e99-4e0237f2ebdb.jpg"
+    },
+    {
+      "id": "progress-dd482b36-75e6-4501-a6e7-6e2fd6609aeb",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-dd482b36-75e6-4501-a6e7-6e2fd6609aeb-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-dd482b36-75e6-4501-a6e7-6e2fd6609aeb-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/dd482b36-75e6-4501-a6e7-6e2fd6609aeb.jpg"
+    },
+    {
+      "id": "progress-e734c927-2229-4788-ad7f-bfe80ee15d10",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-e734c927-2229-4788-ad7f-bfe80ee15d10-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-e734c927-2229-4788-ad7f-bfe80ee15d10-960.webp",
+      "w": 1280,
+      "h": 960,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/e734c927-2229-4788-ad7f-bfe80ee15d10.jpg"
+    },
+    {
+      "id": "progress-e34882c8-2bf0-440f-a46d-dbcf9a326104",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-e34882c8-2bf0-440f-a46d-dbcf9a326104-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-e34882c8-2bf0-440f-a46d-dbcf9a326104-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/e34882c8-2bf0-440f-a46d-dbcf9a326104.jpg"
+    },
+    {
+      "id": "progress-e77914ed-b299-4b4a-a05a-4692d3846c8c",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-e77914ed-b299-4b4a-a05a-4692d3846c8c-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-e77914ed-b299-4b4a-a05a-4692d3846c8c-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/e77914ed-b299-4b4a-a05a-4692d3846c8c.jpg"
+    },
+    {
+      "id": "progress-eddb5469-f2f4-4182-b8fd-805ede3b0cec",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-eddb5469-f2f4-4182-b8fd-805ede3b0cec-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-eddb5469-f2f4-4182-b8fd-805ede3b0cec-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/eddb5469-f2f4-4182-b8fd-805ede3b0cec.jpg"
+    },
+    {
+      "id": "progress-f6172bfc-758b-424d-8bcb-edc747722fc5",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-f6172bfc-758b-424d-8bcb-edc747722fc5-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-f6172bfc-758b-424d-8bcb-edc747722fc5-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/f6172bfc-758b-424d-8bcb-edc747722fc5.jpg"
+    },
+    {
+      "id": "progress-ffbb63be-2deb-49f3-9935-4dd697a4dcb8",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-ffbb63be-2deb-49f3-9935-4dd697a4dcb8-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-ffbb63be-2deb-49f3-9935-4dd697a4dcb8-960.webp",
+      "w": 1280,
+      "h": 960,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/ffbb63be-2deb-49f3-9935-4dd697a4dcb8.jpg"
+    },
+    {
+      "id": "progress-wip-1",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-wip-1-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-wip-1-960.webp",
+      "w": 1280,
+      "h": 720,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/WIP%201.jpeg"
+    },
+    {
+      "id": "progress-wip-2",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-wip-2-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-wip-2-960.webp",
+      "w": 720,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/WIP%202.jpeg"
+    },
+    {
+      "id": "progress-wip-3",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-wip-3-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-wip-3-960.webp",
+      "w": 1064,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/WIP%203.jpeg"
+    },
+    {
+      "id": "progress-wip-4",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-wip-4-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-wip-4-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/WIP%204.jpeg"
+    },
+    {
+      "id": "progress-wip-5",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-wip-5-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-wip-5-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/WIP%205.jpeg"
+    },
+    {
+      "id": "progress-wip-6",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-wip-6-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-wip-6-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/WIP%206.jpeg"
+    },
+    {
+      "id": "progress-wip-7",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-wip-7-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-wip-7-960.webp",
+      "w": 1280,
+      "h": 960,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/WIP%207.jpeg"
+    },
+    {
+      "id": "progress-wip-8",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-wip-8-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-wip-8-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/WIP%208.jpeg"
+    },
+    {
+      "id": "progress-wip-9",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-wip-9-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-wip-9-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/WIP%209.jpeg"
+    },
+    {
+      "id": "progress-wip-12",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-wip-12-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-wip-12-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/WIP%2012.jpeg"
+    },
+    {
+      "id": "progress-wip-13",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-wip-13-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-wip-13-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/WIP%2013.jpeg"
+    },
+    {
+      "id": "progress-wip-14",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-wip-14-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-wip-14-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/WIP%2014.jpeg"
+    },
+    {
+      "id": "progress-wip-15",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-wip-15-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-wip-15-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/WIP%2015.jpeg"
+    },
+    {
+      "id": "progress-wip-16",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-wip-16-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-wip-16-960.webp",
+      "w": 1280,
+      "h": 1187,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/WIP%2016.jpeg"
+    },
+    {
+      "id": "progress-wip-17",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-wip-17-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-wip-17-960.webp",
+      "w": 720,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/WIP%2017.jpeg"
+    },
+    {
+      "id": "progress-wip-18",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-wip-18-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-wip-18-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/WIP%2018.jpeg"
+    },
+    {
+      "id": "progress-wip-19",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-wip-19-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-wip-19-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/WIP%2019.jpeg"
+    },
+    {
+      "id": "progress-wip-20",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-wip-20-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-wip-20-960.webp",
+      "w": 1075,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/WIP%2020.jpeg"
+    },
+    {
+      "id": "progress-wip-21",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-wip-21-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-wip-21-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/WIP%2021.jpeg"
+    },
+    {
+      "id": "progress-wip-22",
+      "group": "progress",
+      "src": "/portfolio-web/bahrban-hunza/progress-wip-22-2000.webp",
+      "thumb": "/portfolio-web/bahrban-hunza/progress-wip-22-960.webp",
+      "w": 960,
+      "h": 1280,
+      "original": "/PORTFOLIO/BAHRBAN/WORK%20IN%20PROGRESS/WIP%2022.jpeg"
+    }
+  ],
+  "videos": [
+    {
+      "src": "/portfolio-web/videos/bahrban-hunza/bahrban-location-aerial.mp4",
+      "w": 1920,
+      "h": 1080,
+      "original": "/PORTFOLIO/BAHRBAN/AERIAL%20VIDEOGRAPHY/LOCATION%20&%20KKH%20ACCESSBILITY%20VIEW.MOV"
+    }
+  ]
+}

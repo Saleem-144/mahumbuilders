@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Contact sheets from scripts/build-portfolio.mjs --sheets
+.portfolio-sheets
+
+# Original client portfolio archive (master copies, local only). The site
+# serves the optimized copies in public/portfolio-web/, built from this
+# folder by scripts/build-portfolio.mjs.
+public/PORTFOLIO/

@@ -1,0 +1,493 @@
+{
+  "slug": "casa-solara",
+  "images": [
+    {
+      "id": "1",
+      "src": "/portfolio-web/casa-solara/1-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/1-960.webp",
+      "w": 2000,
+      "h": 1379,
+      "original": "/PORTFOLIO/CASA%20SOLARA/1.jpg"
+    },
+    {
+      "id": "2",
+      "src": "/portfolio-web/casa-solara/2-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/2-960.webp",
+      "w": 1333,
+      "h": 2000,
+      "original": "/PORTFOLIO/CASA%20SOLARA/2.jpg"
+    },
+    {
+      "id": "3",
+      "src": "/portfolio-web/casa-solara/3-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/3-960.webp",
+      "w": 1333,
+      "h": 2000,
+      "original": "/PORTFOLIO/CASA%20SOLARA/3.jpg"
+    },
+    {
+      "id": "4",
+      "src": "/portfolio-web/casa-solara/4-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/4-960.webp",
+      "w": 1333,
+      "h": 2000,
+      "original": "/PORTFOLIO/CASA%20SOLARA/4.jpg"
+    },
+    {
+      "id": "5",
+      "src": "/portfolio-web/casa-solara/5-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/5-960.webp",
+      "w": 2000,
+      "h": 1333,
+      "original": "/PORTFOLIO/CASA%20SOLARA/5.jpg"
+    },
+    {
+      "id": "6",
+      "src": "/portfolio-web/casa-solara/6-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/6-960.webp",
+      "w": 1333,
+      "h": 2000,
+      "original": "/PORTFOLIO/CASA%20SOLARA/6.jpg"
+    },
+    {
+      "id": "7",
+      "src": "/portfolio-web/casa-solara/7-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/7-960.webp",
+      "w": 1333,
+      "h": 2000,
+      "original": "/PORTFOLIO/CASA%20SOLARA/7.jpg"
+    },
+    {
+      "id": "8",
+      "src": "/portfolio-web/casa-solara/8-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/8-960.webp",
+      "w": 1333,
+      "h": 2000,
+      "original": "/PORTFOLIO/CASA%20SOLARA/8.jpg"
+    },
+    {
+      "id": "9",
+      "src": "/portfolio-web/casa-solara/9-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/9-960.webp",
+      "w": 1333,
+      "h": 2000,
+      "original": "/PORTFOLIO/CASA%20SOLARA/9.jpg"
+    },
+    {
+      "id": "10",
+      "src": "/portfolio-web/casa-solara/10-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/10-960.webp",
+      "w": 1333,
+      "h": 2000,
+      "original": "/PORTFOLIO/CASA%20SOLARA/10.jpg"
+    },
+    {
+      "id": "11",
+      "src": "/portfolio-web/casa-solara/11-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/11-960.webp",
+      "w": 1333,
+      "h": 2000,
+      "original": "/PORTFOLIO/CASA%20SOLARA/11.jpg"
+    },
+    {
+      "id": "11b",
+      "src": "/portfolio-web/casa-solara/11b-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/11b-960.webp",
+      "w": 1333,
+      "h": 2000,
+      "original": "/PORTFOLIO/CASA%20SOLARA/11b.jpg"
+    },
+    {
+      "id": "12",
+      "src": "/portfolio-web/casa-solara/12-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/12-960.webp",
+      "w": 1333,
+      "h": 2000,
+      "original": "/PORTFOLIO/CASA%20SOLARA/12.jpg"
+    },
+    {
+      "id": "13",
+      "src": "/portfolio-web/casa-solara/13-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/13-960.webp",
+      "w": 2000,
+      "h": 1333,
+      "original": "/PORTFOLIO/CASA%20SOLARA/13.jpg"
+    },
+    {
+      "id": "14",
+      "src": "/portfolio-web/casa-solara/14-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/14-960.webp",
+      "w": 2000,
+      "h": 1333,
+      "original": "/PORTFOLIO/CASA%20SOLARA/14.jpg"
+    },
+    {
+      "id": "15",
+      "src": "/portfolio-web/casa-solara/15-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/15-960.webp",
+      "w": 1333,
+      "h": 2000,
+      "original": "/PORTFOLIO/CASA%20SOLARA/15.jpg"
+    },
+    {
+      "id": "16",
+      "src": "/portfolio-web/casa-solara/16-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/16-960.webp",
+      "w": 2000,
+      "h": 1333,
+      "original": "/PORTFOLIO/CASA%20SOLARA/16.jpg"
+    },
+    {
+      "id": "17",
+      "src": "/portfolio-web/casa-solara/17-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/17-960.webp",
+      "w": 1333,
+      "h": 2000,
+      "original": "/PORTFOLIO/CASA%20SOLARA/17.jpg"
+    },
+    {
+      "id": "18",
+      "src": "/portfolio-web/casa-solara/18-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/18-960.webp",
+      "w": 2000,
+      "h": 1333,
+      "original": "/PORTFOLIO/CASA%20SOLARA/18.jpg"
+    },
+    {
+      "id": "19",
+      "src": "/portfolio-web/casa-solara/19-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/19-960.webp",
+      "w": 2000,
+      "h": 1333,
+      "original": "/PORTFOLIO/CASA%20SOLARA/19.jpg"
+    },
+    {
+      "id": "20",
+      "src": "/portfolio-web/casa-solara/20-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/20-960.webp",
+      "w": 2000,
+      "h": 1333,
+      "original": "/PORTFOLIO/CASA%20SOLARA/20.jpg"
+    },
+    {
+      "id": "21",
+      "src": "/portfolio-web/casa-solara/21-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/21-960.webp",
+      "w": 1333,
+      "h": 2000,
+      "original": "/PORTFOLIO/CASA%20SOLARA/21.jpg"
+    },
+    {
+      "id": "22",
+      "src": "/portfolio-web/casa-solara/22-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/22-960.webp",
+      "w": 1333,
+      "h": 2000,
+      "original": "/PORTFOLIO/CASA%20SOLARA/22.jpg"
+    },
+    {
+      "id": "23",
+      "src": "/portfolio-web/casa-solara/23-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/23-960.webp",
+      "w": 2000,
+      "h": 1333,
+      "original": "/PORTFOLIO/CASA%20SOLARA/23.jpg"
+    },
+    {
+      "id": "24",
+      "src": "/portfolio-web/casa-solara/24-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/24-960.webp",
+      "w": 2000,
+      "h": 1333,
+      "original": "/PORTFOLIO/CASA%20SOLARA/24.jpg"
+    },
+    {
+      "id": "25",
+      "src": "/portfolio-web/casa-solara/25-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/25-960.webp",
+      "w": 2000,
+      "h": 1333,
+      "original": "/PORTFOLIO/CASA%20SOLARA/25.jpg"
+    },
+    {
+      "id": "26",
+      "src": "/portfolio-web/casa-solara/26-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/26-960.webp",
+      "w": 2000,
+      "h": 1333,
+      "original": "/PORTFOLIO/CASA%20SOLARA/26.jpg"
+    },
+    {
+      "id": "27",
+      "src": "/portfolio-web/casa-solara/27-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/27-960.webp",
+      "w": 2000,
+      "h": 1333,
+      "original": "/PORTFOLIO/CASA%20SOLARA/27.jpg"
+    },
+    {
+      "id": "28",
+      "src": "/portfolio-web/casa-solara/28-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/28-960.webp",
+      "w": 2000,
+      "h": 1333,
+      "original": "/PORTFOLIO/CASA%20SOLARA/28.jpg"
+    },
+    {
+      "id": "29",
+      "src": "/portfolio-web/casa-solara/29-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/29-960.webp",
+      "w": 1333,
+      "h": 2000,
+      "original": "/PORTFOLIO/CASA%20SOLARA/29.jpg"
+    },
+    {
+      "id": "30",
+      "src": "/portfolio-web/casa-solara/30-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/30-960.webp",
+      "w": 1333,
+      "h": 2000,
+      "original": "/PORTFOLIO/CASA%20SOLARA/30.jpg"
+    },
+    {
+      "id": "31",
+      "src": "/portfolio-web/casa-solara/31-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/31-960.webp",
+      "w": 2000,
+      "h": 1333,
+      "original": "/PORTFOLIO/CASA%20SOLARA/31.jpg"
+    },
+    {
+      "id": "32",
+      "src": "/portfolio-web/casa-solara/32-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/32-960.webp",
+      "w": 2000,
+      "h": 1333,
+      "original": "/PORTFOLIO/CASA%20SOLARA/32.jpg"
+    },
+    {
+      "id": "33",
+      "src": "/portfolio-web/casa-solara/33-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/33-960.webp",
+      "w": 2000,
+      "h": 1333,
+      "original": "/PORTFOLIO/CASA%20SOLARA/33.jpg"
+    },
+    {
+      "id": "34",
+      "src": "/portfolio-web/casa-solara/34-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/34-960.webp",
+      "w": 2000,
+      "h": 1333,
+      "original": "/PORTFOLIO/CASA%20SOLARA/34.jpg"
+    },
+    {
+      "id": "35",
+      "src": "/portfolio-web/casa-solara/35-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/35-960.webp",
+      "w": 2000,
+      "h": 1333,
+      "original": "/PORTFOLIO/CASA%20SOLARA/35.jpg"
+    },
+    {
+      "id": "36",
+      "src": "/portfolio-web/casa-solara/36-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/36-960.webp",
+      "w": 1333,
+      "h": 2000,
+      "original": "/PORTFOLIO/CASA%20SOLARA/36.jpg"
+    },
+    {
+      "id": "38",
+      "src": "/portfolio-web/casa-solara/38-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/38-960.webp",
+      "w": 2000,
+      "h": 1333,
+      "original": "/PORTFOLIO/CASA%20SOLARA/38.jpg"
+    },
+    {
+      "id": "39",
+      "src": "/portfolio-web/casa-solara/39-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/39-960.webp",
+      "w": 2000,
+      "h": 1333,
+      "original": "/PORTFOLIO/CASA%20SOLARA/39.jpg"
+    },
+    {
+      "id": "40",
+      "src": "/portfolio-web/casa-solara/40-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/40-960.webp",
+      "w": 2000,
+      "h": 1333,
+      "original": "/PORTFOLIO/CASA%20SOLARA/40.jpg"
+    },
+    {
+      "id": "41",
+      "src": "/portfolio-web/casa-solara/41-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/41-960.webp",
+      "w": 2000,
+      "h": 1333,
+      "original": "/PORTFOLIO/CASA%20SOLARA/41.jpg"
+    },
+    {
+      "id": "42",
+      "src": "/portfolio-web/casa-solara/42-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/42-960.webp",
+      "w": 2000,
+      "h": 1333,
+      "original": "/PORTFOLIO/CASA%20SOLARA/42.jpg"
+    },
+    {
+      "id": "43",
+      "src": "/portfolio-web/casa-solara/43-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/43-960.webp",
+      "w": 2000,
+      "h": 1333,
+      "original": "/PORTFOLIO/CASA%20SOLARA/43.jpg"
+    },
+    {
+      "id": "44",
+      "src": "/portfolio-web/casa-solara/44-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/44-960.webp",
+      "w": 1333,
+      "h": 2000,
+      "original": "/PORTFOLIO/CASA%20SOLARA/44.jpg"
+    },
+    {
+      "id": "45",
+      "src": "/portfolio-web/casa-solara/45-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/45-960.webp",
+      "w": 2000,
+      "h": 1333,
+      "original": "/PORTFOLIO/CASA%20SOLARA/45.jpg"
+    },
+    {
+      "id": "46",
+      "src": "/portfolio-web/casa-solara/46-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/46-960.webp",
+      "w": 1333,
+      "h": 2000,
+      "original": "/PORTFOLIO/CASA%20SOLARA/46.jpg"
+    },
+    {
+      "id": "47",
+      "src": "/portfolio-web/casa-solara/47-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/47-960.webp",
+      "w": 1333,
+      "h": 2000,
+      "original": "/PORTFOLIO/CASA%20SOLARA/47.jpg"
+    },
+    {
+      "id": "48",
+      "src": "/portfolio-web/casa-solara/48-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/48-960.webp",
+      "w": 2000,
+      "h": 1379,
+      "original": "/PORTFOLIO/CASA%20SOLARA/48.jpg"
+    },
+    {
+      "id": "49",
+      "src": "/portfolio-web/casa-solara/49-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/49-960.webp",
+      "w": 2000,
+      "h": 1333,
+      "original": "/PORTFOLIO/CASA%20SOLARA/49.jpg"
+    },
+    {
+      "id": "50",
+      "src": "/portfolio-web/casa-solara/50-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/50-960.webp",
+      "w": 1333,
+      "h": 2000,
+      "original": "/PORTFOLIO/CASA%20SOLARA/50.jpg"
+    },
+    {
+      "id": "51",
+      "src": "/portfolio-web/casa-solara/51-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/51-960.webp",
+      "w": 1333,
+      "h": 2000,
+      "original": "/PORTFOLIO/CASA%20SOLARA/51.jpg"
+    },
+    {
+      "id": "52",
+      "src": "/portfolio-web/casa-solara/52-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/52-960.webp",
+      "w": 2000,
+      "h": 1333,
+      "original": "/PORTFOLIO/CASA%20SOLARA/52.jpg"
+    },
+    {
+      "id": "53",
+      "src": "/portfolio-web/casa-solara/53-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/53-960.webp",
+      "w": 1333,
+      "h": 2000,
+      "original": "/PORTFOLIO/CASA%20SOLARA/53.jpg"
+    },
+    {
+      "id": "54",
+      "src": "/portfolio-web/casa-solara/54-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/54-960.webp",
+      "w": 2000,
+      "h": 1333,
+      "original": "/PORTFOLIO/CASA%20SOLARA/54.jpg"
+    },
+    {
+      "id": "55",
+      "src": "/portfolio-web/casa-solara/55-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/55-960.webp",
+      "w": 2000,
+      "h": 1333,
+      "original": "/PORTFOLIO/CASA%20SOLARA/55.jpg"
+    },
+    {
+      "id": "56",
+      "src": "/portfolio-web/casa-solara/56-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/56-960.webp",
+      "w": 2000,
+      "h": 1333,
+      "original": "/PORTFOLIO/CASA%20SOLARA/56.jpg"
+    },
+    {
+      "id": "57",
+      "src": "/portfolio-web/casa-solara/57-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/57-960.webp",
+      "w": 1333,
+      "h": 2000,
+      "original": "/PORTFOLIO/CASA%20SOLARA/57.jpg"
+    },
+    {
+      "id": "58",
+      "src": "/portfolio-web/casa-solara/58-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/58-960.webp",
+      "w": 1333,
+      "h": 2000,
+      "original": "/PORTFOLIO/CASA%20SOLARA/58.jpg"
+    },
+    {
+      "id": "59",
+      "src": "/portfolio-web/casa-solara/59-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/59-960.webp",
+      "w": 1333,
+      "h": 2000,
+      "original": "/PORTFOLIO/CASA%20SOLARA/59.jpg"
+    },
+    {
+      "id": "60",
+      "src": "/portfolio-web/casa-solara/60-2000.webp",
+      "thumb": "/portfolio-web/casa-solara/60-960.webp",
+      "w": 1333,
+      "h": 2000,
+      "original": "/PORTFOLIO/CASA%20SOLARA/60.jpg"
+    }
+  ],
+  "videos": [
+    {
+      "src": "/portfolio-web/videos/casa-solara/casa-solara-project-film.mp4",
+      "w": 1920,
+      "h": 1080,
+      "original": "/PORTFOLIO/CASA%20SOLARA/CASA%20SOLARA%20VIDEO.mp4"
+    }
+  ]
+}

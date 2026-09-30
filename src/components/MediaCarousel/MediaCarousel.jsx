@@ -21,7 +21,8 @@ const MS_PER_CARD = 7000;
  * - No prev/next controls, no pagination dots, no edge fade/mask — the row
  *   simply drifts, pausing on hover/touch and resuming from the exact same
  *   position shortly after (never restarts).
- * - Each card carries a static "@mahumbuilders" handle badge (top-left) and,
+ * - Each card carries a static "@mahumbuilders" handle badge (top-left), a
+ *   project caption (bottom-left, from `label` / `tag`) and,
  *   when the item has a `likeCount`, a like-count overlay that fades in on
  *   hover — both purely presentational, no Instagram integration.
  * - Respects prefers-reduced-motion (autoplay disabled; row stays swipeable).
@@ -144,6 +145,19 @@ export default function MediaCarousel({ items }) {
               <span className="absolute left-2 top-2 z-10 rounded-full bg-white/90 px-2.5 py-1 text-[0.6875rem] font-medium text-[color:var(--color-ink)] backdrop-blur-sm sm:left-3 sm:top-3">
                 @mahumbuilders
               </span>
+
+              {item.label && (
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-[color:var(--color-ink)]/80 via-[color:var(--color-ink)]/30 to-transparent px-3 pb-3 pt-14 sm:px-4 sm:pb-4">
+                  <p className="font-display text-base font-medium leading-tight text-[color:var(--color-paper)] sm:text-lg">
+                    {item.label}
+                  </p>
+                  {item.tag && (
+                    <p className="mt-1 text-[0.625rem] font-medium uppercase tracking-[0.16em] text-[color:var(--color-paper)]/75">
+                      {item.tag}
+                    </p>
+                  )}
+                </div>
+              )}
 
               {item.likeCount != null && (
                 <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">

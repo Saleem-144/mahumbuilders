@@ -26,7 +26,7 @@ export default function ProjectCard({ project, size = "md", variant = "default" 
             <h3 className="font-display text-xl font-medium text-[color:var(--color-ink)] sm:text-2xl">
               {project.title}
             </h3>
-            <p className="mt-1.5 text-sm text-[color:var(--color-mist)]">{project.location}</p>
+            {project.location && <p className="mt-1.5 text-sm text-[color:var(--color-mist)]">{project.location}</p>}
           </div>
           <div className="flex shrink-0 flex-col items-end gap-2 pt-1">
             <span className="text-sm text-[color:var(--color-mist)]">{project.year}</span>
@@ -78,7 +78,7 @@ function EditorialProjectCard({ project }) {
           </h3>
           <span className="shrink-0 text-sm text-[color:var(--color-mist)]">{project.year}</span>
         </div>
-        <p className="mt-1 text-sm text-[color:var(--color-mist)]">{project.location}</p>
+        {project.location && <p className="mt-1 text-sm text-[color:var(--color-mist)]">{project.location}</p>}
       </Link>
     </RevealItem>
   );

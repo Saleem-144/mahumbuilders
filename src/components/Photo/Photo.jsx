@@ -6,14 +6,17 @@ import { cn } from "../../lib/cn";
  * (never a broken-image icon) if the third-party source fails to load —
  * important while the site is running on placeholder photography.
  */
-export default function Photo({ src, alt = "", fallback, className, imgClassName, zoom = true, loading = "lazy", sizes }) {
+export default function Photo({ src, srcSet, alt = "", fallback, className, imgClassName, zoom = true, loading = "lazy", sizes, width, height, style }) {
   const [failed, setFailed] = useState(false);
 
   return (
-    <div className={cn("fig", zoom && "fig-zoom", className)}>
+    <div className={cn("fig", zoom && "fig-zoom", className)} style={style}>
       {!failed ? (
         <img
           src={src}
+          srcSet={srcSet}
+          width={width}
+          height={height}
           alt={alt}
           loading={loading}
           sizes={sizes}

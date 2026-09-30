@@ -36,7 +36,7 @@ export const services = [
     description:
       "From the initial grey phase to the meticulous installation of MEP systems, the company undertakes every aspect of construction with precision. MAHUM's commitment extends to completing the finishing touches until the project is turn-key, leaving only the interior fit-outs, such as furniture and curtains, for the client.",
     icon: "Building2",
-    image: "detailMaterial",
+    image: "constructionFrame",
     tags: ["Grey Structure", "MEP", "Turn-Key"],
   },
   {

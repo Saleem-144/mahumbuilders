@@ -19,7 +19,7 @@ const WAYS = [
     title: "Projects We Conceive & Deliver",
     description:
       "Developments MAHUM initiates, finances and delivers as our own — from land acquisition and design through to a finished, ready-to-open space.",
-    image: images.mountainWide,
+    image: images.ownDevelopmentBahrban,
     ctaLabel: "View Our Projects",
     ctaTo: "/projects",
   },
@@ -29,7 +29,7 @@ const WAYS = [
     title: "Turn-Key Construction For Our Clients",
     description:
       "End-to-end construction delivered on behalf of our clients — a single point of accountability from grey structure through to handover.",
-    image: images.commercialFacade,
+    image: images.clientProjectDusk,
     ctaLabel: "Contact Us",
     ctaTo: "/contact",
   },
@@ -44,6 +44,8 @@ function WayCard({ way }) {
       <div className="relative aspect-[16/9] overflow-hidden lg:aspect-[2.4/1]">
         <Photo
           src={way.image.src}
+          srcSet={way.image.large ? `${way.image.src} 960w, ${way.image.large} 2000w` : undefined}
+          sizes="(min-width: 640px) 50vw, 100vw"
           alt={way.image.alt}
           fallback={way.image.fallback}
           zoom={false}
