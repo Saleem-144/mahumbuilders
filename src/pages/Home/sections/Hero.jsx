@@ -32,7 +32,9 @@ export default function Hero() {
     <section ref={scope} className="relative flex min-h-[100svh] items-end overflow-hidden bg-[color:var(--color-ink)] text-[color:var(--color-paper)]">
       <div className="absolute inset-0">
         <Photo
-          src={images.heroExterior.src}
+          src={images.heroExterior.large}
+          srcSet={`${images.heroExterior.src} 960w, ${images.heroExterior.large} 2000w`}
+          sizes="100vw"
           alt={images.heroExterior.alt}
           fallback={images.heroExterior.fallback}
           zoom={false}

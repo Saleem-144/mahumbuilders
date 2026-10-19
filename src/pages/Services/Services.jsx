@@ -35,7 +35,14 @@ export default function Services() {
       <section className="border-t border-[color:var(--color-line)] py-10 sm:py-14 lg:py-16">
         <div className="container-edit grid grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-20">
           <Reveal className="order-2 aspect-[16/11] overflow-hidden lg:order-1">
-            <Photo src={images.officeInterior.src} alt={images.officeInterior.alt} fallback={images.officeInterior.fallback} className="h-full w-full" />
+            <Photo
+              src={images.interiorRevamp.src}
+              srcSet={`${images.interiorRevamp.src} 960w, ${images.interiorRevamp.large} 2000w`}
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              alt={images.interiorRevamp.alt}
+              fallback={images.interiorRevamp.fallback}
+              className="h-full w-full"
+            />
           </Reveal>
           <div className="order-1 lg:order-2">
             <Reveal>

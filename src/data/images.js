@@ -1,6 +1,7 @@
-// Third-party stock photography (Unsplash) used as placeholder imagery.
-// MAHUM's own project photography will replace these as it becomes available —
-// swap the URLs below and every page picks up the change automatically.
+// Site imagery. Almost everything is MAHUM's own photography (served from
+// public/portfolio-web via portfolioImage). The few Unsplash entries left are
+// placeholders for the Marine Tower Offices, Box Home and MAHUM Residency
+// projects until their real photos arrive.
 //
 // Each entry carries a `fallback` label rendered by <Photo /> if the remote
 // image ever fails to load, so the layout never shows a broken-image icon.
@@ -11,55 +12,10 @@ const u = (id, w = 1600) =>
   `https://images.unsplash.com/${id}?q=80&w=${w}&auto=format&fit=crop`;
 
 export const images = {
-  heroExterior: {
-    src: u("photo-1600566753086-00f18fb6b3ea", 2400),
-    alt: "Contemporary residential facade at dusk with warm interior lighting",
-    fallback: "Architectural Photography",
-  },
   aboutFacade: {
     src: u("photo-1600585154340-be6161a56a0c", 1800),
     alt: "Modern minimalist residence with reflecting pool",
     fallback: "MAHUM Project",
-  },
-  ownDevelopment: {
-    src: u("photo-1469474968028-56623f02e42e", 1800),
-    alt: "Mountain valley landscape in Northern Pakistan",
-    fallback: "MAHUM Development",
-  },
-  clientProject: {
-    src: u("photo-1600607687939-ce8a6c25118c", 1800),
-    alt: "Turn-key residential construction, exterior view",
-    fallback: "Client Project",
-  },
-  servicesFacade: {
-    src: u("photo-1600585152915-d208bec867a1", 1600),
-    alt: "Architectural facade detail with clean geometric lines",
-    fallback: "Construction Detail",
-  },
-  detailStair: {
-    src: u("photo-1618221195710-dd6b41faaea6", 1600),
-    alt: "Interior staircase with architectural lighting",
-    fallback: "Interior Detail",
-  },
-  detailMaterial: {
-    src: u("photo-1600047509782-20d39a953885", 1400),
-    alt: "Close detail of concrete and stone construction materials",
-    fallback: "Material Detail",
-  },
-  interiorLiving: {
-    src: u("photo-1600607687644-aac4c3eac7f4", 1800),
-    alt: "Minimal living room interior with natural light",
-    fallback: "Interior",
-  },
-  interiorKitchen: {
-    src: u("photo-1600489000022-c2086d79f9d4", 1600),
-    alt: "Modern kitchen interior with clean cabinetry",
-    fallback: "Interior",
-  },
-  interiorBath: {
-    src: u("photo-1600566752355-35792bedcfea", 1600),
-    alt: "Marble bathroom interior with natural lighting",
-    fallback: "Interior",
   },
   officeInterior: {
     src: u("photo-1497366216548-37526070297c", 1800),
@@ -76,44 +32,76 @@ export const images = {
     alt: "Glass and steel commercial building facade",
     fallback: "Commercial Development",
   },
-  bedroomMinimal: {
-    src: u("photo-1600210492486-724fe5c67fb0", 1600),
-    alt: "Minimal bedroom interior with natural materials",
-    fallback: "Interior",
-  },
-  mountainWide: {
-    src: u("photo-1506905925346-21bda4d32df4", 2000),
-    alt: "Wide mountain range landscape",
-    fallback: "Mountain Site",
-  },
-  mountainSnow: {
-    src: u("photo-1506905925346-21bda4d32df4", 1600),
-    alt: "Snow-capped mountains under clear sky",
-    fallback: "BAHRBAN — Site",
-  },
-  villaExterior: {
-    src: u("photo-1600566753190-17f0baa2a6c3", 1800),
-    alt: "Contemporary villa exterior in daylight",
-    fallback: "Residential Project",
-  },
   poolTerrace: {
     src: u("photo-1600585154526-990dced4db0d", 1800),
     alt: "Outdoor terrace and living space",
     fallback: "Residential Project",
   },
-  ctaExterior: {
-    src: u("photo-1449844908441-8829872d2607", 2200),
-    alt: "Dramatic mountain landscape at golden hour",
-    fallback: "MAHUM Builders",
-  },
   // Real client photography (portfolio-originals → public/portfolio-web).
-  constructionFrame: {
+  // Service cards (keys referenced from data/services.js).
+  serviceLand: {
     ...portfolioImage(
       "bahrban-hunza",
-      "progress-wip-2",
-      "Steel structural frame rising on concrete piers during construction at Bahrban, Hunza"
+      "progress-dd482b36-75e6-4501-a6e7-6e2fd6609aeb",
+      "Snow-capped Karakoram peaks above the BAHRBAN site in Hunza"
+    ),
+    fallback: "Land Acquisition",
+  },
+  serviceDesign: {
+    ...portfolioImage("casa-solara", "5", "Casa Solara — timber-screened facade and glass balcony"),
+    fallback: "Design and Architecture",
+  },
+  serviceApprovals: {
+    ...portfolioImage("house-87b", "14", "House 87B — completed street elevation in DHA Phase 8"),
+    fallback: "Approvals",
+  },
+  serviceConstruction: {
+    ...portfolioImage(
+      "bahrban-hunza",
+      "progress-wip-7",
+      "BAHRBAN cabin under construction — clad volumes on a stone base, with scaffolding"
     ),
     fallback: "Construction Execution",
+  },
+  serviceManagement: {
+    ...portfolioImage(
+      "bahrban-hunza",
+      "progress-9232ba4d-ffb6-4e58-a4db-15ed92643df0",
+      "BAHRBAN site in progress — steel cabin frames laid out across the valley"
+    ),
+    fallback: "Project Management",
+  },
+  serviceUtilities: {
+    ...portfolioImage("house-82b", "21", "House 82B — finished kitchen with fitted cabinetry and lighting"),
+    fallback: "Utility Connections",
+  },
+  // Services page "Interior Revamp Solutions".
+  interiorRevamp: {
+    ...portfolioImage("vsurfaces", "7", "VSurfaces showroom — finished commercial interior"),
+    fallback: "Interior Revamp",
+  },
+  // Background of the closing call-to-action band on every page.
+  ctaExterior: {
+    ...portfolioImage("bahrban-hunza", "aerial-aerial-view", "Aerial view of the Hunza valley"),
+    fallback: "MAHUM Builders",
+  },
+  // Home page hero (full-bleed, under a dark gradient).
+  heroExterior: {
+    ...portfolioImage(
+      "courtyard-home",
+      "elevation-viii",
+      "Courtyard Home at dusk — lit timber-screened upper floor over glazed living spaces"
+    ),
+    fallback: "MAHUM Project",
+  },
+  // About page "Company Introduction".
+  aboutIntro: {
+    ...portfolioImage(
+      "stone-villa",
+      "1a",
+      "Stone Villa — stone-clad facade and cantilevered roof framed by trees"
+    ),
+    fallback: "MAHUM Project",
   },
   // Home page "Company Introduction".
   homeIntro: {

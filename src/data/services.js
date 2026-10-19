@@ -9,7 +9,7 @@ export const services = [
     description:
       "MAHUM specializes in identifying and acquiring prime locations for each client's project, ensuring that every aspect aligns with the client's vision and objectives.",
     icon: "MapPin",
-    image: "mountainWide",
+    image: "serviceLand",
     tags: ["Site Identification", "Acquisition"],
   },
   {
@@ -18,7 +18,7 @@ export const services = [
     description:
       "The company's panel of approved architects and designers collaborates to create innovative and aesthetically pleasing designs that harmonize with each client's aspirations and the surrounding environment.",
     icon: "PenTool",
-    image: "detailStair",
+    image: "serviceDesign",
     tags: ["Architecture", "Interior Design"],
   },
   {
@@ -27,7 +27,7 @@ export const services = [
     description:
       "Navigating the complexities of regulatory compliance, MAHUM secures approvals from relevant authorities, including DHA, CBC, and others, ensuring a hassle-free and expeditious process.",
     icon: "ShieldCheck",
-    image: "commercialFacade",
+    image: "serviceApprovals",
     tags: ["DHA", "CBC", "Approvals"],
   },
   {
@@ -36,7 +36,7 @@ export const services = [
     description:
       "From the initial grey phase to the meticulous installation of MEP systems, the company undertakes every aspect of construction with precision. MAHUM's commitment extends to completing the finishing touches until the project is turn-key, leaving only the interior fit-outs, such as furniture and curtains, for the client.",
     icon: "Building2",
-    image: "constructionFrame",
+    image: "serviceConstruction",
     tags: ["Grey Structure", "MEP", "Turn-Key"],
   },
   {
@@ -45,7 +45,7 @@ export const services = [
     description:
       "MAHUM's seasoned project management team ensures efficiency by delivering comprehensive project budgets, including cost and time planning, alongside detailed project BOQs, Work Breakdown Structures (WBS), and Gantt charts, providing clear visibility, greater control, and well-defined milestones throughout the construction journey.",
     icon: "ListChecks",
-    image: "officeReception",
+    image: "serviceManagement",
     tags: ["BOQs", "WBS", "Gantt Charts"],
   },
   {
@@ -54,7 +54,7 @@ export const services = [
     description:
       "The company takes care of all utility connections, streamlining the process and saving its clients valuable time and effort.",
     icon: "Zap",
-    image: "interiorKitchen",
+    image: "serviceUtilities",
     tags: ["Utilities", "Handover"],
   },
 ];

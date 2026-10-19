@@ -13,7 +13,15 @@ export default function CTA({
   return (
     <section className="relative overflow-hidden bg-[color:var(--color-ink)] text-[color:var(--color-paper)]">
       <div className="absolute inset-0 opacity-[0.35]">
-        <Photo src={images.ctaExterior.src} alt="" fallback="" zoom={false} className="h-full w-full" />
+        <Photo
+          src={images.ctaExterior.src}
+          srcSet={`${images.ctaExterior.src} 960w, ${images.ctaExterior.large} 2000w`}
+          sizes="100vw"
+          alt=""
+          fallback=""
+          zoom={false}
+          className="h-full w-full"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-[color:var(--color-ink)] via-[color:var(--color-ink)]/70 to-[color:var(--color-ink)]/40" />
       </div>
       <div className="container-edit relative py-16 sm:py-20 text-center">

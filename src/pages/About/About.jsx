@@ -27,7 +27,14 @@ export default function About() {
       <section className="py-10 sm:py-14 lg:py-16">
         <div className="container-edit grid grid-cols-1 items-start gap-14 lg:grid-cols-2 lg:gap-20">
           <Reveal className="aspect-[4/3] overflow-hidden lg:aspect-auto lg:h-[420px]">
-            <Photo src={images.aboutFacade.src} alt={images.aboutFacade.alt} fallback={images.aboutFacade.fallback} className="h-full w-full" />
+            <Photo
+              src={images.aboutIntro.src}
+              srcSet={`${images.aboutIntro.src} 960w, ${images.aboutIntro.large} 2000w`}
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              alt={images.aboutIntro.alt}
+              fallback={images.aboutIntro.fallback}
+              className="h-full w-full"
+            />
           </Reveal>
           <div className="space-y-6 pt-2 text-[1.0625rem] leading-relaxed text-[color:var(--color-mist)] lg:pt-10">
             <Reveal as="p">
