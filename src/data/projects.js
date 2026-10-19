@@ -154,7 +154,7 @@ export const projects = [
     scope: ["Land Utilities Development", "Grey", "Pre-Fab Development", "Finishing", "Hard and Soft Interiors"],
     category: "MAHUM Development",
     featuredNote: "MAHUM's flagship hotel project, redefining regional luxury.",
-    cover: portfolioImage("bahrban-hunza", "aerial-rear-view-attabad", "Aerial view of the Bahrban site towards Attabad, Hunza"),
+    cover: portfolioImage("bahrban-hunza", "progress-wip-22", "BAHRBAN, Hunza — gabled cabin with a full-height glazed end against the mountains"),
     galleryRows: [
       ["aerial-aerial-view"],
       ["aerial-clear-aerial-view-of-land", "aerial-high-altitude-view"],
