@@ -5,7 +5,7 @@
 //   node scripts/build-portfolio.mjs --sheets   # also write contact sheets (for curation)
 //   node scripts/build-portfolio.mjs --only=<slug>
 //
-// The originals in public/PORTFOLIO/ are READ ONLY — never moved, renamed or
+// The originals in portfolio-originals/ are READ ONLY — never moved, renamed or
 // modified. For every image this writes two resized, EXIF-rotated WebP copies
 // to public/portfolio-web/<slug>/, and a per-project manifest to
 // src/data/portfolio/<slug>.json listing every image (with dimensions, so the
@@ -29,12 +29,13 @@ import { spawnSync } from "node:child_process";
 import sharp from "sharp";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
-const SRC_DIR = path.join(ROOT, "public", "PORTFOLIO");
+// Kept outside public/ so Vite never copies the multi-GB masters into dist/.
+const SRC_DIR = path.join(ROOT, "portfolio-originals");
 const OUT_DIR = path.join(ROOT, "public", "portfolio-web");
 const MANIFEST_DIR = path.join(ROOT, "src", "data", "portfolio");
 const SHEETS_DIR = process.env.SHEETS_DIR || path.join(ROOT, ".portfolio-sheets");
 
-// slug (matches data/projects.js) → source folders inside public/PORTFOLIO.
+// slug (matches data/projects.js) → source folders inside portfolio-originals/.
 // `group` labels images from multi-folder projects (Bahrban).
 const PROJECTS = {
   "house-82b": [{ dir: "82B" }],
@@ -54,7 +55,7 @@ const PROJECTS = {
   vsurfaces: [{ dir: "VSurfaces" }],
 };
 
-// Original video (path inside public/PORTFOLIO) → web copy name.
+// Original video (path inside portfolio-originals/) → web copy name.
 // `copy: true` = already small and web-ready (H.264, faststart): copied as-is.
 const VIDEOS = {
   "82B/Mahum Builders Fashion Film FHD 1080p Version.mp4": { name: "house-82b-fashion-film" },
@@ -71,14 +72,9 @@ const VIDEO_EXT = new Set([".mp4", ".mov", ".webm", ".m4v"]);
 const collator = new Intl.Collator("en", { numeric: true, sensitivity: "base" });
 const slugify = (s) =>
   s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || "image";
-// URL for an original file — each path segment encoded so spaces etc. work.
-// "&" is left literal: it's valid in a path, and Vite's static server doesn't
-// decode "%26" (it would fall through to index.html).
-const publicUrl = (...segments) =>
-  "/" +
-  ["PORTFOLIO", ...segments.flatMap((s) => s.split("/"))]
-    .map((s) => encodeURIComponent(s).replace(/%26/g, "&"))
-    .join("/");
+// Repo-relative path of an original file, recorded in the manifest for
+// reference only — originals are never served by the site.
+const originalPath = (rel) => `portfolio-originals/${rel}`;
 
 async function exists(p) {
   try {
@@ -205,7 +201,7 @@ async function buildVideo(slug, rel, srcPath) {
   return {
     src: `/portfolio-web/videos/${slug}/${config.name}.mp4`,
     ...(await videoSize(out)),
-    original: publicUrl(rel),
+    original: originalPath(rel),
   };
 }
 
@@ -307,7 +303,7 @@ async function buildProject(slug, sources) {
       thumb: `${base}-${SIZES.thumb}.webp`,
       w,
       h,
-      original: publicUrl(img.file),
+      original: originalPath(img.file),
     };
   });
 

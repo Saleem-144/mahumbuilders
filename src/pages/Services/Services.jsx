@@ -8,8 +8,11 @@ import CTA from "../../components/CTA/CTA";
 import HowWeDeliver from "../../components/HowWeDeliver/HowWeDeliver";
 import { services, interiorRevamp, turnkeyStages } from "../../data/services";
 import { images } from "../../data/images";
+import { useDocumentTitle } from "../../lib/useDocumentTitle";
 
 export default function Services() {
+  useDocumentTitle("Turn-Key Construction Services");
+
   return (
     <>
       <PageIntro

@@ -10,8 +10,11 @@ import CTA from "../../components/CTA/CTA";
 import { images } from "../../data/images";
 import { stats } from "../../data/stats";
 import { company } from "../../data/nav";
+import { useDocumentTitle } from "../../lib/useDocumentTitle";
 
 export default function About() {
+  useDocumentTitle("About Us");
+
   return (
     <>
       <PageIntro

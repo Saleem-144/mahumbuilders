@@ -1,11 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 
-const base = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0 },
-};
-
 /**
  * Standard section-reveal used throughout the site: opacity 0→1, y 20→0,
  * triggered once as the element enters the viewport. Kept subtle and
@@ -79,5 +74,3 @@ export function RevealItem({ children, className, y = 16 }) {
     </motion.div>
   );
 }
-
-export { base as revealVariants };

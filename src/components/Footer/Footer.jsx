@@ -1,5 +1,5 @@
 import { Link } from "../../router/Router";
-import { navLinks, company } from "../../data/nav";
+import { navLinks, company, telHref } from "../../data/nav";
 
 // lucide-react no longer ships brand/logo icons (Facebook, Instagram, etc.),
 // so these two are small local outline glyphs matching the site's existing
@@ -75,7 +75,7 @@ export default function Footer() {
             <span className="eyebrow text-[color:var(--color-mist-light)]/70">Contact</span>
             <ul className="mt-3 flex flex-col gap-2.5 text-sm">
               <li>
-                <a href={`tel:${company.phones[0].replace(/[^\d+]/g, "")}`} className="link-underline text-[color:var(--color-paper)]">
+                <a href={telHref(company.phones[0])} className="link-underline text-[color:var(--color-paper)]">
                   {company.phones[0]}
                 </a>
               </li>

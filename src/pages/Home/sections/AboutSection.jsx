@@ -8,7 +8,14 @@ export default function AboutSection() {
     <section className="py-10 sm:py-14 lg:py-16">
       <div className="container-edit grid grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-20">
         <Reveal className="order-2 aspect-[4/3] overflow-hidden lg:order-1 lg:aspect-auto lg:h-full lg:max-h-[420px]">
-          <Photo src={images.aboutFacade.src} alt={images.aboutFacade.alt} fallback={images.aboutFacade.fallback} className="h-full w-full" />
+          <Photo
+            src={images.homeIntro.src}
+            srcSet={`${images.homeIntro.src} 960w, ${images.homeIntro.large} 2000w`}
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            alt={images.homeIntro.alt}
+            fallback={images.homeIntro.fallback}
+            className="h-full w-full"
+          />
         </Reveal>
 
         <div className="order-1 lg:order-2">

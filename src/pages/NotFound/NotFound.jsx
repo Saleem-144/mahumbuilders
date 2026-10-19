@@ -1,7 +1,10 @@
 import Reveal from "../../components/Reveal/Reveal";
 import Button from "../../components/Button/Button";
+import { useDocumentTitle } from "../../lib/useDocumentTitle";
 
 export default function NotFound() {
+  useDocumentTitle("Page Not Found");
+
   return (
     <section className="flex min-h-[70svh] items-center justify-center py-32 text-center">
       <Reveal>

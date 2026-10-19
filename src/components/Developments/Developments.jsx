@@ -16,7 +16,7 @@ const WAYS = [
   {
     number: "01",
     eyebrow: "MAHUM Development",
-    title: "Projects We Conceive & Deliver",
+    title: "Projects We Conceive and Deliver",
     description:
       "Developments MAHUM initiates, finances and delivers as our own — from land acquisition and design through to a finished, ready-to-open space.",
     image: images.ownDevelopmentBahrban,
@@ -83,7 +83,7 @@ export default function Developments() {
         <Reveal className="max-w-2xl">
           <span className="eyebrow">Two Ways We Build</span>
           <h2 className="text-balance mt-2 text-[clamp(1.75rem,3vw,2.5rem)] font-medium text-[color:var(--color-ink)]">
-            Our Developments &amp; Client Projects
+            Our Developments and Client Projects
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-[color:var(--color-mist)] sm:text-[0.9375rem]">
             MAHUM operates across two distinct lines of work: developments we conceive and deliver as our

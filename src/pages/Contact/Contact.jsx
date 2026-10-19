@@ -3,7 +3,8 @@ import { MapPin, Phone, Mail, ArrowUpRight, Check } from "lucide-react";
 import PageIntro from "../../components/PageIntro/PageIntro";
 import Reveal from "../../components/Reveal/Reveal";
 import Button from "../../components/Button/Button";
-import { company } from "../../data/nav";
+import { company, telHref } from "../../data/nav";
+import { useDocumentTitle } from "../../lib/useDocumentTitle";
 
 const fieldClasses =
   "w-full border-0 border-b border-[color:var(--color-line)] bg-transparent py-3 text-[1.0625rem] text-[color:var(--color-ink)] placeholder:text-[color:var(--color-mist)] focus:border-[color:var(--color-ink)] focus:outline-none transition-colors";
@@ -11,6 +12,7 @@ const fieldClasses =
 const initialForm = { name: "", email: "", phone: "", subject: "", message: "" };
 
 export default function Contact() {
+  useDocumentTitle("Contact Us");
   const [form, setForm] = useState(initialForm);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
@@ -52,7 +54,7 @@ export default function Contact() {
               <div>
                 <p className="eyebrow mb-1.5">Phone</p>
                 {company.phones.map((p) => (
-                  <a key={p} href={`tel:${p.replace(/[^\d+]/g, "")}`} className="link-underline block text-[color:var(--color-ink)]">
+                  <a key={p} href={telHref(p)} className="link-underline block text-[color:var(--color-ink)]">
                     {p}
                   </a>
                 ))}

@@ -1,11 +1,14 @@
 import PageIntro from "../../components/PageIntro/PageIntro";
 import ProjectGrid from "../../components/ProjectGrid/ProjectGrid";
 import { projects } from "../../data/projects";
+import { useDocumentTitle } from "../../lib/useDocumentTitle";
 
 // Newest first; projects without a confirmed year go last, in data order.
 const sorted = [...projects].sort((a, b) => (Number(b.year) || 0) - (Number(a.year) || 0));
 
 export default function Projects() {
+  useDocumentTitle("Projects");
+
   return (
     <>
       <PageIntro

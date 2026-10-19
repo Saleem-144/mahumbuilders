@@ -2,9 +2,8 @@ import { Link } from "../../router/Router";
 import { ArrowUpRight } from "lucide-react";
 import Photo from "../Photo/Photo";
 import { RevealItem } from "../Reveal/Reveal";
-import { cn } from "../../lib/cn";
 
-export default function ProjectCard({ project, size = "md", variant = "default" }) {
+export default function ProjectCard({ project, variant = "default" }) {
   if (variant === "editorial") {
     return <EditorialProjectCard project={project} />;
   }
@@ -12,12 +11,7 @@ export default function ProjectCard({ project, size = "md", variant = "default" 
   return (
     <RevealItem>
       <Link to={`/projects/${project.slug}`} className="group block">
-        <div
-          className={cn(
-            "overflow-hidden rounded-2xl",
-            size === "lg" ? "aspect-[4/5] sm:aspect-[16/10]" : "aspect-[5/6]"
-          )}
-        >
+        <div className="aspect-[5/6] overflow-hidden rounded-2xl">
           <Photo src={project.cover.src} alt={project.cover.alt} fallback={project.title} className="h-full w-full" />
         </div>
 
@@ -29,7 +23,7 @@ export default function ProjectCard({ project, size = "md", variant = "default" 
             {project.location && <p className="mt-1.5 text-sm text-[color:var(--color-mist)]">{project.location}</p>}
           </div>
           <div className="flex shrink-0 flex-col items-end gap-2 pt-1">
-            <span className="text-sm text-[color:var(--color-mist)]">{project.year}</span>
+            {project.year && <span className="text-sm text-[color:var(--color-mist)]">{project.year}</span>}
             <ArrowUpRight
               size={17}
               strokeWidth={1.5}
@@ -76,7 +70,7 @@ function EditorialProjectCard({ project }) {
           <h3 className="font-display text-lg font-medium text-[color:var(--color-ink)] sm:text-xl">
             {project.title}
           </h3>
-          <span className="shrink-0 text-sm text-[color:var(--color-mist)]">{project.year}</span>
+          {project.year && <span className="shrink-0 text-sm text-[color:var(--color-mist)]">{project.year}</span>}
         </div>
         {project.location && <p className="mt-1 text-sm text-[color:var(--color-mist)]">{project.location}</p>}
       </Link>

@@ -14,7 +14,7 @@ export const services = [
   },
   {
     number: "02",
-    title: "Design & Architecture Service",
+    title: "Design and Architecture Service",
     description:
       "The company's panel of approved architects and designers collaborates to create innovative and aesthetically pleasing designs that harmonize with each client's aspirations and the surrounding environment.",
     icon: "PenTool",
@@ -68,9 +68,9 @@ export const interiorRevamp = {
 // Source: p.05, "Seamlessly Navigating the Construction Landscape"
 export const turnkeyStages = [
   { number: "01", title: "Land Acquisition", description: "Identifying and securing prime locations aligned with the client's vision." },
-  { number: "02", title: "Design & Architecture", description: "Innovative, site-responsive design developed with MAHUM's panel of approved architects." },
+  { number: "02", title: "Design and Architecture", description: "Innovative, site-responsive design developed with MAHUM's panel of approved architects." },
   { number: "03", title: "Authority Approvals", description: "Securing approvals from DHA, CBC, and other relevant authorities." },
-  { number: "04", title: "Grey Construction (Civil & MEP)", description: "Precision execution from structure through mechanical, electrical and plumbing systems." },
+  { number: "04", title: "Grey Construction (Civil and MEP)", description: "Precision execution from structure through mechanical, electrical and plumbing systems." },
   { number: "05", title: "Project Management", description: "Cost and time planning, BOQs, WBS and Gantt charts providing clear milestones throughout." },
-  { number: "06", title: "Finishing & Utility Connections", description: "Finishing works and utility connections carried through to a turn-key handover." },
+  { number: "06", title: "Finishing and Utility Connections", description: "Finishing works and utility connections carried through to a turn-key handover." },
 ];

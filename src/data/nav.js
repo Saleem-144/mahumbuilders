@@ -24,3 +24,12 @@ export const company = {
     url: "https://www.instagram.com/mahumbuilders?igsi=MW9sOGdnMnJnOTJpYg%3D%3D",
   },
 };
+
+// `tel:` href in international format for a Pakistani number as displayed
+// above: "(021) 35833415" → "tel:+922135833415", "0301 8242419" →
+// "tel:+923018242419". Only the leading trunk "0" becomes "+92"; the digits
+// themselves are unchanged.
+export function telHref(phone) {
+  const digits = phone.replace(/\D/g, "");
+  return `tel:${digits.startsWith("0") ? `+92${digits.slice(1)}` : `+${digits}`}`;
+}

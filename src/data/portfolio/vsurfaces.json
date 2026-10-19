@@ -7,7 +7,7 @@
       "thumb": "/portfolio-web/vsurfaces/1-960.webp",
       "w": 1331,
       "h": 2000,
-      "original": "/PORTFOLIO/VSurfaces/1.jpg"
+      "original": "portfolio-originals/VSurfaces/1.jpg"
     },
     {
       "id": "2",
@@ -15,7 +15,7 @@
       "thumb": "/portfolio-web/vsurfaces/2-960.webp",
       "w": 1283,
       "h": 2000,
-      "original": "/PORTFOLIO/VSurfaces/2.jpg"
+      "original": "portfolio-originals/VSurfaces/2.jpg"
     },
     {
       "id": "3",
@@ -23,7 +23,7 @@
       "thumb": "/portfolio-web/vsurfaces/3-960.webp",
       "w": 1333,
       "h": 2000,
-      "original": "/PORTFOLIO/VSurfaces/3.jpg"
+      "original": "portfolio-originals/VSurfaces/3.jpg"
     },
     {
       "id": "4",
@@ -31,7 +31,7 @@
       "thumb": "/portfolio-web/vsurfaces/4-960.webp",
       "w": 1333,
       "h": 2000,
-      "original": "/PORTFOLIO/VSurfaces/4.jpg"
+      "original": "portfolio-originals/VSurfaces/4.jpg"
     },
     {
       "id": "5",
@@ -39,7 +39,7 @@
       "thumb": "/portfolio-web/vsurfaces/5-960.webp",
       "w": 1130,
       "h": 2000,
-      "original": "/PORTFOLIO/VSurfaces/5.jpg"
+      "original": "portfolio-originals/VSurfaces/5.jpg"
     },
     {
       "id": "6",
@@ -47,7 +47,7 @@
       "thumb": "/portfolio-web/vsurfaces/6-960.webp",
       "w": 2000,
       "h": 1333,
-      "original": "/PORTFOLIO/VSurfaces/6.jpg"
+      "original": "portfolio-originals/VSurfaces/6.jpg"
     },
     {
       "id": "7",
@@ -55,7 +55,7 @@
       "thumb": "/portfolio-web/vsurfaces/7-960.webp",
       "w": 2000,
       "h": 1333,
-      "original": "/PORTFOLIO/VSurfaces/7.jpg"
+      "original": "portfolio-originals/VSurfaces/7.jpg"
     },
     {
       "id": "8",
@@ -63,7 +63,7 @@
       "thumb": "/portfolio-web/vsurfaces/8-960.webp",
       "w": 2000,
       "h": 1333,
-      "original": "/PORTFOLIO/VSurfaces/8.jpg"
+      "original": "portfolio-originals/VSurfaces/8.jpg"
     },
     {
       "id": "9",
@@ -71,7 +71,7 @@
       "thumb": "/portfolio-web/vsurfaces/9-960.webp",
       "w": 2000,
       "h": 1333,
-      "original": "/PORTFOLIO/VSurfaces/9.jpg"
+      "original": "portfolio-originals/VSurfaces/9.jpg"
     },
     {
       "id": "10",
@@ -79,7 +79,7 @@
       "thumb": "/portfolio-web/vsurfaces/10-960.webp",
       "w": 1333,
       "h": 2000,
-      "original": "/PORTFOLIO/VSurfaces/10.jpg"
+      "original": "portfolio-originals/VSurfaces/10.jpg"
     },
     {
       "id": "11",
@@ -87,7 +87,7 @@
       "thumb": "/portfolio-web/vsurfaces/11-960.webp",
       "w": 1504,
       "h": 2000,
-      "original": "/PORTFOLIO/VSurfaces/11.jpg"
+      "original": "portfolio-originals/VSurfaces/11.jpg"
     }
   ],
   "videos": [
@@ -95,7 +95,7 @@
       "src": "/portfolio-web/videos/vsurfaces/vsurfaces-project-video.mp4",
       "w": 480,
       "h": 848,
-      "original": "/PORTFOLIO/VSurfaces/WhatsApp%20Video%202024-11-21%20at%205.28.43%20PM.mp4"
+      "original": "portfolio-originals/VSurfaces/WhatsApp Video 2024-11-21 at 5.28.43 PM.mp4"
     }
   ]
 }

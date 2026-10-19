@@ -7,7 +7,7 @@ import { portfolioImage } from "./portfolio";
 // set where the source text explicitly supports it.
 //
 // Photography:
-// - Projects with real client photography (public/PORTFOLIO/) have
+// - Projects with real client photography (portfolio-originals/) have
 //   `galleryRows` — a hand-curated selection, laid out row by row (one id =
 //   full-width frame; two or three ids share a row). Ids are the image ids in
 //   the project's generated manifest (src/data/portfolio/<slug>.json); the
@@ -24,7 +24,7 @@ export const projects = [
     architect: "Rehman & Rahman",
     type: "Turn-Key Luxury Residential Villa",
     area: "10,000+ sq. ft. covered area (666 sq. yd. plot)",
-    scope: ["Grey Construction (Civil & MEP)", "Finishing Works", "Landscape", "Custom Interior Fit-Out"],
+    scope: ["Grey Construction (Civil and MEP)", "Finishing Works", "Landscape", "Custom Interior Fit-Out"],
     category: null,
     cover: portfolioImage("casa-solara", "48", "Casa Solara at dusk — street elevation with timber screens lit from within"),
     galleryRows: [["5"], ["4", "9", "51"], ["34", "56"], ["30", "15"], ["32", "39"]],
@@ -38,7 +38,7 @@ export const projects = [
     architect: "Coalesce",
     type: "Turn-key Residential Build",
     area: "8,000 sq. ft. covered area on a 500 sq. yd. lot",
-    scope: ["Grey Construction (Civil & MEP)", "Finishing Works"],
+    scope: ["Grey Construction (Civil and MEP)", "Finishing Works"],
     category: null,
     cover: portfolioImage("house-87b", "17", "House 87B at dusk — timber-screened terrace above the lit white boundary wall"),
     galleryRows: [["14"], ["5", "15", "6"], ["13", "8"], ["11", "16"], ["12", "2"]],
@@ -52,7 +52,7 @@ export const projects = [
     architect: "TSM Design Studio",
     type: "Turn-key Commercial Build",
     area: "12,500 sq. ft. covered area",
-    scope: ["Grey Construction (Civil & MEP)", "Finishing Works"],
+    scope: ["Grey Construction (Civil and MEP)", "Finishing Works"],
     category: "Client Project",
     cover: portfolioImage("vsurfaces", "6", "VSurfaces facade — travertine cladding and illuminated signage above the showroom glazing"),
     galleryRows: [["8"], ["1", "2", "5"], ["7", "9"], ["10", "11", "4"]],
@@ -66,7 +66,7 @@ export const projects = [
     architect: "Shahzad Brothers",
     type: "Turn-key Residential Build",
     area: "8,300 sq. ft. covered area on a 500 sq. yd. lot",
-    scope: ["Grey Construction (Civil & MEP)", "Finishing Works"],
+    scope: ["Grey Construction (Civil and MEP)", "Finishing Works"],
     category: null,
     cover: portfolioImage("house-82b", "40", "House 82B at dusk — stone-clad upper volume and lit entrance"),
     galleryRows: [["1"], ["2", "31"], ["3"], ["43", "36"], ["44", "21"], ["10", "26"]],
@@ -80,23 +80,10 @@ export const projects = [
     architect: "Rehman & Rahman",
     type: "Turn-key Residential Build",
     area: "5,500 sq. ft. covered area",
-    scope: ["Grey Construction (Civil & MEP)", "Finishing Works"],
+    scope: ["Grey Construction (Civil and MEP)", "Finishing Works"],
     category: null,
     cover: portfolioImage("stone-villa", "1a", "Stone Villa — stone-clad facade and cantilevered roof, corner view"),
     galleryRows: [["2a"], ["5", "7", "10"], ["17", "21"], ["16", "11", "26"]],
-  },
-  {
-    slug: "fbr-ltu-office",
-    title: "FBR LTU Office",
-    location: "PNSC",
-    year: "2021",
-    architect: "NAQSH",
-    type: "Turn-key Interior",
-    area: "2,000 sq. ft. works area",
-    scope: ["Grey Construction (Civil & MEP)", "Finishing Works", "Interior"],
-    category: null,
-    cover: images.officeInterior,
-    gallery: [images.officeInterior, images.officeReception],
   },
   {
     slug: "marine-tower-offices",
@@ -106,7 +93,7 @@ export const projects = [
     architect: "NAQSH",
     type: "Turn-key Interior",
     area: "2,500 sq. ft. project",
-    scope: ["Civil & MEP", "Finishing Works"],
+    scope: ["Civil and MEP", "Finishing Works"],
     category: null,
     cover: images.officeReception,
     gallery: [images.officeReception, images.officeInterior],
@@ -119,7 +106,7 @@ export const projects = [
     architect: "Shahzad Brothers",
     type: "Turn-key Commercial Build",
     area: "5,800 sq. ft.",
-    scope: ["Grey Construction (Civil & MEP)", "Finishing Works"],
+    scope: ["Grey Construction (Civil and MEP)", "Finishing Works"],
     category: null,
     cover: portfolioImage("mahum-offices", "mahum-offices", "MAHUM Offices — slender five-storey commercial building"),
     galleryRows: [
@@ -138,7 +125,7 @@ export const projects = [
     architect: "Shahzad Brothers",
     type: "Turn-key Residential Build",
     area: "7,800 sq. ft. covered area",
-    scope: ["Grey Construction (Civil & MEP)", "Finishing Works"],
+    scope: ["Grey Construction (Civil and MEP)", "Finishing Works"],
     category: "Client Project",
     cover: images.aboutFacade,
     gallery: [images.aboutFacade, images.poolTerrace],
@@ -151,20 +138,20 @@ export const projects = [
     architect: "Shahzad Brothers",
     type: "Turn-key Commercial Build",
     area: "12,500 sq. ft.",
-    scope: ["Grey Construction (Civil & MEP)", "Finishing Works"],
+    scope: ["Grey Construction (Civil and MEP)", "Finishing Works"],
     category: null,
     cover: images.commercialFacade,
     gallery: [images.commercialFacade],
   },
   {
     slug: "bahrban-hunza",
-    title: "Bahrban Hunza",
-    location: "Gilgit Baltistan, Pakistan",
+    title: "BAHRBAN",
+    location: "Hunza, GB, Pakistan",
     year: "2026",
     architect: "Coalesce",
     type: "Turn-key Hotel Development",
     area: "35,000 sq. ft. covered area",
-    scope: ["Land Utilities Development", "Grey Construction (Civil & MEP)", "Pre-Fab Development", "Finishing Works"],
+    scope: ["Land Utilities Development", "Grey Construction (Civil and MEP)", "Pre-Fab Development", "Finishing Works"],
     category: "MAHUM Development",
     featuredNote: "MAHUM's flagship hotel project, redefining regional luxury.",
     cover: portfolioImage("bahrban-hunza", "aerial-rear-view-attabad", "Aerial view of the Bahrban site towards Attabad, Hunza"),
@@ -175,10 +162,10 @@ export const projects = [
       ["progress-264a6ebd-bb0b-47dc-8b69-f99d1e418eab", "progress-wip-1"],
       ["progress-6ac4d910-b5e8-46f7-a575-d5cfb824a8ff", "progress-wip-21"],
     ],
-    film: { labels: ["Location & KKH Accessibility View"], poster: "aerial-clear-aerial-view-of-land" },
+    film: { labels: ["Location and KKH Accessibility View"], poster: "aerial-clear-aerial-view-of-land" },
   },
 
-  // Projects supplied as photography only (public/PORTFOLIO/) — no company-
+  // Projects supplied as photography only (portfolio-originals/) — no company-
   // profile details yet, so only the title is set. Add location, year, etc.
   // here once confirmed; the detail page shows whatever exists.
   {

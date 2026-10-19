@@ -26,7 +26,8 @@ dist-ssr
 # Contact sheets from scripts/build-portfolio.mjs --sheets
 .portfolio-sheets
 
-# Original client portfolio archive (master copies, local only). The site
-# serves the optimized copies in public/portfolio-web/, built from this
-# folder by scripts/build-portfolio.mjs.
-public/PORTFOLIO/
+# Original client portfolio archive (master copies, local only). Kept outside
+# public/ so Vite never copies it into dist/. The site serves the optimized
+# copies in public/portfolio-web/, built from this folder by
+# scripts/build-portfolio.mjs.
+portfolio-originals/

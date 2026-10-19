@@ -11,6 +11,7 @@ import ProjectVideo from "../../components/ProjectVideo/ProjectVideo";
 import CTA from "../../components/CTA/CTA";
 import Button from "../../components/Button/Button";
 import NotFound from "../NotFound/NotFound";
+import { useDocumentTitle } from "../../lib/useDocumentTitle";
 
 function roleDescription(project) {
   if (!project.type && !project.scope && !project.category) return null;
@@ -54,6 +55,11 @@ export default function ProjectDetails() {
   const { slug } = useParams("/projects/:slug");
   const project = getProjectBySlug(slug);
   const portfolio = usePortfolio(slug, Boolean(project?.galleryRows));
+  // Set here (not left to <NotFound />) because a parent's effect runs after
+  // its child's, and would otherwise overwrite the 404 title.
+  useDocumentTitle(
+    !project ? "Page Not Found" : project.location ? `${project.title}, ${project.location}` : project.title
+  );
 
   if (!project) return <NotFound />;
 

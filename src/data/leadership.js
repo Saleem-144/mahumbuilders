@@ -14,7 +14,7 @@ export const leadership = [
         body: "A seasoned professional in Civil Engineering, Hasan Mustafa holds a degree from NED University. With over three decades of experience, his journey in construction and real estate development has been defined by technical excellence, visionary leadership, and consistently outstanding achievements.",
       },
       {
-        heading: "Global Real Estate Presence in Canada & the UAE",
+        heading: "Global Real Estate Presence in Canada and the UAE",
         body: "Expanding beyond the local market, Hasan Mustafa has played a key role in establishing the company's presence in international real estate, with notable investments across Canada and the UAE. This global outlook reflects a commitment to growth, diversification, and new opportunities.",
       },
       {
@@ -36,15 +36,15 @@ export const leadership = [
     photo: umairImg,
     points: [
       {
-        heading: "Business Excellence & Strategic Leadership",
-        body: "Umair Hasan holds a Bachelor of Commerce with a specialization in Business Management, Entrepreneurship & Strategy, complemented by a minor in Economics. His academic foundation supports a strong focus on strategic planning, operational excellence, and business growth.",
+        heading: "Business Excellence and Strategic Leadership",
+        body: "Umair Hasan holds a Bachelor of Commerce with a specialization in Business Management, Entrepreneurship and Strategy, complemented by a minor in Economics. His academic foundation supports a strong focus on strategic planning, operational excellence, and business growth.",
       },
       {
         heading: "Leading MAHUM's Growth Since 2014",
         body: "Since joining MAHUM Builders in 2014, Umair Hasan has played a pivotal role in driving the company's growth. Under his operational leadership, more than 30 residential and commercial developments have been successfully executed, reflecting a commitment to quality and innovation.",
       },
       {
-        heading: "Strategic Diversification & Business Expansion",
+        heading: "Strategic Diversification and Business Expansion",
         body: "Umair Hasan has led the company's expansion beyond conventional real estate development into real estate contracting and diversified business ventures. His strategic approach has strengthened MAHUM's portfolio while attracting high-net-worth individuals and corporate clientele.",
       },
       {

@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState, useCallback } from "react";
-import { Heart } from "lucide-react";
 import Photo from "../Photo/Photo";
 
 // Roughly how long one card's full width takes to drift past and be
@@ -21,10 +20,9 @@ const MS_PER_CARD = 7000;
  * - No prev/next controls, no pagination dots, no edge fade/mask — the row
  *   simply drifts, pausing on hover/touch and resuming from the exact same
  *   position shortly after (never restarts).
- * - Each card carries a static "@mahumbuilders" handle badge (top-left), a
- *   project caption (bottom-left, from `label` / `tag`) and,
- *   when the item has a `likeCount`, a like-count overlay that fades in on
- *   hover — both purely presentational, no Instagram integration.
+ * - Each card carries a static "@mahumbuilders" handle badge (top-left) and a
+ *   project caption (bottom-left, from `label` / `tag`) — purely
+ *   presentational, no Instagram integration.
  * - Respects prefers-reduced-motion (autoplay disabled; row stays swipeable).
  */
 export default function MediaCarousel({ items }) {
@@ -156,15 +154,6 @@ export default function MediaCarousel({ items }) {
                       {item.tag}
                     </p>
                   )}
-                </div>
-              )}
-
-              {item.likeCount != null && (
-                <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  <div className="flex scale-95 items-center gap-1.5 rounded-full bg-[color:var(--color-ink)]/55 px-4 py-2 backdrop-blur-sm transition-transform duration-300 group-hover:scale-100">
-                    <Heart size={15} strokeWidth={1.75} className="fill-[color:var(--color-paper)] text-[color:var(--color-paper)]" />
-                    <span className="text-sm font-medium text-[color:var(--color-paper)]">{item.likeCount}</span>
-                  </div>
                 </div>
               )}
             </div>

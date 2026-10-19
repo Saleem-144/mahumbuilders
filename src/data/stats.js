@@ -6,9 +6,3 @@ export const stats = [
   { value: "25", label: "Allied Industries" },
   { prefix: "PKR", value: "5Bn+", label: "Aggregate Construction Value", note: "(approx., 2014–2024)" },
 ];
-
-export const statsCompact = [
-  { value: "1989", label: "Est." },
-  { value: "300+", label: "Projects" },
-  { value: "350", label: "Labor Force" },
-];

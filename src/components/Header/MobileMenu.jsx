@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "motion/react";
 import { X } from "lucide-react";
 import { Link } from "../../router/Router";
-import { navLinks, company } from "../../data/nav";
+import { navLinks, company, telHref } from "../../data/nav";
 import { cn } from "../../lib/cn";
 
 export default function MobileMenu({ open, onClose, location }) {
@@ -55,7 +55,7 @@ export default function MobileMenu({ open, onClose, location }) {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="container-edit absolute bottom-10 left-0 right-0 flex flex-col gap-2 text-sm text-[color:var(--color-mist-light)]"
           >
-            <a href={`tel:${company.phones[0].replace(/[^\d+]/g, "")}`}>{company.phones[0]}</a>
+            <a href={telHref(company.phones[0])}>{company.phones[0]}</a>
             <a href={`mailto:${company.email}`}>{company.email}</a>
           </motion.div>
         </motion.div>
