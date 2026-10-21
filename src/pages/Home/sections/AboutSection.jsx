@@ -22,12 +22,12 @@ export default function AboutSection() {
           <Reveal>
             <span className="eyebrow">Company Introduction</span>
             <h2 className="text-balance mt-5 text-[clamp(2rem,4vw,3.25rem)] font-medium text-[color:var(--color-ink)]">
-              An esteemed firm shaping Pakistan's real estate landscape since 1989
+              An esteemed firm shaping Pakistan's real estate landscape since 1988
             </h2>
           </Reveal>
           <Reveal delay={0.08} className="mt-7 space-y-5 text-[1.0625rem] leading-relaxed text-[color:var(--color-mist)]">
             <p>
-              MAHUM is a real estate development and construction firm established in 1989 by Mr. Hasan
+              MAHUM is a real estate development and construction firm established in 1988 by Mr. Hasan
               Mustafa. Over three decades, the company has carved an illustrious path — delivering
               unparalleled quality across construction, real estate development, project management and
               turn-key solutions.

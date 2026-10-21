@@ -1,6 +1,6 @@
 # MAHUM Builders — Website
 
-Corporate website for **MAHUM Builders**, a Karachi-based real estate development and construction firm (est. 1989). It presents the company, its turn-key services, its portfolio of client projects and own developments, and contact details.
+Corporate website for **MAHUM Builders**, a Karachi-based real estate development and construction firm (est. 1988). It presents the company, its turn-key services, its portfolio of client projects and own developments, and contact details.
 
 Production URL (configured in `index.html`): `https://www.mahumbuilders.com/`
 
@@ -35,8 +35,9 @@ Routes are declared in `src/App.jsx`. Each page sets its own browser title with 
 ```
 index.html                 HTML shell, SEO + Open Graph meta tags
 vercel.json                SPA fallback so deep links (e.g. /projects/casa-solara) resolve
+brand/                     Client logo guideline PDF + logo/icon SVGs extracted from it
 public/
-  favicon.svg
+  favicon.svg, favicon.ico, apple-touch-icon.png   Brand icon (from the guideline)
   og-cover.jpg             Social-share image (1200×630, from the Casa Solara cover photo)
   portfolio-web/           Optimized WebP photos + web videos (generated, committed)
 portfolio-originals/       Client's full-size master photos/videos (local only, git-ignored)

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-// Splits "PKR 5Bn+" / "300+" / "1989" into a leading label, the numeric run
+// Splits "PKR 5Bn+" / "300+" / "1988" into a leading label, the numeric run
 // to animate, and a trailing label — so "Bn+" / "+" stay put while only the
 // digits count up.
 function parseValue(raw) {

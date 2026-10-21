@@ -4,6 +4,7 @@ import { Link, useLocation } from "../../router/Router";
 import { navLinks, company } from "../../data/nav";
 import Button from "../Button/Button";
 import MobileMenu from "./MobileMenu";
+import Logo from "../Logo/Logo";
 import { cn } from "../../lib/cn";
 
 // Routes whose hero sits full-bleed and dark directly under the header —
@@ -55,27 +56,16 @@ export default function Header() {
           <Link
             to="/"
             onClick={() => setMenuOpen(false)}
-            className="flex items-baseline gap-1.5 shrink-0 sm:gap-2"
+            aria-label="MAHUM Builders — Home"
+            className={cn(
+              "shrink-0 transition-colors duration-300",
+              light ? "text-[color:var(--color-paper)]" : "text-[color:var(--color-ink)]"
+            )}
           >
-            <span
-              className={cn(
-                "font-display text-lg font-medium tracking-tight sm:text-xl lg:text-[1.375rem] transition-colors duration-300",
-                light ? "text-[color:var(--color-paper)]" : "text-[color:var(--color-ink)]"
-              )}
-            >
-              MAHUM
-            </span>
-            <span
-              className={cn(
-                "text-[0.5625rem] uppercase tracking-[0.16em] sm:text-[0.6875rem] sm:tracking-[0.2em] transition-colors duration-300",
-                light ? "text-[color:var(--color-mist-light)]" : "text-[color:var(--color-mist)]"
-              )}
-            >
-              Builders
-            </span>
+            <Logo />
           </Link>
 
-          <nav className="hidden items-center gap-9 lg:flex">
+          <nav className="hidden items-center gap-7 lg:flex xl:gap-9">
             {navLinks.map((link) => {
               const active = location === link.path;
               return (

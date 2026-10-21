@@ -1,5 +1,6 @@
 import { Link } from "../../router/Router";
 import { navLinks, company, telHref } from "../../data/nav";
+import Logo from "../Logo/Logo";
 
 // lucide-react no longer ships brand/logo icons (Facebook, Instagram, etc.),
 // so these two are small local outline glyphs matching the site's existing
@@ -51,8 +52,8 @@ export default function Footer() {
       <div className="container-edit pt-12 pb-6 sm:pt-16">
         <div className="grid grid-cols-1 gap-10 border-b border-[color:var(--color-line-dark)] pb-10 sm:grid-cols-3">
           <div>
-            <span className="font-display block text-2xl font-medium text-[color:var(--color-paper)]">MAHUM</span>
-            <p className="mt-3 max-w-xs text-sm leading-relaxed">
+            <Logo variant="stacked" className="text-[color:var(--color-paper)]" />
+            <p className="mt-6 max-w-xs text-sm leading-relaxed">
               {company.tagline}. Est. {company.foundedYear} — a Karachi-based real estate development and
               construction firm.
             </p>

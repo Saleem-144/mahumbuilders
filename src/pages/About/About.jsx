@@ -39,7 +39,7 @@ export default function About() {
           <div className="space-y-6 pt-2 text-[1.0625rem] leading-relaxed text-[color:var(--color-mist)] lg:pt-10">
             <Reveal as="p">
               Welcome to MAHUM, an esteemed real estate development and construction firm that stands as a
-              beacon of excellence in the industry. Established in 1989 by the visionary Mr. Hasan Mustafa,
+              beacon of excellence in the industry. Established in 1988 by the visionary Mr. Hasan Mustafa,
               MAHUM has boasted over three decades of unwavering commitment to delivering unparalleled
               quality and sophistication in every project undertaken.
             </Reveal>
@@ -67,7 +67,7 @@ export default function About() {
             <Reveal as="div">
               <h3 className="font-display text-xl font-medium text-[color:var(--color-ink)]">Born from Vision</h3>
               <p className="mt-4 text-[0.9375rem] leading-relaxed text-[color:var(--color-mist)]">
-                Founded in 1989 by Mr. Hasan Mustafa, MAHUM has risen from a singular residential project to
+                Founded in 1988 by Mr. Hasan Mustafa, MAHUM has risen from a singular residential project to
                 a prominent force in Pakistan's real estate landscape. Driven by a steadfast commitment to
                 quality and innovation, we have continuously expanded our portfolio, venturing beyond
                 residential developments and into commercial construction, interior design, and the

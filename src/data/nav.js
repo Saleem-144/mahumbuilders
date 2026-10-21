@@ -11,7 +11,7 @@ export const company = {
   legalName: "MAHUM",
   tagline: "Where Innovation Meets Legacy",
   founded: "Mr. Hasan Mustafa",
-  foundedYear: "1989",
+  foundedYear: "1988",
   address: "#401, 59D, Murtaza Lane – 1, Phase 8, DHA",
   phones: ["(021) 35833415", "0301 8242419"],
   email: "mahum3791@gmail.com",
