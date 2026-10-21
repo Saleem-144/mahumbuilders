@@ -26,7 +26,7 @@ function roleDescription(project) {
   return `MAHUM delivered ${project.title}${as}, covering ${scopeText} from inception to handover.`;
 }
 
-const META_FIELDS = ["location", "year", "type", "architect", "client", "area", "scope", "category"];
+const META_FIELDS = ["location", "year", "type", "architect", "client", "area", "plot", "scope", "category"];
 
 // Loads only this project's image/video manifest (its own small chunk).
 function usePortfolio(slug, enabled) {

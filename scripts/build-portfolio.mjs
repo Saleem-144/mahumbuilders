@@ -63,6 +63,13 @@ const VIDEOS = {
   "CASA SOLARA/CASA SOLARA VIDEO.mp4": { name: "casa-solara-project-film" },
   "VSurfaces/WhatsApp Video 2024-11-21 at 5.28.43 PM.mp4": { name: "vsurfaces-project-video", copy: true },
 };
+// Original images (path inside portfolio-originals/) left off the site at the
+// client's request. They stay in the archive but get no web copy and no
+// manifest entry.
+const EXCLUDE = new Set([
+  "CASA SOLARA/11.jpg",
+]);
+
 const FFMPEG = process.env.FFMPEG_PATH || "ffmpeg";
 
 const SIZES = { large: 2000, thumb: 960 };
@@ -280,6 +287,7 @@ async function buildProject(slug, sources) {
         continue;
       }
       if (!IMAGE_EXT.has(ext)) continue; // PDFs, etc.
+      if (EXCLUDE.has(`${dir}/${file}`)) continue;
 
       let id = slugify((group ? `${group}-` : "") + path.parse(file).name);
       for (let n = 2; usedIds.has(id); n++) id = `${slugify(path.parse(file).name)}-${n}`;

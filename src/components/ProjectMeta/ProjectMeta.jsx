@@ -19,6 +19,7 @@ export default function ProjectMeta({ project }) {
       <Row label="Architect" value={project.architect} />
       <Row label="Client" value={project.client} />
       <Row label="Area" value={project.area} />
+      <Row label="Plot Size" value={project.plot} />
       <Row label="Scope" value={project.scope?.join(" · ")} />
       <Row label="Category" value={project.category} />
     </Reveal>
