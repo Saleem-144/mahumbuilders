@@ -4,5 +4,4 @@ export const stats = [
   { value: "300+", label: "Projects Completed", note: "Residential 250+ · Commercial 50+" },
   { value: "350", label: "Labor Force", note: "(approx.)" },
   { value: "25", label: "Allied Industries" },
-  { prefix: "PKR", value: "5Bn+", label: "Aggregate Construction Value", note: "(approx., 2014–2024)" },
 ];

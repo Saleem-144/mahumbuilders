@@ -5,9 +5,10 @@ import Reveal from "../../components/Reveal/Reveal";
 import Button from "../../components/Button/Button";
 import { company, telHref } from "../../data/nav";
 import { useDocumentTitle } from "../../lib/useDocumentTitle";
+import { FacebookIcon, InstagramIcon } from "../../components/SocialIcons/SocialIcons";
 
 const fieldClasses =
-  "w-full border-0 border-b border-[color:var(--color-line)] bg-transparent py-3 text-[1.0625rem] text-[color:var(--color-ink)] placeholder:text-[color:var(--color-mist)] focus:border-[color:var(--color-ink)] focus:outline-none transition-colors";
+  "w-full border-0 border-b border-[color:var(--color-line)] bg-transparent py-3 text-[1.0625rem] text-[color:var(--color-ink)] focus:border-[color:var(--color-ink)] focus:outline-none transition-colors";
 
 const initialForm = { name: "", email: "", phone: "", subject: "", message: "" };
 
@@ -73,8 +74,25 @@ export default function Contact() {
               <ArrowUpRight size={20} strokeWidth={1.4} className="mt-0.5 shrink-0 text-[color:var(--color-brass)]" />
               <div>
                 <p className="eyebrow mb-1.5">Social</p>
-                <a href={company.social.url} target="_blank" rel="noreferrer" className="link-underline text-[color:var(--color-ink)]">
-                  {company.social.label}
+                <a
+                  href={company.social.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Facebook ${company.social.label} (opens in a new tab)`}
+                  className="flex items-center gap-2 text-[color:var(--color-ink)]"
+                >
+                  <FacebookIcon size={17} />
+                  <span className="link-underline">{company.social.label}</span>
+                </a>
+                <a
+                  href={company.instagram.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Instagram ${company.instagram.label} (opens in a new tab)`}
+                  className="mt-1.5 flex items-center gap-2 text-[color:var(--color-ink)]"
+                >
+                  <InstagramIcon size={17} />
+                  <span className="link-underline">{company.instagram.label}</span>
                 </a>
               </div>
             </div>
@@ -100,25 +118,25 @@ export default function Contact() {
                     <label htmlFor="name" className="eyebrow mb-2 block">
                       Name
                     </label>
-                    <input id="name" type="text" required value={form.name} onChange={update("name")} className={fieldClasses} placeholder="Your name" />
+                    <input id="name" type="text" required value={form.name} onChange={update("name")} className={fieldClasses} />
                   </div>
                   <div>
                     <label htmlFor="email" className="eyebrow mb-2 block">
                       Email
                     </label>
-                    <input id="email" type="email" required value={form.email} onChange={update("email")} className={fieldClasses} placeholder="you@email.com" />
+                    <input id="email" type="email" required value={form.email} onChange={update("email")} className={fieldClasses} />
                   </div>
                   <div>
                     <label htmlFor="phone" className="eyebrow mb-2 block">
                       Phone
                     </label>
-                    <input id="phone" type="tel" value={form.phone} onChange={update("phone")} className={fieldClasses} placeholder="+92 300 0000000" />
+                    <input id="phone" type="tel" value={form.phone} onChange={update("phone")} className={fieldClasses} />
                   </div>
                   <div>
                     <label htmlFor="subject" className="eyebrow mb-2 block">
                       Project Type
                     </label>
-                    <input id="subject" type="text" value={form.subject} onChange={update("subject")} className={fieldClasses} placeholder="Residential, commercial..." />
+                    <input id="subject" type="text" value={form.subject} onChange={update("subject")} className={fieldClasses} />
                   </div>
                 </div>
                 <div>
@@ -132,7 +150,6 @@ export default function Contact() {
                     value={form.message}
                     onChange={update("message")}
                     className={fieldClasses}
-                    placeholder="Tell us about your project"
                   />
                 </div>
 

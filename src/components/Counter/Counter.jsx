@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 
-// Splits "PKR 5Bn+" / "300+" / "1988" into a leading label, the numeric run
-// to animate, and a trailing label — so "Bn+" / "+" stay put while only the
-// digits count up.
+// Splits "300+" / "1988" into a leading label, the numeric run to animate,
+// and a trailing label — so a suffix like "+" stays put while only the digits
+// count up.
 function parseValue(raw) {
   const match = String(raw).match(/^(\D*)([\d,]+)(\D*)$/);
   if (!match) return { prefix: "", number: null, suffix: raw, digits: "" };

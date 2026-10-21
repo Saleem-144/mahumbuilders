@@ -1,7 +1,7 @@
 // Site imagery. Almost everything is MAHUM's own photography (served from
 // public/portfolio-web via portfolioImage). The few Unsplash entries left are
-// placeholders for the Marine Tower Offices and Box Home projects until
-// their real photos arrive.
+// placeholders for the Marine Tower Offices project until its real photos
+// arrive.
 //
 // Each entry carries a `fallback` label rendered by <Photo /> if the remote
 // image ever fails to load, so the layout never shows a broken-image icon.
@@ -12,11 +12,6 @@ const u = (id, w = 1600) =>
   `https://images.unsplash.com/${id}?q=80&w=${w}&auto=format&fit=crop`;
 
 export const images = {
-  aboutFacade: {
-    src: u("photo-1600585154340-be6161a56a0c", 1800),
-    alt: "Modern minimalist residence with reflecting pool",
-    fallback: "MAHUM Project",
-  },
   officeInterior: {
     src: u("photo-1497366216548-37526070297c", 1800),
     alt: "Contemporary commercial office interior",
@@ -26,11 +21,6 @@ export const images = {
     src: u("photo-1497366811353-6870744d04b2", 1600),
     alt: "Office reception area with warm timber finishes",
     fallback: "Commercial Interior",
-  },
-  poolTerrace: {
-    src: u("photo-1600585154526-990dced4db0d", 1800),
-    alt: "Outdoor terrace and living space",
-    fallback: "Residential Project",
   },
   // Real client photography (portfolio-originals → public/portfolio-web).
   // Service cards (keys referenced from data/services.js).

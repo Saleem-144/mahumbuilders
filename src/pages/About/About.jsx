@@ -99,7 +99,7 @@ export default function About() {
       <section className="border-t border-[color:var(--color-line)] py-10 sm:py-14 lg:py-16">
         <div className="container-edit">
           <p className="eyebrow mb-10">By the Numbers</p>
-          <RevealGroup className="grid grid-cols-2 gap-y-10 sm:grid-cols-5">
+          <RevealGroup className="grid grid-cols-2 gap-y-10 sm:grid-cols-4">
             {stats.map((s) => (
               <StatBlock key={s.label} {...s} />
             ))}

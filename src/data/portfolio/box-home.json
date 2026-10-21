@@ -1,0 +1,294 @@
+{
+  "slug": "box-home",
+  "images": [
+    {
+      "id": "30p2r5cq",
+      "src": "/portfolio-web/box-home/30p2r5cq-2000.webp",
+      "thumb": "/portfolio-web/box-home/30p2r5cq-960.webp",
+      "w": 854,
+      "h": 1280,
+      "original": "portfolio-originals/Box home/30P2R5CQ.jpeg"
+    },
+    {
+      "id": "40607174-2376215442396422-3778596920033804288-n",
+      "src": "/portfolio-web/box-home/40607174-2376215442396422-3778596920033804288-n-2000.webp",
+      "thumb": "/portfolio-web/box-home/40607174-2376215442396422-3778596920033804288-n-960.webp",
+      "w": 640,
+      "h": 960,
+      "original": "portfolio-originals/Box home/40607174_2376215442396422_3778596920033804288_n.jpg"
+    },
+    {
+      "id": "40615066-2376215502396416-5972119147113349120-n",
+      "src": "/portfolio-web/box-home/40615066-2376215502396416-5972119147113349120-n-2000.webp",
+      "thumb": "/portfolio-web/box-home/40615066-2376215502396416-5972119147113349120-n-960.webp",
+      "w": 960,
+      "h": 640,
+      "original": "portfolio-originals/Box home/40615066_2376215502396416_5972119147113349120_n.jpg"
+    },
+    {
+      "id": "41079360-2379979335353366-1184218510386003968-n",
+      "src": "/portfolio-web/box-home/41079360-2379979335353366-1184218510386003968-n-2000.webp",
+      "thumb": "/portfolio-web/box-home/41079360-2379979335353366-1184218510386003968-n-960.webp",
+      "w": 960,
+      "h": 640,
+      "original": "portfolio-originals/Box home/41079360_2379979335353366_1184218510386003968_n.jpg"
+    },
+    {
+      "id": "41158175-2379979385353361-4915519040102858752-n",
+      "src": "/portfolio-web/box-home/41158175-2379979385353361-4915519040102858752-n-2000.webp",
+      "thumb": "/portfolio-web/box-home/41158175-2379979385353361-4915519040102858752-n-960.webp",
+      "w": 960,
+      "h": 640,
+      "original": "portfolio-originals/Box home/41158175_2379979385353361_4915519040102858752_n.jpg"
+    },
+    {
+      "id": "41395101-2387915067893126-820867270736609280-n",
+      "src": "/portfolio-web/box-home/41395101-2387915067893126-820867270736609280-n-2000.webp",
+      "thumb": "/portfolio-web/box-home/41395101-2387915067893126-820867270736609280-n-960.webp",
+      "w": 534,
+      "h": 800,
+      "original": "portfolio-originals/Box home/41395101_2387915067893126_820867270736609280_n.jpg"
+    },
+    {
+      "id": "41474466-2387914957893137-4378689471458050048-n",
+      "src": "/portfolio-web/box-home/41474466-2387914957893137-4378689471458050048-n-2000.webp",
+      "thumb": "/portfolio-web/box-home/41474466-2387914957893137-4378689471458050048-n-960.webp",
+      "w": 800,
+      "h": 534,
+      "original": "portfolio-originals/Box home/41474466_2387914957893137_4378689471458050048_n.jpg"
+    },
+    {
+      "id": "41478625-2387915081226458-2767536166579208192-n",
+      "src": "/portfolio-web/box-home/41478625-2387915081226458-2767536166579208192-n-2000.webp",
+      "thumb": "/portfolio-web/box-home/41478625-2387915081226458-2767536166579208192-n-960.webp",
+      "w": 800,
+      "h": 534,
+      "original": "portfolio-originals/Box home/41478625_2387915081226458_2767536166579208192_n.jpg"
+    },
+    {
+      "id": "75402096-3422214087796547-1354073351567441920-n",
+      "src": "/portfolio-web/box-home/75402096-3422214087796547-1354073351567441920-n-2000.webp",
+      "thumb": "/portfolio-web/box-home/75402096-3422214087796547-1354073351567441920-n-960.webp",
+      "w": 637,
+      "h": 637,
+      "original": "portfolio-originals/Box home/75402096_3422214087796547_1354073351567441920_n.jpg"
+    },
+    {
+      "id": "basement-hall",
+      "src": "/portfolio-web/box-home/basement-hall-2000.webp",
+      "thumb": "/portfolio-web/box-home/basement-hall-960.webp",
+      "w": 1280,
+      "h": 854,
+      "original": "portfolio-originals/Box home/BASEMENT HALL.jpeg"
+    },
+    {
+      "id": "basement",
+      "src": "/portfolio-web/box-home/basement-2000.webp",
+      "thumb": "/portfolio-web/box-home/basement-960.webp",
+      "w": 960,
+      "h": 640,
+      "original": "portfolio-originals/Box home/basement.jpg"
+    },
+    {
+      "id": "bath-1",
+      "src": "/portfolio-web/box-home/bath-1-2000.webp",
+      "thumb": "/portfolio-web/box-home/bath-1-960.webp",
+      "w": 534,
+      "h": 800,
+      "original": "portfolio-originals/Box home/bath 1.jpg"
+    },
+    {
+      "id": "bath",
+      "src": "/portfolio-web/box-home/bath-2000.webp",
+      "thumb": "/portfolio-web/box-home/bath-960.webp",
+      "w": 534,
+      "h": 800,
+      "original": "portfolio-originals/Box home/bath.jpg"
+    },
+    {
+      "id": "court",
+      "src": "/portfolio-web/box-home/court-2000.webp",
+      "thumb": "/portfolio-web/box-home/court-960.webp",
+      "w": 640,
+      "h": 960,
+      "original": "portfolio-originals/Box home/court.jpg"
+    },
+    {
+      "id": "entrace-foyer",
+      "src": "/portfolio-web/box-home/entrace-foyer-2000.webp",
+      "thumb": "/portfolio-web/box-home/entrace-foyer-960.webp",
+      "w": 1280,
+      "h": 854,
+      "original": "portfolio-originals/Box home/ENTRACE FOYER.jpeg"
+    },
+    {
+      "id": "entrance-lobby",
+      "src": "/portfolio-web/box-home/entrance-lobby-2000.webp",
+      "thumb": "/portfolio-web/box-home/entrance-lobby-960.webp",
+      "w": 1280,
+      "h": 854,
+      "original": "portfolio-originals/Box home/ENTRANCE LOBBY.jpeg"
+    },
+    {
+      "id": "iq0fkhtg",
+      "src": "/portfolio-web/box-home/iq0fkhtg-2000.webp",
+      "thumb": "/portfolio-web/box-home/iq0fkhtg-960.webp",
+      "w": 1280,
+      "h": 854,
+      "original": "portfolio-originals/Box home/iQ0FkhTg.jpeg"
+    },
+    {
+      "id": "jjriesjc",
+      "src": "/portfolio-web/box-home/jjriesjc-2000.webp",
+      "thumb": "/portfolio-web/box-home/jjriesjc-960.webp",
+      "w": 1280,
+      "h": 854,
+      "original": "portfolio-originals/Box home/JJRieSJc.jpeg"
+    },
+    {
+      "id": "lobby-space",
+      "src": "/portfolio-web/box-home/lobby-space-2000.webp",
+      "thumb": "/portfolio-web/box-home/lobby-space-960.webp",
+      "w": 960,
+      "h": 640,
+      "original": "portfolio-originals/Box home/lobby space.jpg"
+    },
+    {
+      "id": "lobby",
+      "src": "/portfolio-web/box-home/lobby-2000.webp",
+      "thumb": "/portfolio-web/box-home/lobby-960.webp",
+      "w": 1280,
+      "h": 854,
+      "original": "portfolio-originals/Box home/LOBBY.jpeg"
+    },
+    {
+      "id": "lounge-kitch",
+      "src": "/portfolio-web/box-home/lounge-kitch-2000.webp",
+      "thumb": "/portfolio-web/box-home/lounge-kitch-960.webp",
+      "w": 1280,
+      "h": 854,
+      "original": "portfolio-originals/Box home/LOUNGE + KITCH.jpeg"
+    },
+    {
+      "id": "lounge-kitchen",
+      "src": "/portfolio-web/box-home/lounge-kitchen-2000.webp",
+      "thumb": "/portfolio-web/box-home/lounge-kitchen-960.webp",
+      "w": 1280,
+      "h": 854,
+      "original": "portfolio-originals/Box home/LOUNGE + KITCHEN.jpeg"
+    },
+    {
+      "id": "lounge",
+      "src": "/portfolio-web/box-home/lounge-2000.webp",
+      "thumb": "/portfolio-web/box-home/lounge-960.webp",
+      "w": 1280,
+      "h": 854,
+      "original": "portfolio-originals/Box home/LOUNGE.jpeg"
+    },
+    {
+      "id": "master",
+      "src": "/portfolio-web/box-home/master-2000.webp",
+      "thumb": "/portfolio-web/box-home/master-960.webp",
+      "w": 800,
+      "h": 534,
+      "original": "portfolio-originals/Box home/master.jpg"
+    },
+    {
+      "id": "masterbath",
+      "src": "/portfolio-web/box-home/masterbath-2000.webp",
+      "thumb": "/portfolio-web/box-home/masterbath-960.webp",
+      "w": 960,
+      "h": 640,
+      "original": "portfolio-originals/Box home/masterbath.jpg"
+    },
+    {
+      "id": "mq6nmbxa",
+      "src": "/portfolio-web/box-home/mq6nmbxa-2000.webp",
+      "thumb": "/portfolio-web/box-home/mq6nmbxa-960.webp",
+      "w": 854,
+      "h": 1280,
+      "original": "portfolio-originals/Box home/mq6NmBxA.jpeg"
+    },
+    {
+      "id": "ndbf3n8q",
+      "src": "/portfolio-web/box-home/ndbf3n8q-2000.webp",
+      "thumb": "/portfolio-web/box-home/ndbf3n8q-960.webp",
+      "w": 1280,
+      "h": 854,
+      "original": "portfolio-originals/Box home/ndBf3N8Q.jpeg"
+    },
+    {
+      "id": "q557zzlq",
+      "src": "/portfolio-web/box-home/q557zzlq-2000.webp",
+      "thumb": "/portfolio-web/box-home/q557zzlq-960.webp",
+      "w": 1280,
+      "h": 854,
+      "original": "portfolio-originals/Box home/Q557zZlQ.jpeg"
+    },
+    {
+      "id": "tmr5nfui",
+      "src": "/portfolio-web/box-home/tmr5nfui-2000.webp",
+      "thumb": "/portfolio-web/box-home/tmr5nfui-960.webp",
+      "w": 1280,
+      "h": 854,
+      "original": "portfolio-originals/Box home/tMr5NFUI.jpeg"
+    },
+    {
+      "id": "tvelt-ag",
+      "src": "/portfolio-web/box-home/tvelt-ag-2000.webp",
+      "thumb": "/portfolio-web/box-home/tvelt-ag-960.webp",
+      "w": 854,
+      "h": 1280,
+      "original": "portfolio-originals/Box home/TvElT_Ag.jpeg"
+    },
+    {
+      "id": "ul-bathroom-1",
+      "src": "/portfolio-web/box-home/ul-bathroom-1-2000.webp",
+      "thumb": "/portfolio-web/box-home/ul-bathroom-1-960.webp",
+      "w": 1280,
+      "h": 854,
+      "original": "portfolio-originals/Box home/UL BATHROOM 1.jpeg"
+    },
+    {
+      "id": "ul-lounge",
+      "src": "/portfolio-web/box-home/ul-lounge-2000.webp",
+      "thumb": "/portfolio-web/box-home/ul-lounge-960.webp",
+      "w": 1280,
+      "h": 854,
+      "original": "portfolio-originals/Box home/UL LOUNGE.jpeg"
+    },
+    {
+      "id": "ulbedroom",
+      "src": "/portfolio-web/box-home/ulbedroom-2000.webp",
+      "thumb": "/portfolio-web/box-home/ulbedroom-960.webp",
+      "w": 1280,
+      "h": 854,
+      "original": "portfolio-originals/Box home/ULBEDROOM.jpeg"
+    },
+    {
+      "id": "walkin-c",
+      "src": "/portfolio-web/box-home/walkin-c-2000.webp",
+      "thumb": "/portfolio-web/box-home/walkin-c-960.webp",
+      "w": 640,
+      "h": 960,
+      "original": "portfolio-originals/Box home/walkin c.jpg"
+    },
+    {
+      "id": "walkin",
+      "src": "/portfolio-web/box-home/walkin-2000.webp",
+      "thumb": "/portfolio-web/box-home/walkin-960.webp",
+      "w": 640,
+      "h": 960,
+      "original": "portfolio-originals/Box home/walkin.jpg"
+    },
+    {
+      "id": "zmario",
+      "src": "/portfolio-web/box-home/zmario-2000.webp",
+      "thumb": "/portfolio-web/box-home/zmario-960.webp",
+      "w": 534,
+      "h": 800,
+      "original": "portfolio-originals/Box home/zmario.jpg"
+    }
+  ],
+  "videos": []
+}

@@ -47,6 +47,7 @@ const PROJECTS = {
     // BAHRBAN/ECATALOG (PDFs, logo) is intentionally excluded.
   ],
   "stone-villa": [{ dir: "BTK - STONE HOUSE" }],
+  "box-home": [{ dir: "Box home" }],
   "casa-solara": [{ dir: "CASA SOLARA" }],
   "courtyard-home": [{ dir: "COURTYARD HOME" }],
   "mahum-offices": [{ dir: "MAHUM OFFICES I" }],

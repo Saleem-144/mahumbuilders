@@ -135,8 +135,23 @@ export const projects = [
     area: "7,800 sq. ft.",
     scope: SCOPE,
     category: "Client Project",
-    cover: images.aboutFacade,
-    gallery: [images.aboutFacade, images.poolTerrace],
+    cover: portfolioImage(
+      "box-home",
+      "41158175-2379979385353361-4915519040102858752-n",
+      "Box Home at dusk — lit two-storey facade with timber screens and boundary wall"
+    ),
+    // Walk-through order: arrival, entrance, lobby, living, kitchen, bedrooms,
+    // bathrooms, basement.
+    galleryRows: [
+      ["40615066-2376215502396416-5972119147113349120-n", "41079360-2379979335353366-1184218510386003968-n", "tmr5nfui"],
+      ["court", "entrace-foyer", "entrance-lobby"],
+      ["lobby"],
+      ["lounge-kitchen", "lounge"],
+      ["q557zzlq", "jjriesjc"],
+      ["master", "tvelt-ag", "ulbedroom"],
+      ["masterbath", "ndbf3n8q", "bath-1"],
+      ["basement-hall", "ul-lounge"],
+    ],
   },
   {
     slug: "bahrban-hunza",
