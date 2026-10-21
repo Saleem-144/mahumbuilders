@@ -22,7 +22,8 @@ function roleDescription(project) {
   if (project.category === "Client Project") {
     return `Delivered as a turn-key project for ${project.client}, MAHUM's scope covered ${scopeText}, taking the project from grey structure through to a finished, handover-ready space.`;
   }
-  return `MAHUM delivered ${project.title} as a ${project.type?.toLowerCase()}, covering ${scopeText} from inception to handover.`;
+  const as = project.type ? ` as a ${project.type.toLowerCase()}` : "";
+  return `MAHUM delivered ${project.title}${as}, covering ${scopeText} from inception to handover.`;
 }
 
 const META_FIELDS = ["location", "year", "type", "architect", "client", "area", "scope", "category"];
