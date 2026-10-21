@@ -22,10 +22,10 @@ export const projects = [
   {
     slug: "casa-solara",
     title: "Casa Solara",
-    location: "DHA Phase 8, Karachi",
+    location: "Phase 8, DHA, Karachi",
     year: "2025",
     architect: "Rehman & Rahman",
-    type: "Turn-Key Luxury Residential Villa",
+    type: "Real Estate Development Project",
     area: "10,000+ sq. ft.",
     plot: "666 sq. yd.",
     scope: SCOPE,
@@ -139,19 +139,6 @@ export const projects = [
     gallery: [images.aboutFacade, images.poolTerrace],
   },
   {
-    slug: "mahum-residency",
-    title: "MAHUM Residency",
-    location: "Nishat Commercial",
-    year: "2016",
-    architect: "Shahzad Brothers",
-    type: "Turn-key Commercial Build",
-    area: "12,500 sq. ft.",
-    scope: SCOPE,
-    category: null,
-    cover: images.commercialFacade,
-    gallery: [images.commercialFacade],
-  },
-  {
     slug: "bahrban-hunza",
     title: "BAHRBAN",
     location: "Hunza, GB, Pakistan",
@@ -173,12 +160,14 @@ export const projects = [
     film: { labels: ["Location and KKH Accessibility View"], poster: "aerial-clear-aerial-view-of-land" },
   },
 
-  // Projects supplied as photography only (portfolio-originals/) — no company-
-  // profile details yet, so only the title is set. Add location, year, etc.
-  // here once confirmed; the detail page shows whatever exists.
+  // Projects supplied as photography first; details as confirmed by the
+  // client. Add year, architect, area, etc. here once known — the detail
+  // page shows only the fields that exist.
   {
     slug: "house-84c",
     title: "House 84C",
+    location: "Phase 6, DHA, Karachi",
+    type: "Real Estate Development Project",
     scope: SCOPE,
     cover: portfolioImage("house-84c", "kpot8qva", "House 84C at dusk — lit double-height facade and boundary wall"),
     galleryRows: [["4uewwe6a"], ["yy7qfy8q", "8diyp01a", "wknpa57w"], ["rtasrskq", "rzs0dhpq"], ["iysw6zhw", "imispwmq"]],
@@ -186,6 +175,8 @@ export const projects = [
   {
     slug: "courtyard-home",
     title: "Courtyard Home",
+    location: "Phase 6, DHA, Karachi",
+    type: "Real Estate Development Project",
     scope: SCOPE,
     cover: portfolioImage("courtyard-home", "elevation-viii", "Courtyard Home at dusk — timber-screened upper floor over glazed living spaces"),
     galleryRows: [
@@ -199,6 +190,8 @@ export const projects = [
   {
     slug: "pool-house",
     title: "Pool House",
+    location: "Phase 6, DHA, Karachi",
+    type: "Real Estate Development Project",
     scope: SCOPE,
     cover: portfolioImage("pool-house", "asa-8999", "Pool House at dusk — courtyard pool framed by timber screens"),
     galleryRows: [["asa-7308"], ["asa-8943", "asa-8887"], ["asa-8901", "asa-8987"], ["asa-7379", "asa-7416", "asa-9133"], ["asa-7403", "asa-7359"]],
@@ -206,6 +199,8 @@ export const projects = [
   {
     slug: "tabbani-house",
     title: "Tabbani House",
+    location: "Phase 6, DHA, Karachi",
+    type: "Turn-key Residential Build",
     scope: SCOPE,
     cover: portfolioImage("tabbani-house", "9", "Tabbani House — white two-storey facade with dark-clad entrance portal"),
     galleryRows: [["3"], ["1", "7", "12"], ["14", "8"], ["17", "15", "20"]],

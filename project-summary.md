@@ -97,6 +97,6 @@ npm run portfolio  # regenerate optimized portfolio images + manifests
 ## Known gaps (need client input)
 
 - **Contact form is not connected.** `Contact.jsx` validates the form and shows a thank-you message, but nothing is sent yet. It needs an email/form endpoint.
-- **Placeholder photography.** The home hero, About images, CTA backgrounds, service cards, and the Marine Tower Offices, Box Home and MAHUM Residency projects still use Unsplash stock images.
+- **Placeholder photography.** The home hero, About images, CTA backgrounds, service cards, and the Marine Tower Offices and Box Home projects still use Unsplash stock images.
 - **Project details pending.** House 84C, Courtyard Home, Pool House and Tabbani House have photos but no confirmed location, year, architect or scope.
 - **Map embed** points to "Phase 8 DHA Karachi" generally, not the exact office address.
