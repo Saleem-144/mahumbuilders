@@ -14,7 +14,7 @@ export default function FeaturedProjectsSection() {
             description="A cross-section of MAHUM's portfolio — residential villas, commercial developments and our flagship hospitality project."
           />
           <Button to="/projects" variant="ghost" className="shrink-0">
-            All Projects
+            Recent Projects
           </Button>
         </div>
 
