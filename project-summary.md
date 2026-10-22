@@ -2,7 +2,7 @@
 
 Corporate website for **MAHUM Builders**, a Karachi-based real estate development and construction firm (est. 1988). It presents the company, its turn-key services, its portfolio of client projects and own developments, and contact details.
 
-Production URL (configured in `index.html`): `https://www.mahumbuilders.com/`
+Production URL: `https://www.mbd-pk.com/` (Vercel; `mbd-pk.com` redirects to `www`). Domain registered at GoDaddy; its DNS points to Vercel.
 
 ## Tech stack
 
@@ -94,9 +94,14 @@ npm run portfolio  # regenerate optimized portfolio images + manifests
 - `vercel.json` rewrites unknown paths to `index.html` so the client-side routes work on direct visits and refreshes. If the site is hosted somewhere other than Vercel, replace it with that host's SPA fallback setting.
 - Keep the originals out of `public/`: everything in `public/` is copied into `dist/` as-is.
 
+## Contact form and email
+
+- Enquiries from the Contact page are sent through **Web3Forms** to **info@mbd-pk.com** (GoDaddy Professional Email, webmail powered by Titan). The access key lives in `Contact.jsx`; it is public by design and can only deliver to that inbox. Manage the form at web3forms.com while logged in as info@mbd-pk.com.
+- A hidden honeypot field filters basic spam bots. Replying to an enquiry email replies to the visitor.
+- The email shown across the site comes from `company.email` in `src/data/nav.js`.
+
 ## Known gaps (need client input)
 
-- **Contact form is not connected.** `Contact.jsx` validates the form and shows a thank-you message, but nothing is sent yet. It needs an email/form endpoint.
-- **Placeholder photography.** The home hero, About images, CTA backgrounds, service cards, and the Marine Tower Offices project still use Unsplash stock images.
-- **Project details pending.** House 84C, Courtyard Home, Pool House and Tabbani House have photos but no confirmed location, year, architect or scope.
+- **Placeholder photography.** The Marine Tower Offices project still uses Unsplash stock images.
+- **Project details pending.** House 84C, Courtyard Home, Pool House and Tabbani House have no confirmed year, architect or area yet.
 - **Map embed** points to "Phase 8 DHA Karachi" generally, not the exact office address.

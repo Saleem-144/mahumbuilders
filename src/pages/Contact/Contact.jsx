@@ -12,24 +12,68 @@ const fieldClasses =
 
 const initialForm = { name: "", email: "", phone: "", subject: "", message: "" };
 
+// Enquiries are delivered by Web3Forms to the inbox this key was created for
+// (info@mbd-pk.com). The key is public by design — it can only send to that
+// inbox — so it is safe to ship in the site's code.
+const WEB3FORMS_KEY = "aa32f1c9-40f1-4d02-9c20-218e9187418c";
+
+const isEmail = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+
 export default function Contact() {
   useDocumentTitle("Contact Us");
   const [form, setForm] = useState(initialForm);
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
   const [error, setError] = useState("");
+  // Honeypot: hidden from people, but spam bots fill it in. Web3Forms drops
+  // any submission where it is set.
+  const [botcheck, setBotcheck] = useState(false);
 
   const update = (key) => (e) => setForm((f) => ({ ...f, [key]: e.target.value }));
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!form.name || !form.email || !form.message) {
+    if (sending) return;
+    const name = form.name.trim();
+    const email = form.email.trim();
+    const message = form.message.trim();
+    if (!name || !email || !message) {
       setError("Please fill in your name, email and message.");
       return;
     }
+    if (!isEmail(email)) {
+      setError("Please enter a valid email address.");
+      return;
+    }
     setError("");
-    // No backend is wired up yet — this structures and validates the
-    // enquiry client-side, ready to connect to an email/CRM endpoint.
-    setSubmitted(true);
+    setSending(true);
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          subject: `New website enquiry from ${name}`,
+          from_name: "MAHUM Builders Website",
+          name,
+          email, // Web3Forms sets this as the reply-to address
+          phone: form.phone.trim() || "Not provided",
+          project_type: form.subject.trim() || "Not provided",
+          message,
+          botcheck,
+        }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data.success) throw new Error(data.message || `HTTP ${res.status}`);
+      setSubmitted(true);
+      setForm(initialForm);
+    } catch {
+      setError(
+        `Sorry, your enquiry couldn't be sent. Please try again, or email us at ${company.email} or call ${company.phones[0]}.`
+      );
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -113,6 +157,16 @@ export default function Contact() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} noValidate className="space-y-8">
+                <input
+                  type="checkbox"
+                  name="botcheck"
+                  checked={botcheck}
+                  onChange={(e) => setBotcheck(e.target.checked)}
+                  className="hidden"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                />
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
                   <div>
                     <label htmlFor="name" className="eyebrow mb-2 block">
@@ -153,10 +207,14 @@ export default function Contact() {
                   />
                 </div>
 
-                {error && <p className="text-sm text-red-700">{error}</p>}
+                {error && (
+                  <p role="alert" className="text-sm text-red-700">
+                    {error}
+                  </p>
+                )}
 
-                <Button type="submit" variant="primary">
-                  Send Enquiry
+                <Button type="submit" variant="primary" disabled={sending} aria-busy={sending} className={sending ? "opacity-60" : undefined}>
+                  {sending ? "Sending…" : "Send Enquiry"}
                 </Button>
               </form>
             )}

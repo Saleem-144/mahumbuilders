@@ -19,7 +19,7 @@ export const company = {
   // office exactly and shows the company name.
   mapQuery: "MAHUM Builders, Al-Murtaza Commercial, DHA Phase 8, Karachi",
   phones: ["(021) 35833415", "0301 8242419"],
-  email: "mahum3791@gmail.com",
+  email: "info@mbd-pk.com",
   social: {
     label: "/mahumbuilders",
     url: "https://facebook.com/mahumbuilders",
