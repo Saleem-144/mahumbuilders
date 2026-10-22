@@ -168,7 +168,7 @@ export default function Contact() {
         <div className="aspect-[21/9] w-full bg-[color:var(--color-stone)]">
           <iframe
             title="MAHUM Builders location"
-            src="https://www.google.com/maps?q=Phase+8+DHA+Karachi&output=embed"
+            src={`https://www.google.com/maps?q=${encodeURIComponent(company.mapQuery)}&output=embed`}
             className="h-full w-full grayscale"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

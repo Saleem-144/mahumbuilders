@@ -13,6 +13,11 @@ export const company = {
   founded: "Mr. Hasan Mustafa",
   foundedYear: "1988",
   address: "#401, 59D, Murtaza Lane – 1, Phase 8, DHA",
+  // What the Contact page map searches for. Google doesn't recognise the
+  // street address on its own, so this targets MAHUM's Google Maps business
+  // listing (Bldg C59D, Al-Murtaza Commercial, DHA Phase 8), which pins the
+  // office exactly and shows the company name.
+  mapQuery: "MAHUM Builders, Al-Murtaza Commercial, DHA Phase 8, Karachi",
   phones: ["(021) 35833415", "0301 8242419"],
   email: "mahum3791@gmail.com",
   social: {
