@@ -11,7 +11,7 @@ export default function FeaturedProjectsSection() {
           <SectionHeading
             eyebrow="Selected Work"
             title="Featured Projects"
-            description="A cross-section of MAHUM's portfolio — residential villas, commercial developments and our flagship hospitality project."
+            description="A selection of our recent homes, commercial buildings and our hotel project in Hunza."
           />
           <Button to="/projects" variant="ghost" className="shrink-0">
             Recent Projects

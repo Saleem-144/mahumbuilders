@@ -1,4 +1,3 @@
-import { images } from "./images";
 import { portfolioImage } from "./portfolio";
 
 // Source: MAHUM Builders Company Profile, "Portfolio" (p.07–11).
@@ -30,9 +29,9 @@ export const projects = [
     plot: "666 sq. yd.",
     scope: SCOPE,
     category: null,
-    cover: portfolioImage("casa-solara", "48", "Casa Solara at dusk — street elevation with timber screens lit from within"),
+    cover: portfolioImage("casa-solara", "48", "Casa Solara at dusk, street elevation with timber screens lit from within"),
     galleryRows: [["5"], ["4", "9", "51"], ["34", "56"], ["30", "15"], ["32", "39"]],
-    film: { labels: ["Casa Solara — Project Film"], poster: "48" },
+    film: { labels: ["Casa Solara Project Film"], poster: "48" },
   },
   {
     slug: "house-87b",
@@ -45,7 +44,7 @@ export const projects = [
     plot: "500 sq. yd.",
     scope: SCOPE,
     category: null,
-    cover: portfolioImage("house-87b", "17", "House 87B at dusk — timber-screened terrace above the lit white boundary wall"),
+    cover: portfolioImage("house-87b", "17", "House 87B at dusk, timber-screened terrace above the lit white boundary wall"),
     galleryRows: [["14"], ["5", "15", "6"], ["13", "8"], ["11", "16"], ["12", "2"]],
   },
   {
@@ -60,9 +59,9 @@ export const projects = [
     plot: "200 sq. yd.",
     scope: SCOPE,
     category: "Client Project",
-    cover: portfolioImage("vsurfaces", "6", "VSurfaces facade — travertine cladding and illuminated signage above the showroom glazing"),
+    cover: portfolioImage("vsurfaces", "6", "VSurfaces facade, travertine cladding and illuminated signage above the showroom glazing"),
     galleryRows: [["8"], ["1", "2", "5"], ["7", "9"], ["10", "11", "4"]],
-    film: { labels: ["VSurfaces — Project Video"], poster: "2" },
+    film: { labels: ["VSurfaces Project Video"], poster: "2" },
   },
   {
     slug: "house-82b",
@@ -75,9 +74,9 @@ export const projects = [
     plot: "500 sq. yd.",
     scope: SCOPE,
     category: null,
-    cover: portfolioImage("house-82b", "40", "House 82B at dusk — stone-clad upper volume and lit entrance"),
+    cover: portfolioImage("house-82b", "40", "House 82B at dusk, stone-clad upper volume and lit entrance"),
     galleryRows: [["1"], ["2", "31"], ["3"], ["43", "36"], ["44", "21"], ["10", "26"]],
-    film: { labels: ["MAHUM Builders — Fashion Film"], poster: "39" },
+    film: { labels: ["MAHUM Builders Fashion Film"], poster: "39" },
   },
   {
     slug: "stone-villa",
@@ -90,7 +89,7 @@ export const projects = [
     plot: "500 sq. yd.",
     scope: SCOPE,
     category: null,
-    cover: portfolioImage("stone-villa", "1a", "Stone Villa — stone-clad facade and cantilevered roof, corner view"),
+    cover: portfolioImage("stone-villa", "1a", "Stone Villa, stone-clad facade and cantilevered roof, corner view"),
     galleryRows: [["2a"], ["5", "7", "10"], ["17", "21"], ["16", "11", "26"]],
   },
   {
@@ -103,8 +102,17 @@ export const projects = [
     area: "2,500 sq. ft.",
     scope: SCOPE,
     category: null,
-    cover: images.officeReception,
-    gallery: [images.officeReception, images.officeInterior],
+    cover: portfolioImage("marine-tower-offices", "8", "Marine Tower Offices: executive office with timber joinery and full-height city-view windows"),
+    // Walk-through order: building and reception, meeting room, open-plan
+    // workspace, offices, finishing details, floor plan.
+    galleryRows: [
+      ["9b", "3"],
+      ["4"],
+      ["5", "6"],
+      ["7"],
+      ["8", "1"],
+      ["2", "marine-tower"],
+    ],
   },
   {
     slug: "mahum-offices",
@@ -116,7 +124,7 @@ export const projects = [
     area: "5,800 sq. ft.",
     scope: SCOPE,
     category: null,
-    cover: portfolioImage("mahum-offices", "mahum-offices", "MAHUM Offices — slender five-storey commercial building"),
+    cover: portfolioImage("mahum-offices", "mahum-offices", "MAHUM Offices, slender five-storey commercial building"),
     galleryRows: [
       ["21462488-1860174444000527-1207944980551245250-n", "22045900-1860174627333842-4392918316279884858-n", "22195791-1860174474000524-5278552101757792849-n"],
       ["22045606-1860174610667177-7833348877152228331-n", "22046908-1860174544000517-2789455463052330859-n"],
@@ -138,7 +146,7 @@ export const projects = [
     cover: portfolioImage(
       "box-home",
       "41158175-2379979385353361-4915519040102858752-n",
-      "Box Home at dusk — lit two-storey facade with timber screens and boundary wall"
+      "Box Home at dusk, lit two-storey facade with timber screens and boundary wall"
     ),
     // Walk-through order: arrival, entrance, lobby, living, kitchen, bedrooms,
     // bathrooms, basement.
@@ -163,8 +171,8 @@ export const projects = [
     area: "35,000 sq. ft.",
     scope: SCOPE,
     category: "MAHUM Development",
-    featuredNote: "MAHUM's flagship hotel project, redefining regional luxury.",
-    cover: portfolioImage("bahrban-hunza", "progress-wip-22", "BAHRBAN, Hunza — gabled cabin with a full-height glazed end against the mountains"),
+    featuredNote: "MAHUM's first hotel project, in the Hunza valley.",
+    cover: portfolioImage("bahrban-hunza", "progress-wip-22", "BAHRBAN, Hunza, gabled cabin with a full-height glazed end against the mountains"),
     galleryRows: [
       ["aerial-aerial-view"],
       ["aerial-clear-aerial-view-of-land", "aerial-high-altitude-view"],
@@ -184,7 +192,7 @@ export const projects = [
     location: "Phase 6, DHA, Karachi",
     type: "Real Estate Development Project",
     scope: SCOPE,
-    cover: portfolioImage("house-84c", "kpot8qva", "House 84C at dusk — lit double-height facade and boundary wall"),
+    cover: portfolioImage("house-84c", "kpot8qva", "House 84C at dusk, lit double-height facade and boundary wall"),
     galleryRows: [["4uewwe6a"], ["yy7qfy8q", "8diyp01a", "wknpa57w"], ["rtasrskq", "rzs0dhpq"], ["iysw6zhw", "imispwmq"]],
   },
   {
@@ -193,7 +201,7 @@ export const projects = [
     location: "Phase 6, DHA, Karachi",
     type: "Real Estate Development Project",
     scope: SCOPE,
-    cover: portfolioImage("courtyard-home", "elevation-viii", "Courtyard Home at dusk — timber-screened upper floor over glazed living spaces"),
+    cover: portfolioImage("courtyard-home", "elevation-viii", "Courtyard Home at dusk, timber-screened upper floor over glazed living spaces"),
     galleryRows: [
       ["courtyard-iv"],
       ["elevation-vii", "courtyard-iii", "elevation-iii"],
@@ -208,7 +216,7 @@ export const projects = [
     location: "Phase 6, DHA, Karachi",
     type: "Real Estate Development Project",
     scope: SCOPE,
-    cover: portfolioImage("pool-house", "asa-8999", "Pool House at dusk — courtyard pool framed by timber screens"),
+    cover: portfolioImage("pool-house", "asa-8999", "Pool House at dusk, courtyard pool framed by timber screens"),
     galleryRows: [["asa-7308"], ["asa-8943", "asa-8887"], ["asa-8901", "asa-8987"], ["asa-7379", "asa-7416", "asa-9133"], ["asa-7403", "asa-7359"]],
   },
   {
@@ -217,7 +225,7 @@ export const projects = [
     location: "Phase 6, DHA, Karachi",
     type: "Turn-key Residential Build",
     scope: SCOPE,
-    cover: portfolioImage("tabbani-house", "9", "Tabbani House — white two-storey facade with dark-clad entrance portal"),
+    cover: portfolioImage("tabbani-house", "9", "Tabbani House, white two-storey facade with dark-clad entrance portal"),
     galleryRows: [["3"], ["1", "7", "12"], ["14", "8"], ["17", "15", "20"]],
   },
 ];

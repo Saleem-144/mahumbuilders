@@ -37,7 +37,7 @@ export default function ProjectVideo({ videos, poster, title }) {
                     preload="metadata"
                     poster={poster}
                     className={cn("h-full w-full", video.w && video.h ? "object-cover" : "object-contain")}
-                    aria-label={`${title} — ${video.label}`}
+                    aria-label={`${title}: ${video.label}`}
                   >
                     <source src={video.src} type="video/mp4" />
                   </video>

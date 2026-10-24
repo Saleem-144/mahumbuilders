@@ -14,7 +14,7 @@ export default function Projects() {
       <PageIntro
         eyebrow="Portfolio"
         title="Projects"
-        description="Turn-key developments across residential, commercial and hospitality — from concept to handover."
+        description="Homes, commercial buildings, office interiors and hospitality projects by MAHUM Builders."
       />
 
       <section className="py-10 sm:py-14 lg:py-16">

@@ -17,8 +17,8 @@ export default function Services() {
     <>
       <PageIntro
         eyebrow="What We Do"
-        title="Turn-Key Construction Solutions"
-        description="MAHUM understands the complexities inherent in any construction project — offering a comprehensive suite of turn-key solutions designed to take the stress out of each client's journey, from land acquisition to final handover."
+        title="Our Services"
+        description="We take care of every stage of a construction project, from buying the land to handing over the finished building."
       />
 
       <section className="py-10 sm:py-14 lg:py-16">
@@ -80,12 +80,7 @@ export default function Services() {
 
       <HowWeDeliver />
 
-      <CTA
-        eyebrow="Ready When You Are"
-        title="Let's Discuss Your Project."
-        description="From land acquisition to final handover — tell us what you're building."
-        ctaLabel="Start a Conversation"
-      />
+      <CTA />
     </>
   );
 }

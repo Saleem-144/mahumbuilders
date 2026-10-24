@@ -16,9 +16,9 @@ const WAYS = [
   {
     number: "01",
     eyebrow: "MAHUM Development",
-    title: "Projects We Conceive and Deliver",
+    title: "Our Own Developments",
     description:
-      "Developments MAHUM initiates, finances and delivers as our own — from land acquisition and design through to a finished, ready-to-open space.",
+      "Projects MAHUM starts, finances and builds itself, from buying the land to a finished building ready for use.",
     image: images.ownDevelopmentBahrban,
     ctaLabel: "View Our Projects",
     ctaTo: "/projects",
@@ -26,9 +26,9 @@ const WAYS = [
   {
     number: "02",
     eyebrow: "Client Projects",
-    title: "Turn-Key Construction For Our Clients",
+    title: "Turn-Key Construction for Clients",
     description:
-      "End-to-end construction delivered on behalf of our clients — a single point of accountability from grey structure through to handover.",
+      "We build on the client's behalf and stay responsible for the job from grey structure to handover.",
     image: images.clientProjectDusk,
     ctaLabel: "Contact Us",
     ctaTo: "/contact",
@@ -86,9 +86,8 @@ export default function Developments() {
             Our Developments and Client Projects
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-[color:var(--color-mist)] sm:text-[0.9375rem]">
-            MAHUM operates across two distinct lines of work: developments we conceive and deliver as our
-            own, and turn-key construction executed on behalf of our clients — from land acquisition
-            through to handover.
+            We work in two ways: we develop our own projects, and we build turn-key projects for
+            clients.
           </p>
         </Reveal>
 

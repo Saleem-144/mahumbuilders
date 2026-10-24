@@ -121,7 +121,7 @@ export default function GalleryOverlay({ open, images, title, startIndex = null,
         <motion.div
           role="dialog"
           aria-modal="true"
-          aria-label={`${title} — image gallery`}
+          aria-label={`${title}: image gallery`}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -208,7 +208,7 @@ export default function GalleryOverlay({ open, images, title, startIndex = null,
                 <motion.img
                   key={current.id}
                   src={current.src}
-                  alt={`${title} — image ${view.index + 1} of ${total}`}
+                  alt={`${title}: image ${view.index + 1} of ${total}`}
                   width={current.w}
                   height={current.h}
                   initial={{ opacity: 0 }}

@@ -10,7 +10,7 @@ export default function ApproachSection() {
           light
           eyebrow="Our Approach"
           title="The Turn-Key Approach"
-          description="A single point of accountability from the first site visit to the final handover."
+          description="One team responsible for the project, from the first site visit to handover."
         />
 
         <RevealGroup className="mt-10 divide-y divide-[color:var(--color-line-dark)] border-t border-[color:var(--color-line-dark)]">

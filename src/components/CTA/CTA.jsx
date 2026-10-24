@@ -5,9 +5,9 @@ import { images } from "../../data/images";
 
 export default function CTA({
   eyebrow = "Let's Build Together",
-  title = "Let's Build Something Lasting.",
-  description = "New developments, construction projects, and turn-key solutions — start the conversation with MAHUM's team.",
-  ctaLabel = "Start a Conversation",
+  title = "Planning a project?",
+  description = "Tell us what you want to build and our team will get back to you.",
+  ctaLabel = "Get in Touch",
   ctaTo = "/contact",
 }) {
   return (

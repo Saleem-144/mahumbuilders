@@ -13,8 +13,8 @@ export default function Footer() {
           <div>
             <Logo variant="stacked" className="text-[color:var(--color-paper)]" />
             <p className="mt-6 max-w-xs text-sm leading-relaxed">
-              {company.tagline}. Est. {company.foundedYear} — a Karachi-based real estate development and
-              construction firm.
+              {company.tagline}. Real estate development and construction in Karachi since{" "}
+              {company.foundedYear}.
             </p>
           </div>
 

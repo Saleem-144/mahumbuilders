@@ -9,7 +9,7 @@ export default function MediaSection() {
         <SectionHeading
           eyebrow="From Site to Structure"
           title="Life at MAHUM"
-          description="A closer look at materials, interiors and completed spaces from across the portfolio."
+          description="Photos from our sites and finished projects."
         />
       </div>
 

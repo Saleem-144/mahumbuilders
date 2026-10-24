@@ -64,8 +64,8 @@ export default function Hero() {
 
         <div className="hero-fade mt-10 flex flex-col items-start justify-between gap-8 border-t border-[color:var(--color-line-dark)] pt-8 sm:flex-row sm:items-end">
           <p className="max-w-md text-[1.0625rem] leading-relaxed text-[color:var(--color-mist-light)]">
-            A real estate development and construction firm delivering turn-key residential, commercial
-            and hospitality projects across Pakistan for over three decades.
+            Real estate development and construction in Karachi since 1988. We build homes, offices and
+            hotels, and hand them over ready to use.
           </p>
           <div className="flex shrink-0 items-center gap-4">
             <Button to="/projects" variant="inverse">

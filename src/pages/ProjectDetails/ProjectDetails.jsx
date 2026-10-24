@@ -15,15 +15,14 @@ import { useDocumentTitle } from "../../lib/useDocumentTitle";
 
 function roleDescription(project) {
   if (!project.type && !project.scope && !project.category) return null;
-  const scopeText = project.scope?.join(", ").toLowerCase() ?? "turn-key construction";
   if (project.category === "MAHUM Development") {
-    return `${project.title} is one of MAHUM's own developments — conceived, financed and delivered in-house, covering ${scopeText}.`;
+    return `${project.title} is a MAHUM development, planned, financed and built by our own team.`;
   }
-  if (project.category === "Client Project") {
-    return `Delivered as a turn-key project for ${project.client}, MAHUM's scope covered ${scopeText}, taking the project from grey structure through to a finished, handover-ready space.`;
+  if (project.category === "Client Project" && project.client) {
+    return `MAHUM built ${project.title} for ${project.client} as a turn-key project, from grey structure to handover.`;
   }
   const as = project.type ? ` as a ${project.type.toLowerCase()}` : "";
-  return `MAHUM delivered ${project.title}${as}, covering ${scopeText} from inception to handover.`;
+  return `MAHUM delivered ${project.title}${as}, from grey structure to handover.`;
 }
 
 const META_FIELDS = ["location", "year", "type", "architect", "client", "area", "plot", "scope", "category"];

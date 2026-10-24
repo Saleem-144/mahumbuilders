@@ -27,7 +27,7 @@ export const leadership = [
       },
     ],
     vision:
-      "With a continued focus on innovation, quality, and client satisfaction, Hasan Mustafa remains committed to shaping the future of construction and real estate by creating lasting value and enduring landmarks.",
+      "Hasan Mustafa is a civil engineer from NED University and a licensed member of the Pakistan Engineering Council. He founded MAHUM in 1988 and has led more than 300 projects from start to finish.",
   },
   {
     slug: "umair-hasan",
@@ -53,6 +53,6 @@ export const leadership = [
       },
     ],
     vision:
-      "Committed to sustainable growth, innovation, and operational excellence, Umair Hasan continues to help shape MAHUM Builders' future while delivering long-term value for clients and stakeholders.",
+      "Umair Hasan joined MAHUM in 2014 and runs the company's operations. He has overseen more than 30 residential and commercial developments and led the move into hospitality, including the BAHRBAN hotel in Hunza.",
   },
 ];

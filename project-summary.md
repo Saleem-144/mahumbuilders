@@ -61,7 +61,7 @@ All copy and project data lives in `src/data/`, so content changes rarely touch 
 - `projects.js` — the portfolio. Each project has a `slug`, `title`, and only the fields confirmed by the company profile (`location`, `year`, `architect`, `client`, `type`, `area`, `scope`, `category`). Missing fields are simply not rendered. `featuredProjects` sets the home-page selection.
 - `portfolio/<slug>.json` — generated per-project image/video manifests (do not edit by hand). Loaded lazily, one project per page.
 - `portfolio.js` — manifest loader and the `portfolioImage()` helper for referencing a specific photo.
-- `images.js` — shared imagery: real portfolio photos, remaining Unsplash placeholders, and the "Life at MAHUM" carousel cards.
+- `images.js` — shared imagery: portfolio photos used around the site, and the "Life at MAHUM" carousel cards.
 - `services.js`, `delivery.js`, `stats.js`, `leadership.js` — page copy sourced from the company profile.
 
 **Do not add information that has not been supplied by the client.** Several projects intentionally have only a title until details are confirmed.
@@ -102,6 +102,5 @@ npm run portfolio  # regenerate optimized portfolio images + manifests
 
 ## Known gaps (need client input)
 
-- **Placeholder photography.** The Marine Tower Offices project still uses Unsplash stock images.
 - **Project details pending.** House 84C, Courtyard Home, Pool House and Tabbani House have no confirmed year, architect or area yet.
 - **Map embed** points to "Phase 8 DHA Karachi" generally, not the exact office address.

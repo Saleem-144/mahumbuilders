@@ -23,8 +23,8 @@ export default function HowWeDeliver() {
       <div className="container-edit">
         <SectionHeading
           eyebrow="How We Deliver"
-          title="From vision to completion."
-          description="Every MAHUM project is approached as a considered process — bringing planning, construction, finishing and coordination together to deliver spaces with clarity and purpose."
+          title="Five stages, from brief to handover"
+          description="Every project goes through the same five stages, so clients always know what happens next."
         />
 
         {/* Desktop — connected horizontal timeline */}

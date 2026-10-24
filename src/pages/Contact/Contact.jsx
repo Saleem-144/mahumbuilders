@@ -81,7 +81,7 @@ export default function Contact() {
       <PageIntro
         eyebrow="Let's Build Together"
         title="Contact Us"
-        description="Tell us about your development or construction project — our team will be in touch."
+        description="Tell us about your project and our team will get back to you."
       />
 
       <section className="py-10 sm:py-14 lg:py-16">
@@ -152,7 +152,7 @@ export default function Contact() {
                   Thank You
                 </h3>
                 <p className="mt-3 max-w-xs text-[color:var(--color-mist)]">
-                  Your enquiry has been received. Our team will be in touch shortly.
+                  We have received your enquiry and will get back to you soon.
                 </p>
               </div>
             ) : (

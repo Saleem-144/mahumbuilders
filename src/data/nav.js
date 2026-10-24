@@ -12,7 +12,7 @@ export const company = {
   tagline: "Where Innovation Meets Legacy",
   founded: "Mr. Hasan Mustafa",
   foundedYear: "1988",
-  address: "#401, 59D, Murtaza Lane – 1, Phase 8, DHA",
+  address: "#401, 59D, Murtaza Lane 1, Phase 8, DHA",
   // What the Contact page map searches for. Google doesn't recognise the
   // street address on its own, so this targets MAHUM's Google Maps business
   // listing (Bldg C59D, Al-Murtaza Commercial, DHA Phase 8), which pins the

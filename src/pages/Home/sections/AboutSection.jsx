@@ -20,22 +20,20 @@ export default function AboutSection() {
 
         <div className="order-1 lg:order-2">
           <Reveal>
-            <span className="eyebrow">Company Introduction</span>
+            <span className="eyebrow">About MAHUM</span>
             <h2 className="text-balance mt-5 text-[clamp(2rem,4vw,3.25rem)] font-medium text-[color:var(--color-ink)]">
-              An esteemed firm shaping Pakistan's real estate landscape since 1988
+              Building in Karachi since 1988
             </h2>
           </Reveal>
           <Reveal delay={0.08} className="mt-7 space-y-5 text-[1.0625rem] leading-relaxed text-[color:var(--color-mist)]">
             <p>
-              MAHUM is a real estate development and construction firm established in 1988 by Mr. Hasan
-              Mustafa. Over three decades, the company has carved an illustrious path — delivering
-              unparalleled quality across construction, real estate development, project management and
-              turn-key solutions.
+              MAHUM was founded in 1988 by Hasan Mustafa, a civil engineer from NED University. Since then
+              the company has completed more than 300 residential and commercial projects.
             </p>
             <p>
-              Our seasoned professionals — architects, engineers and project managers — collaborate
-              harmoniously, with every detail meticulously considered to create masterpieces that redefine
-              luxury living and working.
+              We handle a project from start to finish: the land, design, approvals, construction,
+              finishing and utility connections. Our architects, engineers and project managers stay on the
+              job until handover, so the client deals with one company throughout.
             </p>
           </Reveal>
           <Reveal delay={0.16} className="mt-9">

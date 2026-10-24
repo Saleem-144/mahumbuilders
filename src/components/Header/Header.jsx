@@ -56,7 +56,7 @@ export default function Header() {
           <Link
             to="/"
             onClick={() => setMenuOpen(false)}
-            aria-label="MAHUM Builders — Home"
+            aria-label="MAHUM Builders home"
             className={cn(
               "shrink-0 transition-colors duration-300",
               light ? "text-[color:var(--color-paper)]" : "text-[color:var(--color-ink)]"
@@ -100,7 +100,7 @@ export default function Header() {
                   light && "!border-[color:var(--color-line-dark)] !text-[color:var(--color-paper)] hover:!border-[color:var(--color-paper)]"
                 )}
               >
-                {`Enquire — ${company.phones[0]}`}
+                {`Enquire · ${company.phones[0]}`}
               </Button>
             </div>
             <button

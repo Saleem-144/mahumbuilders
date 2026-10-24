@@ -12,7 +12,7 @@ export default function ServicesSection() {
           <SectionHeading
             eyebrow="What We Do"
             title="Our Services"
-            description="Turn-key solutions designed to take the stress out of every client's journey — from land acquisition to final handover."
+            description="Everything a building project needs, from finding the land to the final handover."
           />
           <Button to="/services" variant="ghost" className="shrink-0">
             All Services

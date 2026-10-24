@@ -19,8 +19,8 @@ export default function About() {
     <>
       <PageIntro
         eyebrow={`Est. ${company.foundedYear}`}
-        title="An esteemed firm shaping Pakistan's real estate landscape"
-        description="Founded by Mr. Hasan Mustafa, MAHUM has carved an illustrious path across construction and real estate development — surpassing expectations and setting new benchmarks for luxury and safety."
+        title="About MAHUM Builders"
+        description="Founded by Hasan Mustafa in 1988, MAHUM develops and builds residential, commercial and hospitality projects in Pakistan."
       />
 
       {/* Company Introduction */}
@@ -38,21 +38,19 @@ export default function About() {
           </Reveal>
           <div className="space-y-6 pt-2 text-[1.0625rem] leading-relaxed text-[color:var(--color-mist)] lg:pt-10">
             <Reveal as="p">
-              Welcome to MAHUM, an esteemed real estate development and construction firm that stands as a
-              beacon of excellence in the industry. Established in 1988 by the visionary Mr. Hasan Mustafa,
-              MAHUM has boasted over three decades of unwavering commitment to delivering unparalleled
-              quality and sophistication in every project undertaken.
+              MAHUM is a real estate development and construction company based in Karachi. It was
+              established in 1988 by Hasan Mustafa, a civil engineer licensed by the Pakistan Engineering
+              Council.
             </Reveal>
             <Reveal as="p" delay={0.06}>
-              Our portfolio comprises 300+ expertly executed residential and commercial developments. At
-              MAHUM, we craft environments, not just buildings — redefining luxury living and working with
-              precision, innovation, and the highest quality standards.
+              Since then we have completed more than 300 projects, around 250 residential and 50
+              commercial. Some are developments we start ourselves; others are built for private and
+              corporate clients.
             </Reveal>
             <Reveal as="p" delay={0.12}>
-              Our seasoned professionals — architects, engineers, and project managers — collaborate
-              harmoniously, where every detail is meticulously considered to create masterpieces. As we
-              build on our legacy, MAHUM remains dedicated to pushing the boundaries of excellence, creating
-              timeless spaces that define the pinnacle of luxury and safety in the industry.
+              Our architects, engineers and project managers work together on every job. We pay close
+              attention to build quality and site safety, and we stay with each project until it is handed
+              over.
             </Reveal>
           </div>
         </div>
@@ -61,34 +59,29 @@ export default function About() {
       {/* History / Journey */}
       <section className="border-t border-[color:var(--color-line)] bg-[color:var(--color-paper-dim)] py-10 sm:py-14 lg:py-16">
         <div className="container-edit">
-          <SectionHeading eyebrow="Our Journey" title="From Humble Beginning to an Enduring Legacy" />
+          <SectionHeading eyebrow="Our Journey" title="Our History" />
 
           <div className="mt-14 grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-12">
             <Reveal as="div">
-              <h3 className="font-display text-xl font-medium text-[color:var(--color-ink)]">Born from Vision</h3>
+              <h3 className="font-display text-xl font-medium text-[color:var(--color-ink)]">How It Started</h3>
               <p className="mt-4 text-[0.9375rem] leading-relaxed text-[color:var(--color-mist)]">
-                Founded in 1988 by Mr. Hasan Mustafa, MAHUM has risen from a singular residential project to
-                a prominent force in Pakistan's real estate landscape. Driven by a steadfast commitment to
-                quality and innovation, we have continuously expanded our portfolio, venturing beyond
-                residential developments and into commercial construction, interior design, and the
-                burgeoning hospitality sector.
+                Hasan Mustafa started MAHUM in 1988 with a single residential project. Over the years the
+                company moved into commercial construction, interior work and, more recently, hospitality.
               </p>
             </Reveal>
             <Reveal as="div" delay={0.08}>
-              <h3 className="font-display text-xl font-medium text-[color:var(--color-ink)]">Beyond Bricks and Mortar</h3>
+              <h3 className="font-display text-xl font-medium text-[color:var(--color-ink)]">What We Build Today</h3>
               <p className="mt-4 text-[0.9375rem] leading-relaxed text-[color:var(--color-mist)]">
-                Our iconic office towers redefine the city's business district, while meticulous interior
-                designs breathe life into retail spaces. Soon to come, BAHRBAN — our flagship hotel project —
-                promises to redefine regional luxury with its unmatched sophistication.
+                Our work today includes private homes, office buildings and commercial interiors in Karachi.
+                Our first hotel, BAHRBAN in Hunza, is currently under construction.
               </p>
             </Reveal>
             <Reveal as="div" delay={0.16}>
-              <h3 className="font-display text-xl font-medium text-[color:var(--color-ink)]">A Testament to Dedication</h3>
+              <h3 className="font-display text-xl font-medium text-[color:var(--color-ink)]">How We Work</h3>
               <p className="mt-4 text-[0.9375rem] leading-relaxed text-[color:var(--color-mist)]">
-                Each MAHUM project embodies our core values: unwavering commitment to quality, relentless
-                pursuit of innovation, and exceeding client expectations. Our journey is a testament to the
-                power of vision, dedication, and a collaborative spirit that drives us to shape the future of
-                Pakistan's skyline, one project at a time.
+                We agree the scope, materials and schedule with the client before work starts, and we
+                supervise our own sites through to handover. The same standards apply whether we are building
+                a home or an office.
               </p>
             </Reveal>
           </div>
@@ -115,13 +108,12 @@ export default function About() {
           <Reveal>
             <span className="eyebrow text-[color:var(--color-mist-light)]">Company Philosophy</span>
             <h2 className="text-balance mt-5 text-[clamp(2rem,4.5vw,3.5rem)] font-medium">
-              Where Innovation Meets Legacy. Redefining Construction, Locally.
+              Where Innovation Meets Legacy
             </h2>
             <p className="mt-7 text-[1.0625rem] leading-relaxed text-[color:var(--color-mist-light)]">
-              Our USP lies in our holistic and client-centric approach, seamlessly blending innovation,
-              precision, and a commitment to excellence. Years of expertise meet cutting-edge solutions. We
-              craft residential, commercial, and hospitality spaces that elevate every brand and exceed
-              expectations, both in Pakistan and beyond.
+              Clients come to us because we take care of the whole project. One team handles the land,
+              design, approvals, construction and finishing, so the client has one point of contact and one
+              company responsible for the result.
             </p>
           </Reveal>
         </div>

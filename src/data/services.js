@@ -7,16 +7,16 @@ export const services = [
     number: "01",
     title: "Land Acquisition",
     description:
-      "MAHUM specializes in identifying and acquiring prime locations for each client's project, ensuring that every aspect aligns with the client's vision and objectives.",
+      "We help clients find and buy the right plot, and check that the location suits what they want to build.",
     icon: "MapPin",
     image: "serviceLand",
     tags: ["Site Identification", "Acquisition"],
   },
   {
     number: "02",
-    title: "Design and Architecture Service",
+    title: "Design and Architecture",
     description:
-      "The company's panel of approved architects and designers collaborates to create innovative and aesthetically pleasing designs that harmonize with each client's aspirations and the surrounding environment.",
+      "We work with a panel of approved architects and designers to produce a design that fits the client's brief and the site.",
     icon: "PenTool",
     image: "serviceDesign",
     tags: ["Architecture", "Interior Design"],
@@ -25,7 +25,7 @@ export const services = [
     number: "03",
     title: "Approvals from All Authorities",
     description:
-      "Navigating the complexities of regulatory compliance, MAHUM secures approvals from relevant authorities, including DHA, CBC, and others, ensuring a hassle-free and expeditious process.",
+      "We get the approvals needed from DHA, CBC and other authorities, so the client doesn't have to deal with the paperwork.",
     icon: "ShieldCheck",
     image: "serviceApprovals",
     tags: ["DHA", "CBC", "Approvals"],
@@ -34,7 +34,7 @@ export const services = [
     number: "04",
     title: "Construction Execution",
     description:
-      "From the initial grey phase to the meticulous installation of MEP systems, the company undertakes every aspect of construction with precision. MAHUM's commitment extends to completing the finishing touches until the project is turn-key, leaving only the interior fit-outs, such as furniture and curtains, for the client.",
+      "We carry out the full build, from grey structure and MEP to finishing. The building is handed over ready to use, with only furniture and curtains left to the client.",
     icon: "Building2",
     image: "serviceConstruction",
     tags: ["Grey Structure", "MEP", "Turn-Key"],
@@ -43,7 +43,7 @@ export const services = [
     number: "05",
     title: "Project Management",
     description:
-      "MAHUM's seasoned project management team ensures efficiency by delivering comprehensive project budgets, including cost and time planning, alongside detailed project BOQs, Work Breakdown Structures (WBS), and Gantt charts, providing clear visibility, greater control, and well-defined milestones throughout the construction journey.",
+      "Every project gets a budget with cost and time plans, a detailed BOQ, a work breakdown structure (WBS) and Gantt charts, so the client can follow progress against clear milestones.",
     icon: "ListChecks",
     image: "serviceManagement",
     tags: ["BOQs", "WBS", "Gantt Charts"],
@@ -52,7 +52,7 @@ export const services = [
     number: "06",
     title: "Utility Connections",
     description:
-      "The company takes care of all utility connections, streamlining the process and saving its clients valuable time and effort.",
+      "We arrange all utility connections for the building, which saves the client time and effort.",
     icon: "Zap",
     image: "serviceUtilities",
     tags: ["Utilities", "Handover"],
@@ -60,17 +60,17 @@ export const services = [
 ];
 
 export const interiorRevamp = {
-  title: "Interior Revamp Solutions",
+  title: "Interior Revamp",
   description:
-    "In addition to its turn-key construction services, MAHUM offers specialized Interior Revamp Solutions, tailored for corporate projects. This involves conducting interior works within existing structures, enhancing functionality and aesthetics to meet the evolving needs of each client's business.",
+    "We also refit the interiors of existing buildings for corporate clients, improving the layout, services and finishes to suit how the business works today.",
 };
 
 // Source: p.05, "Seamlessly Navigating the Construction Landscape"
 export const turnkeyStages = [
-  { number: "01", title: "Land Acquisition", description: "Identifying and securing prime locations aligned with the client's vision." },
-  { number: "02", title: "Design and Architecture", description: "Innovative, site-responsive design developed with MAHUM's panel of approved architects." },
-  { number: "03", title: "Authority Approvals", description: "Securing approvals from DHA, CBC, and other relevant authorities." },
-  { number: "04", title: "Complete Construction Execution", description: "Precision execution from structure through mechanical, electrical and plumbing systems." },
-  { number: "05", title: "Project Management", description: "Cost and time planning, BOQs, WBS and Gantt charts providing clear milestones throughout." },
-  { number: "06", title: "Finishing and Utility Connections", description: "Finishing works and utility connections carried through to a turn-key handover." },
+  { number: "01", title: "Land Acquisition", description: "Finding and securing a suitable plot." },
+  { number: "02", title: "Design and Architecture", description: "Design by our panel of approved architects, suited to the site." },
+  { number: "03", title: "Authority Approvals", description: "Approvals from DHA, CBC and other authorities." },
+  { number: "04", title: "Complete Construction Execution", description: "Structure, mechanical, electrical and plumbing work." },
+  { number: "05", title: "Project Management", description: "Budgets, BOQs, WBS and Gantt charts with clear milestones." },
+  { number: "06", title: "Finishing and Utility Connections", description: "Finishing works and utility connections, through to handover." },
 ];

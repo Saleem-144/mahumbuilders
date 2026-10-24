@@ -10,7 +10,7 @@ import CTA from "../../components/CTA/CTA";
 import { useDocumentTitle } from "../../lib/useDocumentTitle";
 
 export default function Home() {
-  useDocumentTitle("MAHUM Builders — Where Innovation Meets Legacy", { full: true });
+  useDocumentTitle("MAHUM Builders | Where Innovation Meets Legacy", { full: true });
 
   return (
     <>

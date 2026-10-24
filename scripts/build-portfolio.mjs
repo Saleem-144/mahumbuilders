@@ -51,6 +51,7 @@ const PROJECTS = {
   "casa-solara": [{ dir: "CASA SOLARA" }],
   "courtyard-home": [{ dir: "COURTYARD HOME" }],
   "mahum-offices": [{ dir: "MAHUM OFFICES I" }],
+  "marine-tower-offices": [{ dir: "Marine Tower Office" }],
   "pool-house": [{ dir: "Pool House" }],
   "tabbani-house": [{ dir: "Tabbani House" }],
   vsurfaces: [{ dir: "VSurfaces" }],

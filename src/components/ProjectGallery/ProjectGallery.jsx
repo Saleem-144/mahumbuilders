@@ -46,7 +46,7 @@ export default function ProjectGallery({ title, rows, images }) {
                   key={img.id}
                   type="button"
                   onClick={() => setOverlay({ open: true, start: indexById.get(img.id) })}
-                  aria-label={`${title} — view image ${indexById.get(img.id) + 1} of ${images.length}`}
+                  aria-label={`${title}: view image ${indexById.get(img.id) + 1} of ${images.length}`}
                   className="block w-full cursor-zoom-in text-left sm:w-auto"
                   style={{ flex: `${img.w / img.h} 1 0%` }}
                 >
