@@ -100,7 +100,7 @@ export default function Header() {
                   light && "!border-[color:var(--color-line-dark)] !text-[color:var(--color-paper)] hover:!border-[color:var(--color-paper)]"
                 )}
               >
-                {`Enquire · ${company.phones[0]}`}
+                {`Inquire · ${company.phones[0]}`}
               </Button>
             </div>
             <button

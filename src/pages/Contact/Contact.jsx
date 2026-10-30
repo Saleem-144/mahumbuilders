@@ -12,7 +12,7 @@ const fieldClasses =
 
 const initialForm = { name: "", email: "", phone: "", subject: "", message: "" };
 
-// Enquiries are delivered by Web3Forms to the inbox this key was created for
+// Inquiries are delivered by Web3Forms to the inbox this key was created for
 // (info@mbd-pk.com). The key is public by design — it can only send to that
 // inbox — so it is safe to ship in the site's code.
 const WEB3FORMS_KEY = "aa32f1c9-40f1-4d02-9c20-218e9187418c";
@@ -53,7 +53,7 @@ export default function Contact() {
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
           access_key: WEB3FORMS_KEY,
-          subject: `New website enquiry from ${name}`,
+          subject: `New website inquiry from ${name}`,
           from_name: "MAHUM Builders Website",
           name,
           email, // Web3Forms sets this as the reply-to address
@@ -69,7 +69,7 @@ export default function Contact() {
       setForm(initialForm);
     } catch {
       setError(
-        `Sorry, your enquiry couldn't be sent. Please try again, or email us at ${company.email} or call ${company.phones[0]}.`
+        `Sorry, your inquiry couldn't be sent. Please try again, or email us at ${company.email} or call ${company.phones[0]}.`
       );
     } finally {
       setSending(false);
@@ -152,7 +152,7 @@ export default function Contact() {
                   Thank You
                 </h3>
                 <p className="mt-3 max-w-xs text-[color:var(--color-mist)]">
-                  We have received your enquiry and will get back to you soon.
+                  We have received your inquiry and will get back to you soon.
                 </p>
               </div>
             ) : (
@@ -214,7 +214,7 @@ export default function Contact() {
                 )}
 
                 <Button type="submit" variant="primary" disabled={sending} aria-busy={sending} className={sending ? "opacity-60" : undefined}>
-                  {sending ? "Sending…" : "Send Enquiry"}
+                  {sending ? "Sending…" : "Send Inquiry"}
                 </Button>
               </form>
             )}
@@ -226,7 +226,7 @@ export default function Contact() {
         <div className="aspect-[21/9] w-full bg-[color:var(--color-stone)]">
           <iframe
             title="MAHUM Builders location"
-            src={`https://www.google.com/maps?q=${encodeURIComponent(company.mapQuery)}&output=embed`}
+            src={`https://www.google.com/maps?q=${encodeURIComponent(company.mapQuery)}&z=17&output=embed`}
             className="h-full w-full grayscale"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

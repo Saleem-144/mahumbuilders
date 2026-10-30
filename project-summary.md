@@ -96,8 +96,8 @@ npm run portfolio  # regenerate optimized portfolio images + manifests
 
 ## Contact form and email
 
-- Enquiries from the Contact page are sent through **Web3Forms** to **info@mbd-pk.com** (GoDaddy Professional Email, webmail powered by Titan). The access key lives in `Contact.jsx`; it is public by design and can only deliver to that inbox. Manage the form at web3forms.com while logged in as info@mbd-pk.com.
-- A hidden honeypot field filters basic spam bots. Replying to an enquiry email replies to the visitor.
+- Inquiries from the Contact page are sent through **Web3Forms** to **info@mbd-pk.com** (GoDaddy Professional Email, webmail powered by Titan). The access key lives in `Contact.jsx`; it is public by design and can only deliver to that inbox. Manage the form at web3forms.com while logged in as info@mbd-pk.com.
+- A hidden honeypot field filters basic spam bots. Replying to an inquiry email replies to the visitor.
 - The email shown across the site comes from `company.email` in `src/data/nav.js`.
 
 ## Known gaps (need client input)
