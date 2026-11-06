@@ -1,0 +1,46 @@
+{
+  "slug": "casa-bellini-plans",
+  "images": [
+    {
+      "id": "1-apartment",
+      "src": "/portfolio-web/casa-bellini-plans/1-apartment-2000.webp",
+      "thumb": "/portfolio-web/casa-bellini-plans/1-apartment-960.webp",
+      "w": 1165,
+      "h": 2000,
+      "original": "portfolio-originals/Casa Bellini/plans/1-apartment.png"
+    },
+    {
+      "id": "2-full-shop-ground",
+      "src": "/portfolio-web/casa-bellini-plans/2-full-shop-ground-2000.webp",
+      "thumb": "/portfolio-web/casa-bellini-plans/2-full-shop-ground-960.webp",
+      "w": 773,
+      "h": 845,
+      "original": "portfolio-originals/Casa Bellini/plans/2-full-shop-ground.png"
+    },
+    {
+      "id": "3-full-shop-basement",
+      "src": "/portfolio-web/casa-bellini-plans/3-full-shop-basement-2000.webp",
+      "thumb": "/portfolio-web/casa-bellini-plans/3-full-shop-basement-960.webp",
+      "w": 650,
+      "h": 692,
+      "original": "portfolio-originals/Casa Bellini/plans/3-full-shop-basement.png"
+    },
+    {
+      "id": "4-single-shops-ground",
+      "src": "/portfolio-web/casa-bellini-plans/4-single-shops-ground-2000.webp",
+      "thumb": "/portfolio-web/casa-bellini-plans/4-single-shops-ground-960.webp",
+      "w": 773,
+      "h": 845,
+      "original": "portfolio-originals/Casa Bellini/plans/4-single-shops-ground.png"
+    },
+    {
+      "id": "5-single-shops-basement",
+      "src": "/portfolio-web/casa-bellini-plans/5-single-shops-basement-2000.webp",
+      "thumb": "/portfolio-web/casa-bellini-plans/5-single-shops-basement-960.webp",
+      "w": 650,
+      "h": 692,
+      "original": "portfolio-originals/Casa Bellini/plans/5-single-shops-basement.png"
+    }
+  ],
+  "videos": []
+}

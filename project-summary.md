@@ -94,6 +94,12 @@ npm run portfolio  # regenerate optimized portfolio images + manifests
 - `vercel.json` rewrites unknown paths to `index.html` so the client-side routes work on direct visits and refreshes. If the site is hosted somewhere other than Vercel, replace it with that host's SPA fallback setting.
 - Keep the originals out of `public/`: everything in `public/` is copied into `dist/` as-is.
 
+## Projects on sale
+
+A project with a `status` (currently only Casa Bellini) gets a badge on its cards, sorts first on the Projects page, and shows extra sections on its page: `units`, `plans`, `specifications` and a brochure download. Rates and payment schedules stay in the brochure, not on the site.
+
+The brochure in `public/brochures/` is a web version of the client's PDF (master in `portfolio-originals/Casa Bellini/`), reduced from 39 MB to 2.2 MB by removing Illustrator's editing data and compressing images. If the client sends a new brochure, compress it the same way before publishing it.
+
 ## Contact form and email
 
 - Inquiries from the Contact page are sent through **Web3Forms** to **info@mbd-pk.com** (GoDaddy Professional Email, webmail powered by Titan). The access key lives in `Contact.jsx`; it is public by design and can only deliver to that inbox. Manage the form at web3forms.com while logged in as info@mbd-pk.com.

@@ -48,6 +48,8 @@ const PROJECTS = {
   ],
   "stone-villa": [{ dir: "BTK - STONE HOUSE" }],
   "box-home": [{ dir: "Box home" }],
+  "casa-bellini": [{ dir: "Casa Bellini" }],
+  "casa-bellini-plans": [{ dir: "Casa Bellini/plans" }],
   "casa-solara": [{ dir: "CASA SOLARA" }],
   "courtyard-home": [{ dir: "COURTYARD HOME" }],
   "mahum-offices": [{ dir: "MAHUM OFFICES I" }],

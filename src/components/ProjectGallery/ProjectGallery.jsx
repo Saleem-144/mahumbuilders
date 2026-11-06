@@ -15,7 +15,7 @@ import GalleryOverlay from "../GalleryOverlay/GalleryOverlay";
  * opens the full gallery overlay; clicking any curated image opens it on
  * that image.
  */
-export default function ProjectGallery({ title, rows, images }) {
+export default function ProjectGallery({ title, rows, images, eyebrow = "Project Gallery", note }) {
   const [overlay, setOverlay] = useState({ open: false, start: null });
 
   const indexById = useMemo(() => new Map(images.map((img, i) => [img.id, i])), [images]);
@@ -34,7 +34,7 @@ export default function ProjectGallery({ title, rows, images }) {
     <section className="pb-16 sm:pb-24">
       <div className="container-edit">
         <Reveal className="mb-8 flex items-baseline justify-between gap-6 border-t border-[color:var(--color-line)] pt-6 sm:mb-10">
-          <span className="eyebrow">Project Gallery</span>
+          <span className="eyebrow">{eyebrow}</span>
           <span className="eyebrow tabular-nums">{images.length} Images</span>
         </Reveal>
 
@@ -71,6 +71,8 @@ export default function ProjectGallery({ title, rows, images }) {
             </Reveal>
           ))}
         </div>
+
+        {note && <p className="mt-5 text-sm text-[color:var(--color-mist)]">{note}</p>}
 
         {images.length > shown && (
           <Reveal className="mt-12 flex justify-center sm:mt-16">

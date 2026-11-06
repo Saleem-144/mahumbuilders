@@ -18,6 +18,89 @@ import { portfolioImage } from "./portfolio";
 const SCOPE = ["Grey", "Finishing", "Hard and Soft Interiors"];
 
 export const projects = [
+  // For sale on booking, so it also carries `status`, `units`, `plans`,
+  // `specifications` and `brochure`. Source: the client's brochure and notes.
+  {
+    slug: "casa-bellini",
+    title: "Casa Bellini",
+    status: "Available on Booking",
+    location: "Main Khayaban-e-Nishat, Ittehad Commercial, Karachi",
+    type: "Retail Space and Apartments",
+    plot: "200 sq. yd.",
+    design: "Neoclassical",
+    groundBreaking: "Expected at the start of 2027, InshaAllah",
+    category: "MAHUM Development",
+    overview:
+      "Casa Bellini is a neoclassical commercial building with shops on the ground floor and basement, and 8 apartments above, 2 on each floor. The building has a lift.",
+    featuredNote:
+      "It sits on Main Khayaban-e-Nishat in Ittehad Commercial, minutes from Murtaza, Bukhari and Zulfiqar Commercial, with restaurants, cafes and banks nearby.",
+    cover: portfolioImage("casa-bellini", "3-night-entrance", "Casa Bellini entrance at night, with lit signage and a glazed lobby"),
+    // Keeps the building's sign in view in the wide project banner.
+    coverClassName: "object-[center_32%]",
+    galleryEyebrow: "3D Views",
+    galleryNote: "3D renders for illustration.",
+    galleryRows: [
+      ["1-day-street", "2-night-street"],
+      ["3-night-entrance", "4-night-entrance-angle"],
+      ["5-day-angle", "6-night-angle"],
+    ],
+    brochure: {
+      href: "/brochures/Casa-Bellini-Brochure.pdf",
+      filename: "Casa-Bellini-Brochure.pdf",
+      size: "2.2 MB",
+    },
+    units: [
+      {
+        name: "Apartment",
+        size: "1,000 sq. ft.",
+        sizeNote: "Gross area",
+        details: ["2 bedrooms, lounge, kitchen and private terrace", "8 apartments in total, 2 on each floor"],
+      },
+      {
+        name: "Full Shop",
+        size: "1,600 sq. ft.",
+        sizeNote: "Ground floor, plus 1,600 sq. ft. basement",
+        details: ["Full ground floor and basement, interconnected", "16 ft clear height"],
+      },
+      {
+        name: "Single Shop",
+        size: "800 sq. ft.",
+        sizeNote: "Ground floor, plus 800 sq. ft. basement",
+        details: ["Shop A or Shop B, ground floor and basement interconnected", "16 ft clear height"],
+      },
+    ],
+    plansManifest: "casa-bellini-plans",
+    plans: [
+      { id: "1-apartment", label: "Typical apartment floor" },
+      { id: "2-full-shop-ground", label: "Full shop: ground floor" },
+      { id: "3-full-shop-basement", label: "Full shop: basement" },
+      { id: "4-single-shops-ground", label: "Single shops: ground floor" },
+      { id: "5-single-shops-basement", label: "Single shops: basement" },
+    ],
+    specifications: [
+      "High-Strength RCC Structure",
+      "Grade 60 Reinforcement Steel",
+      "Premium Aluminium Windows",
+      "Engineered Solid Wood Doors",
+      "Premium Imported or High-Grade Local Flooring",
+      "Premium Sanitary Ware and Faucet Fittings",
+      "Modern Designed Kitchen with Quality Hardware",
+      "Premium Bathroom Vanity Counters",
+      "Marble or Natural Stone Kitchen Counters",
+      "Built-In Bedroom Wardrobes",
+      "Concealed Electrical Wiring with Premium Switches",
+      "High-Quality Concealed Plumbing System",
+      "Modern False Ceiling and Architectural Lighting",
+      "Premium Interior Paint and Wall Finishes",
+      "Natural Stone and Texture-Coated Elevation",
+      "Quality Waterproofing in Roof and Wet Areas",
+      "Well-Designed Natural Light and Ventilation",
+      "Independent Utilities for Each Portion",
+      "Water Meter for Individual Units",
+      "High-Speed Premium Lift",
+      "Intercom System That Opens the Main Door Through an Electric Switch",
+    ],
+  },
   {
     slug: "casa-solara",
     title: "Casa Solara",
@@ -237,10 +320,10 @@ export const photographedProjects = projects.filter((p) => p.galleryRows);
 
 // Home page "Featured Projects" — photographed projects only.
 export const featuredProjects = [
+  "casa-bellini",
   "casa-solara",
   "bahrban-hunza",
   "house-82b",
   "stone-villa",
   "vsurfaces",
-  "pool-house",
 ].map(getProjectBySlug);

@@ -3,6 +3,15 @@ import { ArrowUpRight } from "lucide-react";
 import Photo from "../Photo/Photo";
 import { RevealItem } from "../Reveal/Reveal";
 
+function StatusBadge({ status }) {
+  if (!status) return null;
+  return (
+    <span className="absolute left-3 top-3 z-10 rounded-full bg-white/90 px-3 py-1.5 text-[0.6875rem] font-medium text-[color:var(--color-ink)] backdrop-blur-sm">
+      {status}
+    </span>
+  );
+}
+
 export default function ProjectCard({ project, variant = "default" }) {
   if (variant === "editorial") {
     return <EditorialProjectCard project={project} />;
@@ -11,7 +20,8 @@ export default function ProjectCard({ project, variant = "default" }) {
   return (
     <RevealItem>
       <Link to={`/projects/${project.slug}`} className="group block">
-        <div className="aspect-[5/6] overflow-hidden rounded-2xl">
+        <div className="relative aspect-[5/6] overflow-hidden rounded-2xl">
+          <StatusBadge status={project.status} />
           <Photo src={project.cover.src} alt={project.cover.alt} fallback={project.title} className="h-full w-full" />
         </div>
 
@@ -48,6 +58,7 @@ function EditorialProjectCard({ project }) {
     <RevealItem>
       <Link to={`/projects/${project.slug}`} className="group block">
         <div className="relative aspect-[4/3] overflow-hidden">
+          <StatusBadge status={project.status} />
           <Photo
             src={project.cover.src}
             alt={project.cover.alt}

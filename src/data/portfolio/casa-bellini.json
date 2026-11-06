@@ -1,0 +1,54 @@
+{
+  "slug": "casa-bellini",
+  "images": [
+    {
+      "id": "1-day-street",
+      "src": "/portfolio-web/casa-bellini/1-day-street-2000.webp",
+      "thumb": "/portfolio-web/casa-bellini/1-day-street-960.webp",
+      "w": 1254,
+      "h": 1254,
+      "original": "portfolio-originals/Casa Bellini/1-day-street.webp"
+    },
+    {
+      "id": "2-night-street",
+      "src": "/portfolio-web/casa-bellini/2-night-street-2000.webp",
+      "thumb": "/portfolio-web/casa-bellini/2-night-street-960.webp",
+      "w": 1254,
+      "h": 1254,
+      "original": "portfolio-originals/Casa Bellini/2-night-street.webp"
+    },
+    {
+      "id": "3-night-entrance",
+      "src": "/portfolio-web/casa-bellini/3-night-entrance-2000.webp",
+      "thumb": "/portfolio-web/casa-bellini/3-night-entrance-960.webp",
+      "w": 1254,
+      "h": 1254,
+      "original": "portfolio-originals/Casa Bellini/3-night-entrance.webp"
+    },
+    {
+      "id": "4-night-entrance-angle",
+      "src": "/portfolio-web/casa-bellini/4-night-entrance-angle-2000.webp",
+      "thumb": "/portfolio-web/casa-bellini/4-night-entrance-angle-960.webp",
+      "w": 1254,
+      "h": 1254,
+      "original": "portfolio-originals/Casa Bellini/4-night-entrance-angle.webp"
+    },
+    {
+      "id": "5-day-angle",
+      "src": "/portfolio-web/casa-bellini/5-day-angle-2000.webp",
+      "thumb": "/portfolio-web/casa-bellini/5-day-angle-960.webp",
+      "w": 1254,
+      "h": 1254,
+      "original": "portfolio-originals/Casa Bellini/5-day-angle.webp"
+    },
+    {
+      "id": "6-night-angle",
+      "src": "/portfolio-web/casa-bellini/6-night-angle-2000.webp",
+      "thumb": "/portfolio-web/casa-bellini/6-night-angle-960.webp",
+      "w": 1254,
+      "h": 1254,
+      "original": "portfolio-originals/Casa Bellini/6-night-angle.webp"
+    }
+  ],
+  "videos": []
+}

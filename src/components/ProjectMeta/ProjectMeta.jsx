@@ -13,6 +13,7 @@ function Row({ label, value }) {
 export default function ProjectMeta({ project }) {
   return (
     <Reveal className="border-b border-[color:var(--color-line)]">
+      <Row label="Status" value={project.status} />
       <Row label="Location" value={project.location} />
       <Row label="Completion" value={project.year} />
       <Row label="Type" value={project.type} />
@@ -20,6 +21,8 @@ export default function ProjectMeta({ project }) {
       <Row label="Client" value={project.client} />
       <Row label="Area" value={project.area} />
       <Row label="Plot Size" value={project.plot} />
+      <Row label="Design" value={project.design} />
+      <Row label="Ground Breaking" value={project.groundBreaking} />
       <Row label="Scope" value={project.scope?.join(" · ")} />
       <Row label="Category" value={project.category} />
     </Reveal>

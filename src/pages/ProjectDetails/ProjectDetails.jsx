@@ -8,6 +8,12 @@ import ProjectMeta from "../../components/ProjectMeta/ProjectMeta";
 import ProjectGrid from "../../components/ProjectGrid/ProjectGrid";
 import ProjectGallery from "../../components/ProjectGallery/ProjectGallery";
 import ProjectVideo from "../../components/ProjectVideo/ProjectVideo";
+import {
+  BrochureButton,
+  ProjectPlans,
+  ProjectSpecifications,
+  ProjectUnits,
+} from "../../components/ProjectOffering/ProjectOffering";
 import CTA from "../../components/CTA/CTA";
 import Button from "../../components/Button/Button";
 import NotFound from "../NotFound/NotFound";
@@ -25,7 +31,7 @@ function roleDescription(project) {
   return `MAHUM delivered ${project.title}${as}, from grey structure to handover.`;
 }
 
-const META_FIELDS = ["location", "year", "type", "architect", "client", "area", "plot", "scope", "category"];
+const META_FIELDS = ["status", "location", "year", "type", "architect", "client", "area", "plot", "design", "groundBreaking", "scope", "category"];
 
 // Loads only this project's image/video manifest (its own small chunk).
 function usePortfolio(slug, enabled) {
@@ -64,7 +70,7 @@ export default function ProjectDetails() {
   if (!project) return <NotFound />;
 
   const related = relatedTo(project);
-  const overview = roleDescription(project);
+  const overview = project.overview ?? roleDescription(project);
   const hasMeta = META_FIELDS.some((f) => project[f]);
 
   const videos =
@@ -75,16 +81,23 @@ export default function ProjectDetails() {
     <>
       <section className="relative flex h-[70svh] min-h-[420px] items-end overflow-hidden bg-[color:var(--color-ink)] text-[color:var(--color-paper)]">
         <div className="absolute inset-0">
-          <Photo src={project.cover.large ?? project.cover.src} alt={project.cover.alt} fallback={project.title} zoom={false} loading="eager" className="h-full w-full" />
+          <Photo src={project.cover.large ?? project.cover.src} alt={project.cover.alt} fallback={project.title} zoom={false} loading="eager" className="h-full w-full" imgClassName={project.coverClassName} />
           <div className="absolute inset-0 bg-gradient-to-t from-[color:var(--color-ink)] via-[color:var(--color-ink)]/35 to-[color:var(--color-ink)]/10" />
           {/* Independent top scrim so the fixed header stays legible regardless of photo brightness. */}
           <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[color:var(--color-ink)]/70 to-transparent sm:h-48" />
         </div>
         <div className="container-edit relative w-full pb-14 pt-40">
           <Reveal>
-            {project.category && <span className="eyebrow text-[color:var(--color-mist-light)]">{project.category}</span>}
+            {(project.status || project.category) && (
+              <span className="eyebrow text-[color:var(--color-mist-light)]">{project.status ?? project.category}</span>
+            )}
             <h1 className="mt-4 text-[clamp(2.5rem,6.5vw,5.5rem)] font-medium">{project.title}</h1>
             {project.location && <p className="mt-3 text-[color:var(--color-mist-light)]">{project.location}</p>}
+            {project.brochure && (
+              <div className="mt-6">
+                <BrochureButton brochure={project.brochure} variant="inverse" />
+              </div>
+            )}
           </Reveal>
         </div>
       </section>
@@ -110,10 +123,18 @@ export default function ProjectDetails() {
         <div className="h-10 sm:h-14 lg:h-16" />
       )}
 
+      {project.units && <ProjectUnits units={project.units} brochure={project.brochure} />}
+
       {project.galleryRows ? (
         portfolio ? (
           <>
-            <ProjectGallery title={project.title} rows={project.galleryRows} images={portfolio.images} />
+            <ProjectGallery
+              title={project.title}
+              rows={project.galleryRows}
+              images={portfolio.images}
+              eyebrow={project.galleryEyebrow}
+              note={project.galleryNote}
+            />
             <ProjectVideo videos={videos} poster={posterImg?.src} title={project.title} />
           </>
         ) : (
@@ -138,6 +159,9 @@ export default function ProjectDetails() {
         )
       )}
 
+      {project.plans && <ProjectPlans title={project.title} manifest={project.plansManifest} plans={project.plans} />}
+      {project.specifications && <ProjectSpecifications items={project.specifications} />}
+
       <section className="border-t border-[color:var(--color-line)] py-10 sm:py-14 lg:py-16">
         <div className="container-edit">
           <div className="flex items-end justify-between">
@@ -152,7 +176,16 @@ export default function ProjectDetails() {
         </div>
       </section>
 
-      <CTA />
+      {project.status ? (
+        <CTA
+          eyebrow={project.status}
+          title={`Interested in ${project.title}?`}
+          description="Get in touch to book an apartment or a shop, or to ask about rates and the payment schedule."
+          ctaLabel="Send an Inquiry"
+        />
+      ) : (
+        <CTA />
+      )}
     </>
   );
 }
