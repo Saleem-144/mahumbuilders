@@ -1,17 +1,18 @@
-// Google Analytics 4. Paste the property's Measurement ID ("G-XXXXXXXXXX")
-// here to switch tracking on; while it is empty nothing is loaded or sent.
+// Google Analytics 4 property "MAHUM Builders" (stream: www.mbd-pk.com). Clear the ID
+// to switch tracking off; while it is empty nothing is loaded or sent.
 //
 // Page views (including in-app navigation) and PDF brochure downloads are
 // recorded automatically by GA4's enhanced measurement. On top of that the
 // site sends:
 //   generate_lead   a contact-form inquiry was delivered
 //   contact_click   a phone number or email address was clicked (method: phone | email)
-export const GA_MEASUREMENT_ID = "";
+export const GA_MEASUREMENT_ID = "G-04D5Y544WR";
 
 let started = false;
 
 export function initAnalytics() {
-  if (started || !GA_MEASUREMENT_ID || typeof window === "undefined") return;
+  // Production builds only, so local development isn't counted as traffic.
+  if (started || !GA_MEASUREMENT_ID || !import.meta.env.PROD || typeof window === "undefined") return;
   started = true;
 
   window.dataLayer = window.dataLayer || [];
