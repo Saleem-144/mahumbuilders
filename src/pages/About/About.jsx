@@ -10,10 +10,11 @@ import CTA from "../../components/CTA/CTA";
 import { images } from "../../data/images";
 import { stats } from "../../data/stats";
 import { company } from "../../data/nav";
-import { useDocumentTitle } from "../../lib/useDocumentTitle";
+import { usePageMeta } from "../../lib/usePageMeta";
+import { PAGES } from "../../data/seo";
 
 export default function About() {
-  useDocumentTitle("About Us");
+  usePageMeta({ ...PAGES["/about"], path: "/about" });
 
   return (
     <>

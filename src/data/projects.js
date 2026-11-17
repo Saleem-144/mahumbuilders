@@ -24,6 +24,8 @@ export const projects = [
     slug: "casa-bellini",
     title: "Casa Bellini",
     status: "Available on Booking",
+    seoDescription:
+      "Casa Bellini by MAHUM Builders: shops and 1,000 sq. ft. apartments on Main Khayaban-e-Nishat, Karachi. Available on booking. Download the brochure for rates.",
     location: "Main Khayaban-e-Nishat, Ittehad Commercial, Karachi",
     type: "Retail Space and Apartments",
     plot: "200 sq. yd.",

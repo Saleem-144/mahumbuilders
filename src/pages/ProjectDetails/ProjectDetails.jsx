@@ -17,19 +17,8 @@ import {
 import CTA from "../../components/CTA/CTA";
 import Button from "../../components/Button/Button";
 import NotFound from "../NotFound/NotFound";
-import { useDocumentTitle } from "../../lib/useDocumentTitle";
-
-function roleDescription(project) {
-  if (!project.type && !project.scope && !project.category) return null;
-  if (project.category === "MAHUM Development") {
-    return `${project.title} is a MAHUM development, planned, financed and built by our own team.`;
-  }
-  if (project.category === "Client Project" && project.client) {
-    return `MAHUM built ${project.title} for ${project.client} as a turn-key project, from grey structure to handover.`;
-  }
-  const as = project.type ? ` as a ${project.type.toLowerCase()}` : "";
-  return `MAHUM delivered ${project.title}${as}, from grey structure to handover.`;
-}
+import { usePageMeta } from "../../lib/usePageMeta";
+import { describeProject, projectSeo } from "../../data/seo";
 
 const META_FIELDS = ["status", "location", "year", "type", "architect", "client", "area", "plot", "design", "groundBreaking", "scope", "category"];
 
@@ -62,15 +51,17 @@ export default function ProjectDetails() {
   const project = getProjectBySlug(slug);
   const portfolio = usePortfolio(slug, Boolean(project?.galleryRows));
   // Set here (not left to <NotFound />) because a parent's effect runs after
-  // its child's, and would otherwise overwrite the 404 title.
-  useDocumentTitle(
-    !project ? "Page Not Found" : project.location ? `${project.title}, ${project.location}` : project.title
+  // its child's, and would otherwise overwrite the 404 details.
+  usePageMeta(
+    project
+      ? projectSeo(project)
+      : { title: "Page Not Found | MAHUM Builders", description: "This project page doesn't exist.", noindex: true }
   );
 
   if (!project) return <NotFound />;
 
   const related = relatedTo(project);
-  const overview = project.overview ?? roleDescription(project);
+  const overview = describeProject(project);
   const hasMeta = META_FIELDS.some((f) => project[f]);
 
   const videos =

@@ -1,7 +1,8 @@
 import PageIntro from "../../components/PageIntro/PageIntro";
 import ProjectGrid from "../../components/ProjectGrid/ProjectGrid";
 import { projects } from "../../data/projects";
-import { useDocumentTitle } from "../../lib/useDocumentTitle";
+import { usePageMeta } from "../../lib/usePageMeta";
+import { PAGES } from "../../data/seo";
 
 // Projects on sale first, then newest first; projects without a confirmed year
 // go last, in data order.
@@ -10,7 +11,7 @@ const sorted = [...projects].sort(
 );
 
 export default function Projects() {
-  useDocumentTitle("Projects");
+  usePageMeta({ ...PAGES["/projects"], path: "/projects" });
 
   return (
     <>

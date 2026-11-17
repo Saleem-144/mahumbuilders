@@ -4,8 +4,10 @@ import PageIntro from "../../components/PageIntro/PageIntro";
 import Reveal from "../../components/Reveal/Reveal";
 import Button from "../../components/Button/Button";
 import { company, telHref } from "../../data/nav";
-import { useDocumentTitle } from "../../lib/useDocumentTitle";
+import { usePageMeta } from "../../lib/usePageMeta";
+import { PAGES } from "../../data/seo";
 import { FacebookIcon, InstagramIcon } from "../../components/SocialIcons/SocialIcons";
+import { trackEvent } from "../../lib/analytics";
 
 const fieldClasses =
   "w-full border-0 border-b border-[color:var(--color-line)] bg-transparent py-3 text-[1.0625rem] text-[color:var(--color-ink)] focus:border-[color:var(--color-ink)] focus:outline-none transition-colors";
@@ -20,7 +22,7 @@ const WEB3FORMS_KEY = "aa32f1c9-40f1-4d02-9c20-218e9187418c";
 const isEmail = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
 
 export default function Contact() {
-  useDocumentTitle("Contact Us");
+  usePageMeta({ ...PAGES["/contact"], path: "/contact" });
   const [form, setForm] = useState(initialForm);
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
@@ -66,6 +68,7 @@ export default function Contact() {
       const data = await res.json().catch(() => ({}));
       if (!res.ok || !data.success) throw new Error(data.message || `HTTP ${res.status}`);
       setSubmitted(true);
+      trackEvent("generate_lead", { form: "contact", project_type: form.subject.trim() || "not provided" });
       setForm(initialForm);
     } catch {
       setError(

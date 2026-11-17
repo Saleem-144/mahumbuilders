@@ -7,10 +7,11 @@ import ApproachSection from "./sections/ApproachSection";
 import MediaSection from "./sections/MediaSection";
 import Developments from "../../components/Developments/Developments";
 import CTA from "../../components/CTA/CTA";
-import { useDocumentTitle } from "../../lib/useDocumentTitle";
+import { usePageMeta } from "../../lib/usePageMeta";
+import { PAGES } from "../../data/seo";
 
 export default function Home() {
-  useDocumentTitle("MAHUM Builders | Where Innovation Meets Legacy", { full: true });
+  usePageMeta({ ...PAGES["/"], path: "/" });
 
   return (
     <>

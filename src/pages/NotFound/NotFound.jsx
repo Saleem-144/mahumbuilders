@@ -1,9 +1,13 @@
 import Reveal from "../../components/Reveal/Reveal";
 import Button from "../../components/Button/Button";
-import { useDocumentTitle } from "../../lib/useDocumentTitle";
+import { usePageMeta } from "../../lib/usePageMeta";
 
 export default function NotFound() {
-  useDocumentTitle("Page Not Found");
+  usePageMeta({
+    title: "Page Not Found | MAHUM Builders",
+    description: "The page you're looking for doesn't exist or may have moved.",
+    noindex: true,
+  });
 
   return (
     <section className="flex min-h-[70svh] items-center justify-center py-32 text-center">
