@@ -5,7 +5,8 @@
 //     WhatsApp/Facebook link previews see the right details without running
 //     the app (Vercel's `cleanUrls` serves /about from about.html);
 //   - a 1200×630 JPEG share image per project (dist/og/<slug>.jpg);
-//   - dist/sitemap.xml listing every page.
+//   - dist/sitemap.xml listing every page;
+//   - dist/404.html, shown by Vercel (with a 404 status) for unknown paths.
 // Page data comes from src/data/seo.js and src/data/projects.js.
 
 import fs from "node:fs/promises";
@@ -94,6 +95,19 @@ export default function seoPages() {
         await fs.mkdir(path.dirname(path.join(outDir, file)), { recursive: true });
         await fs.writeFile(path.join(outDir, file), html);
       }
+
+      // Vercel serves 404.html (with a 404 status) for any path that has no
+      // file, so unknown URLs get the site's own "Page Not Found" screen: the
+      // app boots and renders its NotFound page for the unmatched route.
+      let notFound = fillHead(template, {
+        title: "Page Not Found | MAHUM Builders",
+        description: "The page you're looking for doesn't exist or may have moved.",
+        url: seo.absoluteUrl("/"),
+        imageUrl: seo.absoluteUrl(seo.DEFAULT_IMAGE.path),
+        imageAlt: seo.DEFAULT_IMAGE.alt,
+      });
+      notFound = setMeta(notFound, "robots", "noindex, follow");
+      await fs.writeFile(path.join(outDir, "404.html"), notFound);
 
       const urls = pages.map((p) => `  <url><loc>${seo.absoluteUrl(p.route)}</loc></url>`).join("\n");
       await fs.writeFile(

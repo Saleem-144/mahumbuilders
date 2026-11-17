@@ -103,7 +103,7 @@ The brochure in `public/brochures/` is a web version of the client's PDF (master
 ## Search, share previews and analytics
 
 - `src/data/seo.js` holds every page's title and description, plus `projectSeo()` for project pages. A project can override its description with `seoDescription`.
-- At build time `scripts/seo-pages.mjs` (a Vite plugin) writes one HTML file per page and project with that page's title, description, canonical URL and share preview filled in, a 1200x630 JPEG share image per project (`/og/<slug>.jpg`), and `sitemap.xml`. Vercel's `cleanUrls` serves `/about` from `about.html`; unknown paths still fall back to the app. New projects are picked up automatically.
+- At build time `scripts/seo-pages.mjs` (a Vite plugin) writes one HTML file per page and project with that page's title, description, canonical URL and share preview filled in, a 1200x630 JPEG share image per project (`/og/<slug>.jpg`), and `sitemap.xml`. Vercel's `cleanUrls` serves `/about` from `about.html`; unknown paths get `404.html`, which loads the app's own Page Not Found screen with a real 404 status. New projects are picked up automatically.
 - `public/robots.txt` points search engines to the sitemap. Business details (address, phone, coordinates, founding year) are in a JSON-LD block in `index.html`.
 - Google Analytics 4 is switched off until a Measurement ID is pasted into `GA_MEASUREMENT_ID` in `src/lib/analytics.js`. It then records page views and PDF downloads (GA4 enhanced measurement), delivered inquiries (`generate_lead`) and phone/email clicks (`contact_click`).
 - Google Search Console: verify `mbd-pk.com` as a Domain property (TXT record in GoDaddy DNS), then submit `https://www.mbd-pk.com/sitemap.xml`.
