@@ -26,7 +26,7 @@ export function ProjectUnits({ units, brochure }) {
   return (
     <section className="bg-[color:var(--color-paper-dim)] py-14 sm:py-20">
       <div className="container-edit">
-        <SectionHeading eyebrow="Available on Booking" title="Apartments and shops" />
+        <SectionHeading eyebrow="Available on Booking" title="Apartments and Shops" />
 
         <div className="mt-10 grid grid-cols-1 gap-8 sm:mt-12 sm:grid-cols-3 sm:gap-8">
           {units.map((unit, i) => (

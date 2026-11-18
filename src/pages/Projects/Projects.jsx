@@ -71,9 +71,9 @@ export default function Projects() {
   return (
     <>
       <PageIntro
-        eyebrow={`Portfolio · ${projects.length} Projects`}
+        eyebrow="Portfolio"
         title="Projects"
-        description="Homes, commercial buildings, office interiors and hospitality projects by MAHUM Builders, in Karachi and the Hunza valley."
+        description="Homes, commercial buildings, office interiors and hospitality projects by MAHUM Builders."
       />
 
       <section className="pb-16 sm:pb-24">

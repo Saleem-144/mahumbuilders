@@ -98,15 +98,15 @@ export default function Hero() {
 
         <div className="hero-fade mt-7 grid grid-cols-1 items-end gap-6 sm:mt-9 lg:grid-cols-[1fr_auto]">
           <p className="max-w-md text-[0.9375rem] leading-relaxed text-[color:var(--color-paper)]/80">
-            Real estate development and construction in Karachi since 1988. Homes, offices and hotels,
-            built and handed over ready to use.
+            Real estate development and construction in Karachi since 1988. We build homes, offices and
+            hotels, and hand them over ready to use.
           </p>
           <div className="flex flex-wrap items-center gap-3">
             <Button to="/projects" variant="inverse">
-              View Projects
+              View Our Work
             </Button>
             <Button to="/contact" variant="ghost-light">
-              Inquire
+              Contact
             </Button>
           </div>
         </div>

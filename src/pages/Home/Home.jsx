@@ -9,6 +9,8 @@ import HowWeDeliver from "../../components/HowWeDeliver/HowWeDeliver";
 import CTA from "../../components/CTA/CTA";
 import { usePageMeta } from "../../lib/usePageMeta";
 import { PAGES } from "../../data/seo";
+import ProjectSpotlight from "../../components/ProjectSpotlight/ProjectSpotlight";
+import { images } from "../../data/images";
 
 export default function Home() {
   usePageMeta({ ...PAGES["/"], path: "/" });
@@ -17,11 +19,12 @@ export default function Home() {
     <>
       <Hero />
       <AboutSection />
+      <ProjectSpotlight slug="house-82b" image={images.homeIntro} />
       <FeaturedProjectsSection />
       <NowBooking />
-      <Developments index="03" />
+      <Developments />
       <ServicesSection />
-      <HowWeDeliver dark index="05" />
+      <HowWeDeliver dark />
       <MediaSection />
       <CTA />
     </>

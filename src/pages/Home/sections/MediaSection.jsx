@@ -10,7 +10,6 @@ export default function MediaSection() {
     <section className="py-12 sm:py-16 lg:py-20">
       <div className="container-edit flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
         <SectionHeading
-          index="06"
           eyebrow="From Site to Structure"
           title="Life at MAHUM"
           description="Photos from our sites and finished projects."

@@ -9,7 +9,6 @@ export default function SectionHeading({
   eyebrow,
   title,
   description,
-  index,
   light = false,
   align = "left",
   className,
@@ -18,13 +17,7 @@ export default function SectionHeading({
   const muted = light ? "text-[color:var(--color-stone)]" : "text-[color:var(--color-mist)]";
   return (
     <Reveal className={cn("max-w-4xl", align === "center" && "mx-auto text-center", className)}>
-      {(index || eyebrow) && (
-        <p className={cn("index-label mb-4 flex items-center gap-4", align === "center" && "justify-center", muted)}>
-          {index && <span>{index}</span>}
-          {index && eyebrow && <span className={cn("h-px w-8", light ? "bg-white/30" : "bg-[color:var(--color-ink)]/25")} />}
-          {eyebrow && <span>{eyebrow}</span>}
-        </p>
-      )}
+      {eyebrow && <p className={cn("index-label mb-4", muted)}>{eyebrow}</p>}
       <h2
         className={cn(
           "text-balance text-[clamp(1.75rem,3vw,2.625rem)] font-normal leading-[1.12]",

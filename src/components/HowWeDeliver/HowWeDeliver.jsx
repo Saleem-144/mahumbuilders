@@ -8,7 +8,7 @@ import { cn } from "../../lib/cn";
  * stage and a large numeral above each. Horizontal on desktop, vertical on
  * phones. `dark` sets it on the brand's deep umber.
  */
-export default function HowWeDeliver({ dark = false, index }) {
+export default function HowWeDeliver({ dark = false }) {
   const line = dark ? "bg-white/20" : "bg-[color:var(--color-line)]";
   return (
     <section
@@ -20,8 +20,7 @@ export default function HowWeDeliver({ dark = false, index }) {
       <div className="container-edit">
         <SectionHeading
           light={dark}
-          index={index}
-          eyebrow="How We Work"
+          eyebrow="How We Deliver"
           title="Five stages, from brief to handover"
           description="Every project goes through the same five stages, so clients always know what happens next."
         />

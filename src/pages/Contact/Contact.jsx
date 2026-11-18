@@ -97,9 +97,9 @@ export default function Contact() {
   return (
     <>
       <PageIntro
-        eyebrow="Contact Us"
-        title="Let's talk about your project."
-        description="Tell us what you're planning: a home, a commercial building or an interior. Our team will get back to you."
+        eyebrow="Let's Build Together"
+        title="Contact Us"
+        description="Tell us about your project and our team will get back to you."
       />
 
       <section className="pb-14 sm:pb-20">
@@ -154,7 +154,7 @@ export default function Contact() {
                   <Check size={20} strokeWidth={1.5} />
                 </div>
                 <h3 className="mt-6 text-[clamp(1.875rem,3vw,2.5rem)] font-normal leading-tight text-[color:var(--color-ink)]">
-                  Thank you.
+                  Thank You
                 </h3>
                 <p className="mt-5 max-w-sm text-[0.9375rem] leading-relaxed text-[color:var(--color-mist)]">
                   We have received your inquiry and will get back to you soon.

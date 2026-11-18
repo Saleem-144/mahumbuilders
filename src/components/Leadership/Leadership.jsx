@@ -4,11 +4,11 @@ import { leadership } from "../../data/leadership";
 
 // Leadership as editorial rows: a small portrait, the name in large serif and
 // a short profile. (The supplied portraits are small, so they stay small.)
-export default function Leadership({ index }) {
+export default function Leadership() {
   return (
     <section className="py-12 sm:py-16 lg:py-20">
       <div className="container-edit">
-        <SectionHeading index={index} eyebrow="Meet the Team" title="Leadership" />
+        <SectionHeading eyebrow="Meet the Team" title="Leadership" />
 
         <div className="mt-10 border-b border-[color:var(--color-line)] sm:mt-12">
           {leadership.map((person) => (

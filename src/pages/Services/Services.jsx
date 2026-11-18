@@ -90,7 +90,7 @@ export default function Services() {
       {/* The turn-key approach */}
       <section className="py-12 sm:py-16 lg:py-20">
         <div className="container-edit">
-          <SectionHeading eyebrow="Our Approach" title="The turn-key approach" description="One team responsible for the project, from the first site visit to handover." />
+          <SectionHeading eyebrow="Our Approach" title="The Turn-Key Approach" description="One team responsible for the project, from the first site visit to handover." />
           <RevealGroup className="mt-10 border-b border-[color:var(--color-line)] sm:mt-12">
             {turnkeyStages.map((stage) => (
               <RevealItem

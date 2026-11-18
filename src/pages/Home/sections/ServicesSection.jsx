@@ -16,9 +16,8 @@ export default function ServicesSection() {
       <div className="container-edit">
         <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
           <SectionHeading
-            index="04"
             eyebrow="What We Do"
-            title="One team, from the land to the keys"
+            title="Our Services"
             description="Everything a building project needs, from finding the land to the final handover."
           />
           <Reveal className="shrink-0">

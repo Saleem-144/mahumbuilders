@@ -10,9 +10,8 @@ export default function FeaturedProjectsSection() {
       <div className="container-edit">
         <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
           <SectionHeading
-            index="02"
             eyebrow="Selected Work"
-            title="Recent projects"
+            title="Featured Projects"
             description="A selection of our recent homes, commercial buildings and our hotel project in Hunza."
           />
           <Reveal className="shrink-0">

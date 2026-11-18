@@ -28,7 +28,7 @@ const WAYS = [
     description:
       "We build on the client's behalf and stay responsible for the job from grey structure to handover.",
     image: images.clientProjectDusk,
-    ctaLabel: "Start a Project",
+    ctaLabel: "Contact Us",
     ctaTo: "/contact",
   },
 ];
@@ -66,14 +66,13 @@ function WayPanel({ way }) {
   );
 }
 
-export default function Developments({ index }) {
+export default function Developments() {
   return (
     <section className="bg-[color:var(--color-paper)]">
       <div className="container-edit py-14 sm:py-20">
         <SectionHeading
-          index={index}
           eyebrow="Two Ways We Build"
-          title="Our developments and client projects"
+          title="Our Developments and Client Projects"
           description="We work in two ways: we develop our own projects, and we build turn-key projects for clients."
         />
       </div>
