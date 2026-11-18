@@ -1,17 +1,31 @@
 import PageIntro from "../../components/PageIntro/PageIntro";
 import Reveal from "../../components/Reveal/Reveal";
+import { RevealGroup, RevealItem } from "../../components/Reveal/Reveal";
 import Photo from "../../components/Photo/Photo";
 import SectionHeading from "../../components/SectionHeading/SectionHeading";
-import StatBlock from "../../components/StatBlock/StatBlock";
-import { RevealGroup } from "../../components/Reveal/Reveal";
+import StatsStrip from "../../components/StatsStrip/StatsStrip";
 import Developments from "../../components/Developments/Developments";
 import Leadership from "../../components/Leadership/Leadership";
 import CTA from "../../components/CTA/CTA";
 import { images } from "../../data/images";
-import { stats } from "../../data/stats";
 import { company } from "../../data/nav";
 import { usePageMeta } from "../../lib/usePageMeta";
 import { PAGES } from "../../data/seo";
+
+// Milestones, all taken from facts already on the site (company profile and
+// project details).
+const HISTORY = [
+  { year: "1988", title: "MAHUM is founded", text: "Hasan Mustafa starts the company in Karachi with a single residential project." },
+  {
+    year: "2014",
+    title: "A second generation",
+    text: "Umair Hasan joins and leads operations as the company moves into contracting, commercial construction and interiors.",
+  },
+  { year: "2019", title: "MAHUM Offices", text: "Our own five-storey office building is completed in Phase 8, DHA." },
+  { year: "2025", title: "Casa Solara", text: "A 10,000 sq. ft. villa on a 666 sq. yd. plot is completed in Phase 8, DHA." },
+  { year: "2026", title: "BAHRBAN, Hunza", text: "Our first hotel, in the Hunza valley, is under construction." },
+  { year: "2027", title: "Casa Bellini", text: "Ground breaking is expected for a neoclassical retail and apartment building on Khayaban-e-Nishat." },
+];
 
 export default function About() {
   usePageMeta({ ...PAGES["/about"], path: "/about" });
@@ -19,32 +33,32 @@ export default function About() {
   return (
     <>
       <PageIntro
-        eyebrow={`Est. ${company.foundedYear}`}
+        eyebrow={`Est. ${company.foundedYear} · Karachi`}
         title="About MAHUM Builders"
         description="Founded by Hasan Mustafa in 1988, MAHUM develops and builds residential, commercial and hospitality projects in Pakistan."
       />
 
-      {/* Company Introduction */}
-      <section className="py-10 sm:py-14 lg:py-16">
-        <div className="container-edit grid grid-cols-1 items-start gap-14 lg:grid-cols-2 lg:gap-20">
-          <Reveal className="aspect-[4/3] overflow-hidden lg:aspect-auto lg:h-[420px]">
+      {/* Company introduction */}
+      <section className="pb-20 sm:pb-28 lg:pb-36">
+        <div className="container-edit grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-10">
+          <Reveal className="lg:col-span-7">
             <Photo
               src={images.aboutIntro.src}
               srcSet={`${images.aboutIntro.src} 960w, ${images.aboutIntro.large} 2000w`}
-              sizes="(min-width: 1024px) 50vw, 100vw"
+              sizes="(min-width: 1024px) 58vw, 100vw"
               alt={images.aboutIntro.alt}
               fallback={images.aboutIntro.fallback}
-              className="h-full w-full"
+              className="aspect-[4/3] w-full"
             />
+            <p className="mt-3 text-xs text-[color:var(--color-mist)]">Stone Villa, BTK Hills, Bahria Town</p>
           </Reveal>
-          <div className="space-y-6 pt-2 text-[1.0625rem] leading-relaxed text-[color:var(--color-mist)] lg:pt-10">
-            <Reveal as="p">
-              MAHUM is a real estate development and construction company based in Karachi. It was
-              established in 1988 by Hasan Mustafa, a civil engineer licensed by the Pakistan Engineering
-              Council.
+          <div className="space-y-6 text-[0.9375rem] leading-relaxed text-[color:var(--color-mist)] lg:col-span-4 lg:col-start-9 lg:self-end">
+            <Reveal as="p" className="statement text-[clamp(1.5rem,2.2vw,2rem)] text-[color:var(--color-ink)]">
+              A real estate development and construction company, based in Karachi since 1988.
             </Reveal>
             <Reveal as="p" delay={0.06}>
-              Since then we have completed more than 300 projects, around 250 residential and 50
+              MAHUM was established by Hasan Mustafa, a civil engineer licensed by the Pakistan Engineering
+              Council. Since then we have completed more than 300 projects, around 250 residential and 50
               commercial. Some are developments we start ourselves; others are built for private and
               corporate clients.
             </Reveal>
@@ -57,61 +71,52 @@ export default function About() {
         </div>
       </section>
 
-      {/* History / Journey */}
-      <section className="border-t border-[color:var(--color-line)] bg-[color:var(--color-paper-dim)] py-10 sm:py-14 lg:py-16">
+      {/* History */}
+      <section className="bg-[color:var(--color-paper-dim)] py-20 sm:py-28 lg:py-36">
         <div className="container-edit">
-          <SectionHeading eyebrow="Our Journey" title="Our History" />
-
-          <div className="mt-14 grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-12">
-            <Reveal as="div">
-              <h3 className="font-display text-xl font-medium text-[color:var(--color-ink)]">How It Started</h3>
-              <p className="mt-4 text-[0.9375rem] leading-relaxed text-[color:var(--color-mist)]">
-                Hasan Mustafa started MAHUM in 1988 with a single residential project. Over the years the
-                company moved into commercial construction, interior work and, more recently, hospitality.
-              </p>
-            </Reveal>
-            <Reveal as="div" delay={0.08}>
-              <h3 className="font-display text-xl font-medium text-[color:var(--color-ink)]">What We Build Today</h3>
-              <p className="mt-4 text-[0.9375rem] leading-relaxed text-[color:var(--color-mist)]">
-                Our work today includes private homes, office buildings and commercial interiors in Karachi.
-                Our first hotel, BAHRBAN in Hunza, is currently under construction.
-              </p>
-            </Reveal>
-            <Reveal as="div" delay={0.16}>
-              <h3 className="font-display text-xl font-medium text-[color:var(--color-ink)]">How We Work</h3>
-              <p className="mt-4 text-[0.9375rem] leading-relaxed text-[color:var(--color-mist)]">
-                We agree the scope, materials and schedule with the client before work starts, and we
-                supervise our own sites through to handover. The same standards apply whether we are building
-                a home or an office.
-              </p>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Statistics */}
-      <section className="border-t border-[color:var(--color-line)] py-10 sm:py-14 lg:py-16">
-        <div className="container-edit">
-          <p className="eyebrow mb-10">By the Numbers</p>
-          <RevealGroup className="grid grid-cols-2 gap-y-10 sm:grid-cols-4">
-            {stats.map((s) => (
-              <StatBlock key={s.label} {...s} />
+          <SectionHeading index="01" eyebrow="Our Journey" title="From one house to three hundred projects" />
+          <RevealGroup className="mt-14 border-b border-[color:var(--color-line)] sm:mt-20">
+            {HISTORY.map((m) => (
+              <RevealItem
+                key={m.year}
+                className="group grid grid-cols-[5.5rem_1fr] gap-x-6 border-t border-[color:var(--color-line)] py-7 sm:grid-cols-[9rem_1fr] sm:py-9 lg:grid-cols-12 lg:gap-x-10"
+              >
+                <span className="font-display text-[2.25rem] font-light leading-none text-[color:var(--color-mist)] transition-colors duration-500 group-hover:text-[color:var(--color-ink)] sm:text-[3.25rem] lg:col-span-2">
+                  {m.year}
+                </span>
+                <h3 className="self-center text-[1.625rem] font-normal leading-tight text-[color:var(--color-ink)] sm:text-[2rem] lg:col-span-4">
+                  {m.title}
+                </h3>
+                <p className="col-start-2 mt-2 max-w-lg self-center text-[0.9375rem] leading-relaxed text-[color:var(--color-mist)] lg:col-span-6 lg:col-start-auto lg:mt-0">
+                  {m.text}
+                </p>
+              </RevealItem>
             ))}
           </RevealGroup>
         </div>
       </section>
 
-      <Leadership />
+      {/* Figures */}
+      <section className="py-20 sm:py-28">
+        <div className="container-edit">
+          <p className="index-label mb-10 text-[color:var(--color-mist)]">By the Numbers</p>
+          <StatsStrip />
+        </div>
+      </section>
 
-      {/* Philosophy / Vision */}
-      <section className="border-t border-[color:var(--color-line)] bg-[color:var(--color-ink)] py-10 text-[color:var(--color-paper)] sm:py-14 lg:py-16">
-        <div className="container-edit max-w-3xl">
-          <Reveal>
-            <span className="eyebrow text-[color:var(--color-mist-light)]">Company Philosophy</span>
-            <h2 className="text-balance mt-5 text-[clamp(2rem,4.5vw,3.5rem)] font-medium">
-              Where Innovation Meets Legacy
+      <Leadership index="02" />
+
+      {/* Philosophy */}
+      <section className="grain relative overflow-hidden bg-[color:var(--color-umber)] py-24 text-[color:var(--color-paper)] sm:py-32 lg:py-40">
+        <div className="container-edit grid grid-cols-1 gap-10 lg:grid-cols-12">
+          <Reveal className="lg:col-span-3">
+            <p className="index-label text-[color:var(--color-stone)]">Company Philosophy</p>
+          </Reveal>
+          <Reveal className="lg:col-span-9">
+            <h2 className="text-[clamp(2.75rem,6vw,5.5rem)] font-normal leading-[0.98] tracking-[-0.02em]">
+              Where innovation <em className="italic text-[color:var(--color-stone)]">meets legacy.</em>
             </h2>
-            <p className="mt-7 text-[1.0625rem] leading-relaxed text-[color:var(--color-mist-light)]">
+            <p className="mt-10 max-w-2xl text-[1.0625rem] leading-relaxed text-[color:var(--color-stone)]">
               Clients come to us because we take care of the whole project. One team handles the land,
               design, approvals, construction and finishing, so the client has one point of contact and one
               company responsible for the result.
@@ -120,7 +125,7 @@ export default function About() {
         </div>
       </section>
 
-      <Developments />
+      <Developments index="03" />
 
       <CTA />
     </>

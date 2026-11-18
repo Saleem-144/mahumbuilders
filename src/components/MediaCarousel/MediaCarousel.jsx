@@ -115,7 +115,7 @@ export default function MediaCarousel({ items }) {
           pause();
           resumeSoon(1400);
         }}
-        className="scrollbar-none flex gap-4 overflow-x-auto"
+        className="scrollbar-none flex gap-4 overflow-x-auto sm:gap-6"
         style={{ scrollbarWidth: "none" }}
       >
         {loop.map((item, i) => (
@@ -123,9 +123,9 @@ export default function MediaCarousel({ items }) {
             data-card
             ref={i === items.length ? markerRef : undefined}
             key={i}
-            className="group w-[54vw] shrink-0 sm:w-[30vw] lg:w-[19vw]"
+            className="group w-[62vw] shrink-0 sm:w-[34vw] lg:w-[22vw]"
           >
-            <div className="relative aspect-[4/5] overflow-hidden rounded-xl">
+            <div className="relative aspect-[4/5] overflow-hidden bg-[color:var(--color-stone)]">
               {item.type === "video" ? (
                 <video
                   src={item.src}
@@ -137,26 +137,22 @@ export default function MediaCarousel({ items }) {
                   className="h-full w-full object-cover"
                 />
               ) : (
-                <Photo src={item.src} alt={item.alt} fallback={item.fallback} zoom={false} className="h-full w-full" />
-              )}
-
-              <span className="absolute left-2 top-2 z-10 rounded-full bg-white/90 px-2.5 py-1 text-[0.6875rem] font-medium text-[color:var(--color-ink)] backdrop-blur-sm sm:left-3 sm:top-3">
-                @mahumbuilders
-              </span>
-
-              {item.label && (
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-[color:var(--color-ink)]/80 via-[color:var(--color-ink)]/30 to-transparent px-3 pb-3 pt-14 sm:px-4 sm:pb-4">
-                  <p className="font-display text-base font-medium leading-tight text-[color:var(--color-paper)] sm:text-lg">
-                    {item.label}
-                  </p>
-                  {item.tag && (
-                    <p className="mt-1 text-[0.625rem] font-medium uppercase tracking-[0.16em] text-[color:var(--color-paper)]/75">
-                      {item.tag}
-                    </p>
-                  )}
-                </div>
+                <Photo
+                  src={item.src}
+                  alt={item.alt}
+                  fallback={item.fallback}
+                  zoom={false}
+                  className="h-full w-full"
+                  imgClassName="transition-transform duration-[1.2s] ease-[var(--ease-out-editorial)] group-hover:scale-[1.05]"
+                />
               )}
             </div>
+            {item.label && (
+              <p className="mt-3 flex items-baseline justify-between gap-3 text-[0.8125rem] text-[color:var(--color-ink)]">
+                <span className="font-display text-[1.125rem]">{item.label}</span>
+                {item.tag && <span className="index-label text-[color:var(--color-mist)]">{item.tag}</span>}
+              </p>
+            )}
           </div>
         ))}
       </div>

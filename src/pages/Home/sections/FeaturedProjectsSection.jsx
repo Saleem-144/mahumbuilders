@@ -1,25 +1,29 @@
 import SectionHeading from "../../../components/SectionHeading/SectionHeading";
-import ProjectGrid from "../../../components/ProjectGrid/ProjectGrid";
+import ProjectIndex from "../../../components/ProjectIndex/ProjectIndex";
 import Button from "../../../components/Button/Button";
-import { featuredProjects } from "../../../data/projects";
+import Reveal from "../../../components/Reveal/Reveal";
+import { featuredProjects, projects } from "../../../data/projects";
 
 export default function FeaturedProjectsSection() {
   return (
-    <section className="border-t border-[color:var(--color-line)] py-10 sm:py-14 lg:py-16">
+    <section className="py-20 sm:py-28 lg:py-36">
       <div className="container-edit">
-        <div className="flex flex-col items-start justify-between gap-8 sm:flex-row sm:items-end">
+        <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
           <SectionHeading
+            index="02"
             eyebrow="Selected Work"
-            title="Featured Projects"
+            title="Recent projects"
             description="A selection of our recent homes, commercial buildings and our hotel project in Hunza."
           />
-          <Button to="/projects" variant="ghost" className="shrink-0">
-            Recent Projects
-          </Button>
+          <Reveal className="shrink-0">
+            <Button to="/projects" variant="ghost">
+              All {projects.length} Projects
+            </Button>
+          </Reveal>
         </div>
 
-        <div className="mt-10 sm:mt-16">
-          <ProjectGrid projects={featuredProjects} columns={3} />
+        <div className="mt-14 sm:mt-20">
+          <ProjectIndex projects={featuredProjects} />
         </div>
       </div>
     </section>

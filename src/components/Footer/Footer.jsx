@@ -1,83 +1,97 @@
 import { Link } from "../../router/Router";
 import { navLinks, company, telHref } from "../../data/nav";
 import Logo from "../Logo/Logo";
+import Arrow from "../Arrow/Arrow";
+import { WORDMARK } from "../Logo/logoPaths";
 import { FacebookIcon, InstagramIcon } from "../SocialIcons/SocialIcons";
+
+function Column({ title, children }) {
+  return (
+    <div>
+      <p className="index-label text-[color:var(--color-stone)]/70">{title}</p>
+      <div className="mt-5 flex flex-col gap-3 text-[0.875rem] text-[color:var(--color-paper)]">{children}</div>
+    </div>
+  );
+}
 
 export default function Footer() {
   const year = new Date().getFullYear();
+  const toTop = () => {
+    if (window.__lenis?.scrollTo) window.__lenis.scrollTo(0, { duration: 1.4 });
+    else window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
-    <footer className="bg-[color:var(--color-ink)] text-[color:var(--color-mist-light)]">
-      <div className="container-edit pt-12 pb-6 sm:pt-16">
-        <div className="grid grid-cols-1 gap-10 border-b border-[color:var(--color-line-dark)] pb-10 sm:grid-cols-3">
-          <div>
+    <footer className="overflow-hidden bg-[color:var(--color-umber)] text-[color:var(--color-stone)]">
+      <div className="container-edit pt-20 sm:pt-24">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-12 lg:grid-cols-12">
+          <div className="col-span-2 lg:col-span-4">
             <Logo variant="stacked" className="text-[color:var(--color-paper)]" />
-            <p className="mt-6 max-w-xs text-sm leading-relaxed">
-              {company.tagline}. Real estate development and construction in Karachi since{" "}
-              {company.foundedYear}.
+            <p className="mt-8 max-w-xs text-[0.875rem] leading-relaxed">
+              {company.tagline}. Real estate development and construction in Karachi since {company.foundedYear}.
             </p>
           </div>
 
-          <div>
-            <span className="eyebrow text-[color:var(--color-mist-light)]/70">Navigate</span>
-            <ul className="mt-3 flex flex-col gap-2.5">
+          <div className="lg:col-span-2 lg:col-start-6">
+            <Column title="Navigate">
               {navLinks.map((link) => (
-                <li key={link.path}>
-                  <Link to={link.path} className="link-underline text-sm text-[color:var(--color-paper)]">
-                    {link.label}
-                  </Link>
-                </li>
+                <Link key={link.path} to={link.path} className="link-underline w-fit">
+                  {link.label}
+                </Link>
               ))}
-            </ul>
+            </Column>
           </div>
 
-          <div>
-            <span className="eyebrow text-[color:var(--color-mist-light)]/70">Contact</span>
-            <ul className="mt-3 flex flex-col gap-2.5 text-sm">
-              <li>
-                <a href={telHref(company.phones[0])} className="link-underline text-[color:var(--color-paper)]">
-                  {company.phones[0]}
+          <div className="lg:col-span-3">
+            <Column title="Contact">
+              {company.phones.map((p) => (
+                <a key={p} href={telHref(p)} className="link-underline w-fit">
+                  {p}
                 </a>
-              </li>
-              <li>
-                <a href={`mailto:${company.email}`} className="link-underline text-[color:var(--color-paper)]">
-                  {company.email}
-                </a>
-              </li>
-              <li className="max-w-[220px] leading-relaxed">{company.address}</li>
-            </ul>
+              ))}
+              <a href={`mailto:${company.email}`} className="link-underline w-fit">
+                {company.email}
+              </a>
+              <span className="max-w-[16rem] leading-relaxed text-[color:var(--color-stone)]">
+                {company.address}, Karachi
+              </span>
+            </Column>
+          </div>
+
+          <div className="lg:col-span-2">
+            <Column title="Follow">
+              <a href={company.instagram.url} target="_blank" rel="noreferrer" className="group inline-flex w-fit items-center gap-2.5">
+                <InstagramIcon size={15} />
+                <span className="link-underline">Instagram</span>
+              </a>
+              <a href={company.social.url} target="_blank" rel="noreferrer" className="group inline-flex w-fit items-center gap-2.5">
+                <FacebookIcon size={15} />
+                <span className="link-underline">Facebook</span>
+              </a>
+            </Column>
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-5 pt-5 text-xs text-[color:var(--color-mist-light)]/60 sm:grid sm:grid-cols-3 sm:items-center sm:gap-4">
-          <span className="text-center sm:justify-self-start sm:text-left">
-            © {year} MAHUM Builders. All rights reserved.
-          </span>
+        {/* The brand wordmark, set across the full width. */}
+        <svg
+          viewBox={`0 0 ${WORDMARK.w} ${WORDMARK.h}`}
+          className="mt-20 block w-full text-[color:var(--color-paper)]/[0.07] sm:mt-28"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          {WORDMARK.paths.map((d) => (
+            <path key={d.slice(0, 24)} d={d} />
+          ))}
+        </svg>
 
-          <div className="flex items-center gap-5 sm:justify-self-center">
-            <a
-              href={company.social.url}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Visit MAHUM Builders on Facebook (opens in a new tab)"
-              className="text-[color:var(--color-mist-light)] transition-colors duration-300 hover:text-[color:var(--color-paper)]"
-            >
-              <FacebookIcon />
-            </a>
-            <a
-              href={company.instagram.url}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Visit MAHUM Builders on Instagram (opens in a new tab)"
-              className="text-[color:var(--color-mist-light)] transition-colors duration-300 hover:text-[color:var(--color-paper)]"
-            >
-              <InstagramIcon />
-            </a>
-          </div>
-
-          <span className="text-center sm:justify-self-end sm:text-right">
-            Founded {company.foundedYear} by {company.founded}
+        <div className="mt-8 flex flex-col gap-4 border-t border-white/10 py-6 text-xs text-[color:var(--color-stone)]/70 sm:flex-row sm:items-center sm:justify-between">
+          <span>
+            © {year} MAHUM Builders. Founded {company.foundedYear} by {company.founded}.
           </span>
+          <button type="button" onClick={toTop} className="group inline-flex w-fit items-center gap-3 uppercase tracking-[0.2em] hover:text-[color:var(--color-paper)]">
+            Back to top
+            <Arrow className="-rotate-90 group-hover:translate-x-0 group-hover:-translate-y-1" />
+          </button>
         </div>
       </div>
     </footer>

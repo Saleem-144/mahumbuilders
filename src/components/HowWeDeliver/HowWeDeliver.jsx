@@ -4,131 +4,66 @@ import { deliveryStages } from "../../data/delivery";
 import { cn } from "../../lib/cn";
 
 /**
- * "How We Deliver" — MAHUM's five-stage delivery process, read as a single
- * connected journey rather than a set of cards.
- *
- * - Desktop (lg+): each stage alternates above/below a shared centerline,
- *   joined to it by a short connector — closer to an elevation drawing
- *   than a card grid. Every stage (including the final handover) takes a
- *   brass accent on hover only, never permanently.
- * - Tablet (sm–lg, incl. ~834px): a static 3+2 grid beneath a single rule.
- * - Mobile (<sm): a genuine vertical process, each stage joined to the next
- *   by a short connecting rule.
+ * MAHUM's five delivery stages as a timeline: one hairline with a marker per
+ * stage and a large numeral above each. Horizontal on desktop, vertical on
+ * phones. `dark` sets it on the brand's deep umber.
  */
-export default function HowWeDeliver() {
-  const last = deliveryStages.length - 1;
-
+export default function HowWeDeliver({ dark = false, index }) {
+  const line = dark ? "bg-white/20" : "bg-[color:var(--color-line)]";
   return (
-    <section className="border-t border-[color:var(--color-line)] py-10 sm:py-14 lg:py-16">
+    <section
+      className={cn(
+        "py-20 sm:py-28 lg:py-36",
+        dark ? "bg-[color:var(--color-umber)] text-[color:var(--color-paper)]" : "border-t border-[color:var(--color-line)]"
+      )}
+    >
       <div className="container-edit">
         <SectionHeading
-          eyebrow="How We Deliver"
+          light={dark}
+          index={index}
+          eyebrow="How We Work"
           title="Five stages, from brief to handover"
           description="Every project goes through the same five stages, so clients always know what happens next."
         />
 
-        {/* Desktop — connected horizontal timeline */}
-        <div className="relative mt-28 hidden lg:block">
-          <RevealGroup className="relative grid grid-cols-5" stagger={0.1}>
-            {deliveryStages.map((stage, i) => {
-              const above = i % 2 === 0;
-              return (
-                <RevealItem key={stage.number} y={above ? -14 : 14} className="relative">
-                  <div
-                    className={cn(
-                      "group relative flex flex-col items-center px-4 text-center",
-                      above ? "justify-end pb-16" : "justify-start pt-16"
-                    )}
-                    style={{ minHeight: "12rem" }}
-                  >
-                    <span className="font-display block text-[3.25rem] font-light leading-none text-[color:var(--color-ink)] transition-colors duration-300 group-hover:text-[color:var(--color-brass)] xl:text-6xl">
-                      {stage.number}
-                    </span>
-                    <p className="eyebrow mt-4">{stage.name}</p>
-                    <h3 className="font-display mt-2 text-base font-medium text-[color:var(--color-ink)]">
-                      {stage.title}
-                    </h3>
-                    <p className="mt-2.5 max-w-[13rem] text-[0.8125rem] leading-relaxed text-[color:var(--color-mist)]">
-                      {stage.description}
-                    </p>
+        <RevealGroup className="relative mt-16 grid grid-cols-1 gap-0 sm:mt-24 lg:grid-cols-5 lg:gap-8">
+          {/* Desktop: one continuous hairline through the markers. */}
+          <span aria-hidden="true" className={cn("absolute left-0 right-0 top-[89px] hidden h-px lg:block", line)} />
 
-                    <span
-                      aria-hidden="true"
-                      className={cn(
-                        "absolute left-1/2 w-px -translate-x-1/2 bg-[color:var(--color-line)] transition-colors duration-300 group-hover:bg-[color:var(--color-brass-light)]",
-                        above ? "bottom-0 h-16" : "top-0 h-16"
-                      )}
-                    />
-                  </div>
-                </RevealItem>
-              );
-            })}
-          </RevealGroup>
-        </div>
+          {deliveryStages.map((stage, i) => (
+            <RevealItem key={stage.number} className="group relative grid grid-cols-[3.5rem_1fr] gap-x-5 pb-12 last:pb-0 lg:block lg:pb-0">
+              {/* Phones: vertical hairline between markers. */}
+              {i < deliveryStages.length - 1 && (
+                <span aria-hidden="true" className={cn("absolute bottom-0 left-[1.75rem] top-16 w-px lg:hidden", line)} />
+              )}
 
-        {/* Tablet — static 3+2 grid */}
-        <RevealGroup className="mt-16 hidden grid-cols-3 gap-x-8 gap-y-14 border-t border-[color:var(--color-line)] pt-12 sm:grid lg:hidden">
-          {deliveryStages.map((stage, i) => {
-            const isLast = i === last;
-            return (
-              <RevealItem key={stage.number}>
-                <span
-                  className={cn(
-                    "font-display block text-5xl font-light leading-none",
-                    isLast ? "text-[color:var(--color-brass)]" : "text-[color:var(--color-ink)]"
-                  )}
-                >
-                  {stage.number}
-                </span>
-                <p className="eyebrow mt-4">{stage.name}</p>
-                <h3 className="font-display mt-2 text-lg font-medium text-[color:var(--color-ink)]">
-                  {stage.title}
-                </h3>
-                <p className="mt-2.5 max-w-[16rem] text-sm leading-relaxed text-[color:var(--color-mist)]">
-                  {stage.description}
-                </p>
-              </RevealItem>
-            );
-          })}
-        </RevealGroup>
-
-        {/* Mobile — genuine vertical process */}
-        <RevealGroup className="mt-14 flex flex-col sm:hidden">
-          {deliveryStages.map((stage, i) => {
-            const isLast = i === last;
-            return (
-              <RevealItem key={stage.number} className="relative pb-10 pl-9 last:pb-0">
-                {!isLast && (
-                  <span
-                    aria-hidden="true"
-                    className="absolute bottom-0 left-[0.28rem] top-9 w-px bg-[color:var(--color-line)]"
-                  />
+              <span
+                className={cn(
+                  "font-display text-[3rem] font-light italic leading-none transition-colors duration-500 lg:block lg:text-[4.5rem]",
+                  dark ? "text-[color:var(--color-stone)] group-hover:text-[color:var(--color-paper)]" : "text-[color:var(--color-mist)] group-hover:text-[color:var(--color-ink)]"
                 )}
+              >
+                {stage.number}
+              </span>
+
+              <div className="lg:mt-0">
                 <span
                   aria-hidden="true"
                   className={cn(
-                    "absolute left-0 top-2 h-[0.4rem] w-[0.4rem] rounded-full",
-                    isLast ? "bg-[color:var(--color-brass)]" : "bg-[color:var(--color-mist-light)]"
+                    "mb-6 mt-3 hidden h-2.5 w-2.5 rotate-45 border transition-colors duration-500 lg:block",
+                    dark
+                      ? "border-[color:var(--color-stone)] bg-[color:var(--color-umber)] group-hover:bg-[color:var(--color-stone)]"
+                      : "border-[color:var(--color-ink)]/50 bg-[color:var(--color-paper)] group-hover:bg-[color:var(--color-ink)]"
                   )}
                 />
-                <span
-                  className={cn(
-                    "font-display block text-4xl font-light leading-none",
-                    isLast ? "text-[color:var(--color-brass)]" : "text-[color:var(--color-ink)]"
-                  )}
-                >
-                  {stage.number}
-                </span>
-                <p className="eyebrow mt-3">{stage.name}</p>
-                <h3 className="font-display mt-2 text-lg font-medium text-[color:var(--color-ink)]">
-                  {stage.title}
-                </h3>
-                <p className="mt-2.5 text-sm leading-relaxed text-[color:var(--color-mist)]">
+                <p className={cn("index-label", dark ? "text-[color:var(--color-stone)]" : "text-[color:var(--color-mist)]")}>{stage.name}</p>
+                <h3 className="mt-3 text-[1.625rem] font-normal leading-tight">{stage.title}</h3>
+                <p className={cn("mt-3 max-w-xs text-[0.875rem] leading-relaxed", dark ? "text-[color:var(--color-stone)]" : "text-[color:var(--color-mist)]")}>
                   {stage.description}
                 </p>
-              </RevealItem>
-            );
-          })}
+              </div>
+            </RevealItem>
+          ))}
         </RevealGroup>
       </div>
     </section>

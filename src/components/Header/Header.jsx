@@ -40,14 +40,15 @@ export default function Header() {
   }, [menuOpen]);
 
   const hasDarkHero = DARK_HERO_ROUTES.some((re) => re.test(location));
-  const light = hasDarkHero && !scrolled && !menuOpen;
+  // Light text over dark heroes, and over the open mobile menu.
+  const light = (hasDarkHero && !scrolled) || menuOpen;
 
   return (
     <>
       <header
         className={cn(
           "fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,backdrop-filter] duration-500",
-          scrolled || menuOpen
+          scrolled && !menuOpen
             ? "border-b border-[color:var(--color-line)] bg-[color:var(--color-paper)]/90 backdrop-blur-md"
             : "border-b border-transparent bg-transparent"
         )}
@@ -65,7 +66,7 @@ export default function Header() {
             <Logo />
           </Link>
 
-          <nav className="hidden items-center gap-7 lg:flex xl:gap-9">
+          <nav className="hidden items-center gap-8 lg:flex xl:gap-10">
             {navLinks.map((link) => {
               const active = location === link.path;
               return (
@@ -73,7 +74,7 @@ export default function Header() {
                   key={link.path}
                   to={link.path}
                   className={cn(
-                    "link-underline text-[0.8125rem] font-medium uppercase tracking-[0.12em] transition-colors duration-300",
+                    "link-underline text-[0.6875rem] font-medium uppercase tracking-[0.2em] transition-colors duration-300",
                     light
                       ? active
                         ? "text-[color:var(--color-paper)]"
@@ -96,11 +97,11 @@ export default function Header() {
                 variant="ghost"
                 icon={false}
                 className={cn(
-                  "!py-2.5 !px-5 text-xs transition-colors duration-300",
-                  light && "!border-[color:var(--color-line-dark)] !text-[color:var(--color-paper)] hover:!border-[color:var(--color-paper)]"
+                  "!py-3 !px-5 transition-colors duration-300",
+                  light && "!border-white/30 !text-[color:var(--color-paper)] hover:!border-white/80"
                 )}
               >
-                {`Inquire · ${company.phones[0]}`}
+                Inquire<span className="hidden xl:inline">{` · ${company.phones[0]}`}</span>
               </Button>
             </div>
             <button
@@ -110,9 +111,9 @@ export default function Header() {
               onClick={() => setMenuOpen((v) => !v)}
               className={cn(
                 "flex h-11 w-11 items-center justify-center rounded-full border transition-colors duration-300 lg:hidden",
-                light && !menuOpen
-                  ? "border-[color:var(--color-line-dark)] text-[color:var(--color-paper)]"
-                  : "border-[color:var(--color-line)] text-[color:var(--color-ink)]"
+                light
+                  ? "border-white/25 text-[color:var(--color-paper)]"
+                  : "border-[color:var(--color-ink)]/20 text-[color:var(--color-ink)]"
               )}
             >
               {menuOpen ? <X size={19} strokeWidth={1.6} /> : <Menu size={19} strokeWidth={1.6} />}

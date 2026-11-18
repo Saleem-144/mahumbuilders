@@ -1,12 +1,13 @@
-import { ArrowUpRight } from "lucide-react";
 import { Link } from "../../router/Router";
 import { cn } from "../../lib/cn";
+import Arrow from "../Arrow/Arrow";
 
 const variants = {
-  primary: "bg-[color:var(--color-ink)] text-[color:var(--color-paper)] hover:bg-[color:var(--color-ink-soft)]",
-  ghost: "bg-transparent text-[color:var(--color-ink)] border border-[color:var(--color-line)] hover:border-[color:var(--color-ink)]",
-  inverse: "bg-[color:var(--color-paper)] text-[color:var(--color-ink)] hover:bg-[color:var(--color-brass-light)]",
-  text: "bg-transparent text-inherit px-0",
+  primary: "bg-[color:var(--color-ink)] text-[color:var(--color-paper)] hover:bg-[color:var(--color-umber)]",
+  ghost: "bg-transparent text-[color:var(--color-ink)] border border-[color:var(--color-ink)]/25 hover:border-[color:var(--color-ink)]",
+  inverse: "bg-[color:var(--color-paper)] text-[color:var(--color-ink)] hover:bg-[color:var(--color-paper-dim)]",
+  "ghost-light": "bg-transparent text-[color:var(--color-paper)] border border-white/30 hover:border-white/80",
+  text: "bg-transparent text-inherit",
 };
 
 export default function Button({
@@ -21,8 +22,8 @@ export default function Button({
   ...rest
 }) {
   const classes = cn(
-    "group inline-flex items-center gap-2.5 rounded-full px-6 py-3.5 text-sm font-medium tracking-wide transition-colors duration-300",
-    variant === "text" && "rounded-none px-0 py-1 gap-1.5 text-[0.8125rem] uppercase tracking-[0.12em]",
+    "group inline-flex items-center gap-3 sm:gap-4 text-[0.6875rem] font-medium uppercase tracking-[0.2em] transition-colors duration-300",
+    variant === "text" ? "py-2" : "px-5 py-3.5 sm:px-7 sm:py-4",
     variants[variant],
     className
   );
@@ -30,13 +31,7 @@ export default function Button({
   const content = (
     <>
       <span>{children}</span>
-      {icon && (
-        <ArrowUpRight
-          size={variant === "text" ? 14 : 16}
-          strokeWidth={1.75}
-          className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-        />
-      )}
+      {icon && <Arrow />}
     </>
   );
 

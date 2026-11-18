@@ -24,19 +24,22 @@ export function BrochureButton({ brochure, variant = "primary" }) {
 
 export function ProjectUnits({ units, brochure }) {
   return (
-    <section className="border-t border-[color:var(--color-line)] py-10 sm:py-14 lg:py-16">
+    <section className="bg-[color:var(--color-paper-dim)] py-20 sm:py-28">
       <div className="container-edit">
-        <SectionHeading eyebrow="Available on Booking" title="Apartments and Shops" />
+        <SectionHeading eyebrow="Available on Booking" title="Apartments and shops" />
 
-        <div className="mt-10 grid grid-cols-1 gap-5 sm:mt-12 sm:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-10 sm:mt-16 sm:grid-cols-3 sm:gap-8">
           {units.map((unit, i) => (
             <Reveal
               key={unit.name}
               delay={i * 0.06}
-              className="flex flex-col border border-[color:var(--color-line)] p-6 sm:p-7"
+              className="flex flex-col border-t border-[color:var(--color-ink)] pt-6"
             >
               <p className="eyebrow">{unit.name}</p>
-              <p className="font-display mt-4 text-3xl font-medium text-[color:var(--color-ink)]">{unit.size}</p>
+              <p className="mt-4 flex items-baseline gap-2 whitespace-nowrap text-[color:var(--color-ink)]">
+                <span className="font-display text-[clamp(2.75rem,4vw,3.5rem)] font-light leading-none">{unit.size.split(" ")[0]}</span>
+                <span className="text-sm text-[color:var(--color-mist)]">{unit.size.split(" ").slice(1).join(" ")}</span>
+              </p>
               <p className="mt-1.5 text-sm text-[color:var(--color-mist)]">{unit.sizeNote}</p>
               <ul className="mt-6 space-y-2.5 border-t border-[color:var(--color-line)] pt-5 text-[0.9375rem] leading-relaxed text-[color:var(--color-ink)]">
                 {unit.details.map((detail) => (
@@ -103,7 +106,7 @@ export function ProjectPlans({ title, manifest, plans }) {
   const open = (index) => setOverlay({ open: true, start: index });
 
   return (
-    <section className="border-t border-[color:var(--color-line)] py-10 sm:py-14 lg:py-16">
+    <section className="py-20 sm:py-28">
       <div className="container-edit">
         <SectionHeading eyebrow="Typical Layouts" title="Floor Plans" />
 
@@ -132,7 +135,7 @@ export function ProjectPlans({ title, manifest, plans }) {
 
 export function ProjectSpecifications({ items }) {
   return (
-    <section className="border-t border-[color:var(--color-line)] py-10 sm:py-14 lg:py-16">
+    <section className="py-20 sm:py-28">
       <div className="container-edit">
         <SectionHeading eyebrow="What Is Included" title="Specifications" />
         <Reveal className="mt-10 sm:mt-12">

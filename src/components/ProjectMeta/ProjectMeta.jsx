@@ -3,16 +3,17 @@ import Reveal from "../Reveal/Reveal";
 function Row({ label, value }) {
   if (!value) return null;
   return (
-    <div className="flex flex-col gap-1.5 border-t border-[color:var(--color-line)] py-5 sm:flex-row sm:items-baseline sm:justify-between sm:py-6">
-      <span className="eyebrow shrink-0 sm:w-40">{label}</span>
-      <span className="text-[color:var(--color-ink)] sm:text-right">{value}</span>
+    <div className="grid grid-cols-[7.5rem_1fr] gap-4 border-t border-[color:var(--color-line)] py-4">
+      <dt className="index-label pt-1 text-[color:var(--color-mist)]">{label}</dt>
+      <dd className="text-[0.9375rem] leading-relaxed text-[color:var(--color-ink)]">{value}</dd>
     </div>
   );
 }
 
+// Project facts as a compact definition list; empty fields are skipped.
 export default function ProjectMeta({ project }) {
   return (
-    <Reveal className="border-b border-[color:var(--color-line)]">
+    <Reveal as="dl" className="border-b border-[color:var(--color-line)]">
       <Row label="Status" value={project.status} />
       <Row label="Location" value={project.location} />
       <Row label="Completion" value={project.year} />

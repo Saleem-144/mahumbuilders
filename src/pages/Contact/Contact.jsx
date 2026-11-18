@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MapPin, Phone, Mail, ArrowUpRight, Check } from "lucide-react";
+import { Check } from "lucide-react";
 import PageIntro from "../../components/PageIntro/PageIntro";
 import Reveal from "../../components/Reveal/Reveal";
 import Button from "../../components/Button/Button";
@@ -7,10 +7,25 @@ import { company, telHref } from "../../data/nav";
 import { usePageMeta } from "../../lib/usePageMeta";
 import { PAGES } from "../../data/seo";
 import { FacebookIcon, InstagramIcon } from "../../components/SocialIcons/SocialIcons";
+import Arrow from "../../components/Arrow/Arrow";
 import { trackEvent } from "../../lib/analytics";
 
 const fieldClasses =
-  "w-full border-0 border-b border-[color:var(--color-line)] bg-transparent py-3 text-[1.0625rem] text-[color:var(--color-ink)] focus:border-[color:var(--color-ink)] focus:outline-none transition-colors";
+  "w-full border-0 border-b border-[color:var(--color-ink)]/20 bg-transparent py-3 font-display text-[1.375rem] text-[color:var(--color-ink)] focus:border-[color:var(--color-ink)] focus:outline-none transition-colors";
+
+const labelClasses = "index-label block text-[color:var(--color-mist)]";
+
+// One block of contact details: a small label over large serif lines.
+function Detail({ label, children }) {
+  return (
+    <div className="border-t border-[color:var(--color-line)] pt-5">
+      <p className="index-label text-[color:var(--color-mist)]">{label}</p>
+      <div className="mt-3 flex flex-col gap-1.5 font-display text-[clamp(1.375rem,2vw,1.75rem)] leading-snug text-[color:var(--color-ink)] [font-variant-numeric:lining-nums]">
+        {children}
+      </div>
+    </div>
+  );
+}
 
 const initialForm = { name: "", email: "", phone: "", subject: "", message: "" };
 
@@ -82,84 +97,71 @@ export default function Contact() {
   return (
     <>
       <PageIntro
-        eyebrow="Let's Build Together"
-        title="Contact Us"
-        description="Tell us about your project and our team will get back to you."
+        eyebrow="Contact Us"
+        title="Let's talk about your project."
+        description="Tell us what you're planning: a home, a commercial building or an interior. Our team will get back to you."
       />
 
-      <section className="py-10 sm:py-14 lg:py-16">
-        <div className="container-edit grid grid-cols-1 gap-16 lg:grid-cols-[0.9fr_1.3fr] lg:gap-20">
-          <Reveal className="space-y-10">
-            <div className="flex items-start gap-4">
-              <MapPin size={20} strokeWidth={1.4} className="mt-0.5 shrink-0 text-[color:var(--color-brass)]" />
-              <div>
-                <p className="eyebrow mb-1.5">Address</p>
-                <p className="text-[color:var(--color-ink)]">{company.address}</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <Phone size={20} strokeWidth={1.4} className="mt-0.5 shrink-0 text-[color:var(--color-brass)]" />
-              <div>
-                <p className="eyebrow mb-1.5">Phone</p>
-                {company.phones.map((p) => (
-                  <a key={p} href={telHref(p)} className="link-underline block text-[color:var(--color-ink)]">
-                    {p}
-                  </a>
-                ))}
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <Mail size={20} strokeWidth={1.4} className="mt-0.5 shrink-0 text-[color:var(--color-brass)]" />
-              <div>
-                <p className="eyebrow mb-1.5">Email</p>
-                <a href={`mailto:${company.email}`} className="link-underline text-[color:var(--color-ink)]">
-                  {company.email}
+      <section className="pb-20 sm:pb-28 lg:pb-36">
+        <div className="container-edit grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-10">
+          <Reveal className="space-y-8 lg:col-span-4">
+            <Detail label="Phone">
+              {company.phones.map((p) => (
+                <a key={p} href={telHref(p)} className="link-underline w-fit">
+                  {p}
                 </a>
-              </div>
-            </div>
-            <div className="flex items-start gap-4">
-              <ArrowUpRight size={20} strokeWidth={1.4} className="mt-0.5 shrink-0 text-[color:var(--color-brass)]" />
-              <div>
-                <p className="eyebrow mb-1.5">Social</p>
-                <a
-                  href={company.social.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`Facebook ${company.social.label} (opens in a new tab)`}
-                  className="flex items-center gap-2 text-[color:var(--color-ink)]"
-                >
-                  <FacebookIcon size={17} />
-                  <span className="link-underline">{company.social.label}</span>
-                </a>
+              ))}
+            </Detail>
+            <Detail label="Email">
+              <a href={`mailto:${company.email}`} className="link-underline w-fit">
+                {company.email}
+              </a>
+            </Detail>
+            <Detail label="Office">
+              <span>{company.address}, Karachi</span>
+            </Detail>
+            <div className="border-t border-[color:var(--color-line)] pt-5">
+              <p className="index-label text-[color:var(--color-mist)]">Follow</p>
+              <div className="mt-4 flex flex-col gap-2.5 text-[0.9375rem] text-[color:var(--color-ink)]">
                 <a
                   href={company.instagram.url}
                   target="_blank"
                   rel="noreferrer"
                   aria-label={`Instagram ${company.instagram.label} (opens in a new tab)`}
-                  className="mt-1.5 flex items-center gap-2 text-[color:var(--color-ink)]"
+                  className="flex w-fit items-center gap-2.5"
                 >
-                  <InstagramIcon size={17} />
+                  <InstagramIcon size={16} />
                   <span className="link-underline">{company.instagram.label}</span>
+                </a>
+                <a
+                  href={company.social.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Facebook ${company.social.label} (opens in a new tab)`}
+                  className="flex w-fit items-center gap-2.5"
+                >
+                  <FacebookIcon size={16} />
+                  <span className="link-underline">{company.social.label}</span>
                 </a>
               </div>
             </div>
           </Reveal>
 
-          <Reveal delay={0.08}>
+          <Reveal delay={0.08} className="lg:col-span-7 lg:col-start-6">
             {submitted ? (
-              <div className="flex min-h-[380px] flex-col items-center justify-center border border-[color:var(--color-line)] px-8 py-16 text-center">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[color:var(--color-ink)] text-[color:var(--color-paper)]">
-                  <Check size={20} strokeWidth={1.75} />
+              <div className="flex min-h-[420px] flex-col items-start justify-center border-t border-[color:var(--color-ink)] py-16">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[color:var(--color-ink)] text-[color:var(--color-ink)]">
+                  <Check size={20} strokeWidth={1.5} />
                 </div>
-                <h3 className="font-display mt-6 text-2xl font-medium text-[color:var(--color-ink)]">
-                  Thank You
+                <h3 className="mt-8 text-[clamp(2.5rem,5vw,4rem)] font-normal leading-none text-[color:var(--color-ink)]">
+                  Thank you.
                 </h3>
-                <p className="mt-3 max-w-xs text-[color:var(--color-mist)]">
+                <p className="mt-5 max-w-sm text-[0.9375rem] leading-relaxed text-[color:var(--color-mist)]">
                   We have received your inquiry and will get back to you soon.
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} noValidate className="space-y-8">
+              <form onSubmit={handleSubmit} noValidate className="space-y-10 border-t border-[color:var(--color-ink)] pt-10">
                 <input
                   type="checkbox"
                   name="botcheck"
@@ -170,34 +172,34 @@ export default function Contact() {
                   autoComplete="off"
                   aria-hidden="true"
                 />
-                <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+                <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-x-10">
                   <div>
-                    <label htmlFor="name" className="eyebrow mb-2 block">
+                    <label htmlFor="name" className={labelClasses}>
                       Name
                     </label>
                     <input id="name" type="text" required value={form.name} onChange={update("name")} className={fieldClasses} />
                   </div>
                   <div>
-                    <label htmlFor="email" className="eyebrow mb-2 block">
+                    <label htmlFor="email" className={labelClasses}>
                       Email
                     </label>
                     <input id="email" type="email" required value={form.email} onChange={update("email")} className={fieldClasses} />
                   </div>
                   <div>
-                    <label htmlFor="phone" className="eyebrow mb-2 block">
+                    <label htmlFor="phone" className={labelClasses}>
                       Phone
                     </label>
                     <input id="phone" type="tel" value={form.phone} onChange={update("phone")} className={fieldClasses} />
                   </div>
                   <div>
-                    <label htmlFor="subject" className="eyebrow mb-2 block">
+                    <label htmlFor="subject" className={labelClasses}>
                       Project Type
                     </label>
                     <input id="subject" type="text" value={form.subject} onChange={update("subject")} className={fieldClasses} />
                   </div>
                 </div>
                 <div>
-                  <label htmlFor="message" className="eyebrow mb-2 block">
+                  <label htmlFor="message" className={labelClasses}>
                     Message
                   </label>
                   <textarea
@@ -225,8 +227,8 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="border-t border-[color:var(--color-line)]">
-        <div className="aspect-[21/9] w-full bg-[color:var(--color-stone)]">
+      <section>
+        <div className="relative aspect-[4/5] w-full bg-[color:var(--color-stone)] sm:aspect-[21/9]">
           <iframe
             title="MAHUM Builders location"
             src={`https://www.google.com/maps?q=${encodeURIComponent(company.mapQuery)}&z=17&output=embed`}
@@ -234,6 +236,15 @@ export default function Contact() {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
+          <a
+            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(company.mapQuery)}`}
+            target="_blank"
+            rel="noreferrer"
+            className="group absolute bottom-5 left-5 inline-flex items-center gap-4 bg-[color:var(--color-ink)] px-6 py-4 text-[0.6875rem] font-medium uppercase tracking-[0.2em] text-[color:var(--color-paper)] sm:bottom-8 sm:left-8"
+          >
+            Open in Google Maps
+            <Arrow />
+          </a>
         </div>
       </section>
     </>

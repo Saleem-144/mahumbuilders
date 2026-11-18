@@ -3,6 +3,8 @@ import SmoothScroll from "./components/SmoothScroll/SmoothScroll";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import BackToTop from "./components/BackToTop/BackToTop";
+import Preloader from "./components/Preloader/Preloader";
+import PageTransition from "./components/PageTransition/PageTransition";
 
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
@@ -18,28 +20,31 @@ function App() {
       <SmoothScroll>
         <ScrollToTop />
         <Header />
+        <Preloader />
         <main>
-          <Switch>
-            <Route path="/">
-              <Home />
-            </Route>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/services">
-              <Services />
-            </Route>
-            <Route path="/projects">
-              <Projects />
-            </Route>
-            <Route path="/projects/:slug">
-              <ProjectDetails />
-            </Route>
-            <Route path="/contact">
-              <Contact />
-            </Route>
-            <NotFound />
-          </Switch>
+          <PageTransition>
+            <Switch>
+              <Route path="/">
+                <Home />
+              </Route>
+              <Route path="/about">
+                <About />
+              </Route>
+              <Route path="/services">
+                <Services />
+              </Route>
+              <Route path="/projects">
+                <Projects />
+              </Route>
+              <Route path="/projects/:slug">
+                <ProjectDetails />
+              </Route>
+              <Route path="/contact">
+                <Contact />
+              </Route>
+              <NotFound />
+            </Switch>
+          </PageTransition>
         </main>
         <Footer />
         <BackToTop />

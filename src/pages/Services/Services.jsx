@@ -1,15 +1,51 @@
 import PageIntro from "../../components/PageIntro/PageIntro";
 import Reveal from "../../components/Reveal/Reveal";
+import { RevealGroup, RevealItem } from "../../components/Reveal/Reveal";
 import Photo from "../../components/Photo/Photo";
 import SectionHeading from "../../components/SectionHeading/SectionHeading";
-import ServiceCard from "../../components/ServiceCard/ServiceCard";
-import { RevealGroup } from "../../components/Reveal/Reveal";
 import CTA from "../../components/CTA/CTA";
 import HowWeDeliver from "../../components/HowWeDeliver/HowWeDeliver";
 import { services, interiorRevamp, turnkeyStages } from "../../data/services";
 import { images } from "../../data/images";
 import { usePageMeta } from "../../lib/usePageMeta";
 import { PAGES } from "../../data/seo";
+import { cn } from "../../lib/cn";
+
+// One service: photograph and text side by side, alternating sides down the
+// page so the list reads like a printed brochure rather than a card grid.
+function ServiceRow({ service, flip }) {
+  const img = images[service.image];
+  return (
+    <article className="grid grid-cols-1 items-center gap-8 border-t border-[color:var(--color-line)] py-14 sm:py-20 lg:grid-cols-12 lg:gap-10">
+      <Reveal className={cn("lg:col-span-6", flip && "lg:order-2 lg:col-start-7")}>
+        <Photo
+          src={img.src}
+          srcSet={img.large ? `${img.src} 960w, ${img.large} 2000w` : undefined}
+          sizes="(min-width: 1024px) 50vw, 100vw"
+          alt={img.alt}
+          fallback={service.title}
+          className="aspect-[4/3] w-full"
+        />
+      </Reveal>
+      <Reveal delay={0.06} className={cn("lg:col-span-5", flip ? "lg:order-1 lg:col-start-1" : "lg:col-start-8")}>
+        <span className="font-display text-[3.5rem] font-light italic leading-none text-[color:var(--color-mist)] sm:text-[4.5rem]">
+          {service.number}
+        </span>
+        <h2 className="mt-5 text-[clamp(2rem,3.5vw,3rem)] font-normal leading-[1.05] text-[color:var(--color-ink)]">
+          {service.title}
+        </h2>
+        <p className="mt-5 max-w-md text-[0.9375rem] leading-relaxed text-[color:var(--color-mist)]">{service.description}</p>
+        {service.tags?.length > 0 && (
+          <p className="index-label mt-7 flex flex-wrap gap-x-5 gap-y-2 text-[color:var(--color-ink)]">
+            {service.tags.map((tag) => (
+              <span key={tag}>{tag}</span>
+            ))}
+          </p>
+        )}
+      </Reveal>
+    </article>
+  );
+}
 
 export default function Services() {
   usePageMeta({ ...PAGES["/services"], path: "/services" });
@@ -22,64 +58,59 @@ export default function Services() {
         description="We take care of every stage of a construction project, from buying the land to handing over the finished building."
       />
 
-      <section className="py-10 sm:py-14 lg:py-16">
+      <section className="pb-12 sm:pb-20">
         <div className="container-edit">
-          <RevealGroup className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((s) => (
-              <ServiceCard key={s.number} service={s} />
+          {services.map((s, i) => (
+            <ServiceRow key={s.number} service={s} flip={i % 2 === 1} />
+          ))}
+        </div>
+      </section>
+
+      {/* Interior revamp: a full-bleed band */}
+      <section className="grain relative flex min-h-[80svh] items-end overflow-hidden bg-[color:var(--color-ink)] text-[color:var(--color-paper)]">
+        <Photo
+          src={images.interiorRevamp.large ?? images.interiorRevamp.src}
+          alt={images.interiorRevamp.alt}
+          fallback={images.interiorRevamp.fallback}
+          zoom={false}
+          className="absolute inset-0 h-full w-full"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[color:var(--color-ink)] via-[color:var(--color-ink)]/45 to-[color:var(--color-ink)]/10" />
+        <div className="container-edit relative w-full py-16 sm:py-24">
+          <Reveal className="max-w-2xl">
+            <p className="index-label text-[color:var(--color-stone)]">Also Offered</p>
+            <h2 className="mt-5 text-[clamp(2.75rem,6vw,5rem)] font-normal leading-[0.98]">{interiorRevamp.title}</h2>
+            <p className="mt-6 max-w-lg text-[0.9375rem] leading-relaxed text-[color:var(--color-paper)]/85">
+              {interiorRevamp.description}
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* The turn-key approach */}
+      <section className="py-20 sm:py-28 lg:py-36">
+        <div className="container-edit">
+          <SectionHeading eyebrow="Our Approach" title="The turn-key approach" description="One team responsible for the project, from the first site visit to handover." />
+          <RevealGroup className="mt-14 border-b border-[color:var(--color-line)] sm:mt-20">
+            {turnkeyStages.map((stage) => (
+              <RevealItem
+                key={stage.number}
+                className="grid grid-cols-[3rem_1fr] gap-x-5 border-t border-[color:var(--color-line)] py-6 sm:grid-cols-[5rem_1fr] sm:py-8 lg:grid-cols-12 lg:gap-x-10"
+              >
+                <span className="index-label pt-2 text-[color:var(--color-mist)] lg:col-span-1">{stage.number}</span>
+                <h3 className="text-[clamp(1.5rem,2.4vw,2.125rem)] font-normal leading-tight text-[color:var(--color-ink)] lg:col-span-5">
+                  {stage.title}
+                </h3>
+                <p className="col-start-2 mt-2 max-w-md text-[0.9375rem] leading-relaxed text-[color:var(--color-mist)] lg:col-span-6 lg:col-start-auto lg:mt-0 lg:pt-2">
+                  {stage.description}
+                </p>
+              </RevealItem>
             ))}
           </RevealGroup>
         </div>
       </section>
 
-      {/* Interior Revamp callout */}
-      <section className="border-t border-[color:var(--color-line)] py-10 sm:py-14 lg:py-16">
-        <div className="container-edit grid grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-20">
-          <Reveal className="order-2 aspect-[16/11] overflow-hidden lg:order-1">
-            <Photo
-              src={images.interiorRevamp.src}
-              srcSet={`${images.interiorRevamp.src} 960w, ${images.interiorRevamp.large} 2000w`}
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              alt={images.interiorRevamp.alt}
-              fallback={images.interiorRevamp.fallback}
-              className="h-full w-full"
-            />
-          </Reveal>
-          <div className="order-1 lg:order-2">
-            <Reveal>
-              <span className="eyebrow">Also Offered</span>
-              <h2 className="font-display mt-5 text-3xl font-medium text-[color:var(--color-ink)] sm:text-4xl">
-                {interiorRevamp.title}
-              </h2>
-              <p className="mt-6 text-[1.0625rem] leading-relaxed text-[color:var(--color-mist)]">
-                {interiorRevamp.description}
-              </p>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Turnkey approach */}
-      <section className="border-t border-[color:var(--color-line)] bg-[color:var(--color-ink)] py-10 text-[color:var(--color-paper)] sm:py-14 lg:py-16">
-        <div className="container-edit">
-          <SectionHeading light eyebrow="Our Approach" title="The Turn-Key Approach" />
-          <div className="mt-10 divide-y divide-[color:var(--color-line-dark)] border-t border-[color:var(--color-line-dark)]">
-            {turnkeyStages.map((stage) => (
-              <Reveal key={stage.number}>
-                <div className="grid grid-cols-1 gap-2 py-4 sm:grid-cols-[5rem_1fr_1.4fr] sm:items-baseline sm:gap-8 sm:py-5">
-                  <span className="font-display text-lg text-[color:var(--color-mist-light)]">{stage.number}</span>
-                  <span className="font-display text-xl font-medium sm:text-2xl">{stage.title}</span>
-                  <span className="text-[0.9375rem] leading-relaxed text-[color:var(--color-mist-light)] sm:text-right">
-                    {stage.description}
-                  </span>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <HowWeDeliver />
+      <HowWeDeliver dark />
 
       <CTA />
     </>

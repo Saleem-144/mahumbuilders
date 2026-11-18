@@ -1,11 +1,11 @@
 import Hero from "./sections/Hero";
-import StatsSection from "./sections/StatsSection";
 import AboutSection from "./sections/AboutSection";
 import FeaturedProjectsSection from "./sections/FeaturedProjectsSection";
 import ServicesSection from "./sections/ServicesSection";
-import ApproachSection from "./sections/ApproachSection";
 import MediaSection from "./sections/MediaSection";
+import NowBooking from "../../components/NowBooking/NowBooking";
 import Developments from "../../components/Developments/Developments";
+import HowWeDeliver from "../../components/HowWeDeliver/HowWeDeliver";
 import CTA from "../../components/CTA/CTA";
 import { usePageMeta } from "../../lib/usePageMeta";
 import { PAGES } from "../../data/seo";
@@ -16,12 +16,12 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <StatsSection />
       <AboutSection />
-      <Developments />
       <FeaturedProjectsSection />
+      <NowBooking />
+      <Developments index="03" />
       <ServicesSection />
-      <ApproachSection />
+      <HowWeDeliver dark index="05" />
       <MediaSection />
       <CTA />
     </>

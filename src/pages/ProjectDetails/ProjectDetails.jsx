@@ -5,7 +5,7 @@ import { loadPortfolio } from "../../data/portfolio";
 import Reveal from "../../components/Reveal/Reveal";
 import Photo from "../../components/Photo/Photo";
 import ProjectMeta from "../../components/ProjectMeta/ProjectMeta";
-import ProjectGrid from "../../components/ProjectGrid/ProjectGrid";
+import Arrow from "../../components/Arrow/Arrow";
 import ProjectGallery from "../../components/ProjectGallery/ProjectGallery";
 import ProjectVideo from "../../components/ProjectVideo/ProjectVideo";
 import {
@@ -15,7 +15,7 @@ import {
   ProjectUnits,
 } from "../../components/ProjectOffering/ProjectOffering";
 import CTA from "../../components/CTA/CTA";
-import Button from "../../components/Button/Button";
+import { Link } from "../../router/Router";
 import NotFound from "../NotFound/NotFound";
 import { usePageMeta } from "../../lib/usePageMeta";
 import { describeProject, projectSeo } from "../../data/seo";
@@ -38,12 +38,39 @@ function usePortfolio(slug, enabled) {
   return state.slug === slug ? state.data : null;
 }
 
-// Three other photographed projects, starting after this one in the list,
-// so each page suggests a different set.
-function relatedTo(project) {
-  const pool = photographedProjects.filter((p) => p.slug !== project.slug);
-  const start = Math.max(photographedProjects.findIndex((p) => p.slug === project.slug), 0);
-  return [...pool.slice(start), ...pool.slice(0, start)].slice(0, 3);
+// The project after this one (wrapping round), so every project page leads
+// on to another like the pages of a portfolio.
+function nextAfter(project) {
+  const list = photographedProjects;
+  const i = list.findIndex((p) => p.slug === project.slug);
+  return list[(i + 1) % list.length];
+}
+
+function NextProject({ project }) {
+  return (
+    <Link
+      to={`/projects/${project.slug}`}
+      className="grain group relative flex min-h-[70svh] items-end overflow-hidden bg-[color:var(--color-ink)] text-[color:var(--color-paper)]"
+    >
+      <Photo
+        src={project.cover.large ?? project.cover.src}
+        alt={project.cover.alt}
+        fallback={project.title}
+        zoom={false}
+        className="absolute inset-0 h-full w-full opacity-70 transition-opacity duration-700 group-hover:opacity-90"
+        imgClassName={`transition-transform duration-[1.6s] ease-[var(--ease-out-editorial)] group-hover:scale-[1.04] ${project.coverClassName ?? ""}`}
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-[color:var(--color-ink)] via-[color:var(--color-ink)]/30 to-transparent" />
+      <div className="container-edit relative w-full pb-12 sm:pb-16">
+        <p className="index-label text-[color:var(--color-stone)]">Next Project</p>
+        <div className="mt-5 flex items-end justify-between gap-6">
+          <h2 className="text-[clamp(3rem,9vw,8.5rem)] font-normal leading-[0.92] tracking-[-0.02em]">{project.title}</h2>
+          <Arrow className="mb-4 h-4 w-12 shrink-0 sm:mb-6" />
+        </div>
+        {project.location && <p className="mt-4 text-sm text-[color:var(--color-stone)]">{project.location}</p>}
+      </div>
+    </Link>
+  );
 }
 
 export default function ProjectDetails() {
@@ -60,7 +87,7 @@ export default function ProjectDetails() {
 
   if (!project) return <NotFound />;
 
-  const related = relatedTo(project);
+  const next = nextAfter(project);
   const overview = describeProject(project);
   const hasMeta = META_FIELDS.some((f) => project[f]);
 
@@ -70,48 +97,57 @@ export default function ProjectDetails() {
 
   return (
     <>
-      <section className="relative flex h-[70svh] min-h-[420px] items-end overflow-hidden bg-[color:var(--color-ink)] text-[color:var(--color-paper)]">
+      <section className="grain relative flex h-[88svh] min-h-[520px] items-end overflow-hidden bg-[color:var(--color-ink)] text-[color:var(--color-paper)]">
         <div className="absolute inset-0">
           <Photo src={project.cover.large ?? project.cover.src} alt={project.cover.alt} fallback={project.title} zoom={false} loading="eager" className="h-full w-full" imgClassName={project.coverClassName} />
-          <div className="absolute inset-0 bg-gradient-to-t from-[color:var(--color-ink)] via-[color:var(--color-ink)]/35 to-[color:var(--color-ink)]/10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[color:var(--color-ink)] via-[color:var(--color-ink)]/30 to-[color:var(--color-ink)]/5" />
           {/* Independent top scrim so the fixed header stays legible regardless of photo brightness. */}
           <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[color:var(--color-ink)]/70 to-transparent sm:h-48" />
         </div>
-        <div className="container-edit relative w-full pb-14 pt-40">
+        <div className="container-edit relative w-full pb-10 pt-40 sm:pb-14">
           <Reveal>
-            {(project.status || project.category) && (
-              <span className="eyebrow text-[color:var(--color-mist-light)]">{project.status ?? project.category}</span>
-            )}
-            <h1 className="mt-4 text-[clamp(2.5rem,6.5vw,5.5rem)] font-medium">{project.title}</h1>
-            {project.location && <p className="mt-3 text-[color:var(--color-mist-light)]">{project.location}</p>}
-            {project.brochure && (
-              <div className="mt-6">
-                <BrochureButton brochure={project.brochure} variant="inverse" />
-              </div>
-            )}
+            <p className="index-label flex flex-wrap items-center gap-x-4 gap-y-2 text-[color:var(--color-stone)]">
+              {[project.status ?? project.category, project.sector].filter(Boolean).map((label, i) => (
+                <span key={label} className="flex items-center gap-4">
+                  {i > 0 && <span className="h-px w-8 bg-white/30" />}
+                  {label}
+                </span>
+              ))}
+            </p>
+            <h1 className="mt-5 text-[clamp(3.25rem,11vw,10rem)] font-normal leading-[0.9] tracking-[-0.025em]">{project.title}</h1>
+          </Reveal>
+          <Reveal delay={0.08} className="mt-8 flex flex-col gap-6 border-t border-white/15 pt-5 sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-sm text-[color:var(--color-stone)]">
+              {[project.location, project.year].filter(Boolean).join(" · ")}
+            </p>
+            {project.brochure && <BrochureButton brochure={project.brochure} variant="inverse" />}
           </Reveal>
         </div>
       </section>
 
       {hasMeta || overview ? (
-        <section className="py-10 sm:py-14 lg:py-16">
-          <div className="container-edit grid grid-cols-1 gap-14 lg:grid-cols-[1fr_1.3fr] lg:gap-20">
-            {hasMeta && <ProjectMeta project={project} />}
+        <section className="pt-20 sm:pt-28 lg:pt-32">
+          <div className="container-edit grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-10">
             {overview && (
-              <Reveal delay={0.05}>
-                <span className="eyebrow">Overview</span>
-                <p className="mt-5 text-[1.0625rem] leading-relaxed text-[color:var(--color-mist)]">{overview}</p>
+              <Reveal className="lg:col-span-7">
+                <p className="index-label text-[color:var(--color-mist)]">Overview</p>
+                <p className="statement mt-6 text-[clamp(1.625rem,2.8vw,2.5rem)] text-[color:var(--color-ink)]">{overview}</p>
                 {project.featuredNote && (
-                  <p className="mt-4 text-[1.0625rem] leading-relaxed text-[color:var(--color-mist)]">
+                  <p className="mt-6 max-w-xl text-[0.9375rem] leading-relaxed text-[color:var(--color-mist)]">
                     {project.featuredNote}
                   </p>
                 )}
               </Reveal>
             )}
+            {hasMeta && (
+              <div className={overview ? "lg:col-span-4 lg:col-start-9" : "lg:col-span-6"}>
+                <ProjectMeta project={project} />
+              </div>
+            )}
           </div>
         </section>
       ) : (
-        <div className="h-10 sm:h-14 lg:h-16" />
+        <div className="h-16 sm:h-24" />
       )}
 
       {project.units && <ProjectUnits units={project.units} brochure={project.brochure} />}
@@ -153,19 +189,7 @@ export default function ProjectDetails() {
       {project.plans && <ProjectPlans title={project.title} manifest={project.plansManifest} plans={project.plans} />}
       {project.specifications && <ProjectSpecifications items={project.specifications} />}
 
-      <section className="border-t border-[color:var(--color-line)] py-10 sm:py-14 lg:py-16">
-        <div className="container-edit">
-          <div className="flex items-end justify-between">
-            <span className="eyebrow">Related Projects</span>
-            <Button to="/projects" variant="text">
-              All Projects
-            </Button>
-          </div>
-          <div className="mt-12">
-            <ProjectGrid projects={related} columns={3} />
-          </div>
-        </div>
-      </section>
+      {next && next.slug !== project.slug && <NextProject project={next} />}
 
       {project.status ? (
         <CTA

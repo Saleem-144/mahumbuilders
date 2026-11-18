@@ -1,25 +1,33 @@
 import Reveal from "../Reveal/Reveal";
 import { cn } from "../../lib/cn";
 
+/**
+ * Editorial section heading: a small index label ("01  About"), a large serif
+ * title, and an optional short description beside or below it.
+ */
 export default function SectionHeading({
   eyebrow,
   title,
   description,
-  align = "left",
   index,
   light = false,
+  align = "left",
   className,
   titleClassName,
 }) {
+  const muted = light ? "text-[color:var(--color-stone)]" : "text-[color:var(--color-mist)]";
   return (
-    <Reveal className={cn("max-w-3xl", align === "center" && "mx-auto text-center", className)}>
-      <div className={cn("flex items-center gap-3 mb-4", align === "center" && "justify-center")}>
-        {index && <span className={cn("eyebrow", light && "text-[color:var(--color-mist-light)]")}>{index}</span>}
-        {eyebrow && <span className={cn("eyebrow", light && "text-[color:var(--color-mist-light)]")}>{eyebrow}</span>}
-      </div>
+    <Reveal className={cn("max-w-4xl", align === "center" && "mx-auto text-center", className)}>
+      {(index || eyebrow) && (
+        <p className={cn("index-label mb-5 flex items-center gap-4 sm:mb-6", align === "center" && "justify-center", muted)}>
+          {index && <span>{index}</span>}
+          {index && eyebrow && <span className={cn("h-px w-8", light ? "bg-white/30" : "bg-[color:var(--color-ink)]/25")} />}
+          {eyebrow && <span>{eyebrow}</span>}
+        </p>
+      )}
       <h2
         className={cn(
-          "text-balance text-[clamp(2rem,4vw,3.25rem)] font-medium",
+          "text-balance text-[clamp(2.25rem,5vw,4.25rem)] font-normal leading-[1.02]",
           light ? "text-[color:var(--color-paper)]" : "text-[color:var(--color-ink)]",
           titleClassName
         )}
@@ -27,13 +35,7 @@ export default function SectionHeading({
         {title}
       </h2>
       {description && (
-        <p
-          className={cn(
-            "mt-5 max-w-xl text-[1.0625rem] leading-relaxed",
-            align === "center" && "mx-auto",
-            light ? "text-[color:var(--color-mist-light)]" : "text-[color:var(--color-mist)]"
-          )}
-        >
+        <p className={cn("mt-6 max-w-xl text-[0.9375rem] leading-relaxed", align === "center" && "mx-auto", muted)}>
           {description}
         </p>
       )}

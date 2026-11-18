@@ -23,6 +23,7 @@ export const projects = [
   {
     slug: "casa-bellini",
     title: "Casa Bellini",
+    sector: "Commercial",
     status: "Available on Booking",
     seoDescription:
       "Casa Bellini by MAHUM Builders: shops and 1,000 sq. ft. apartments on Main Khayaban-e-Nishat, Karachi. Available on booking. Download the brochure for rates.",
@@ -106,6 +107,7 @@ export const projects = [
   {
     slug: "casa-solara",
     title: "Casa Solara",
+    sector: "Residential",
     location: "Phase 8, DHA, Karachi",
     year: "2025",
     architect: "Rehman & Rehman",
@@ -121,6 +123,7 @@ export const projects = [
   {
     slug: "house-87b",
     title: "House 87B",
+    sector: "Residential",
     location: "Phase 8, DHA, Karachi",
     year: "2023",
     architect: "Coalesce",
@@ -135,6 +138,7 @@ export const projects = [
   {
     slug: "vsurfaces",
     title: "VSurfaces",
+    sector: "Commercial",
     location: "Bukhari Commercial, DHA, Karachi",
     year: "2023",
     client: "Venus Carpets",
@@ -151,6 +155,7 @@ export const projects = [
   {
     slug: "house-82b",
     title: "House 82B",
+    sector: "Residential",
     location: "Phase 8, DHA, Karachi",
     year: "2022",
     architect: "Shahzad Brothers",
@@ -166,6 +171,7 @@ export const projects = [
   {
     slug: "stone-villa",
     title: "Stone Villa",
+    sector: "Residential",
     location: "BTK Hills, Bahria Town, Karachi",
     year: "2023",
     architect: "Rehman & Rehman",
@@ -180,6 +186,7 @@ export const projects = [
   {
     slug: "marine-tower-offices",
     title: "Marine Tower Offices",
+    sector: "Commercial",
     location: "Clifton, Karachi",
     year: "2023",
     architect: "NAQSH",
@@ -202,6 +209,7 @@ export const projects = [
   {
     slug: "mahum-offices",
     title: "MAHUM Offices",
+    sector: "Commercial",
     location: "Phase 8, DHA, Karachi",
     year: "2019",
     architect: "Shahzad Brothers",
@@ -220,6 +228,7 @@ export const projects = [
   {
     slug: "box-home",
     title: "Box Home",
+    sector: "Residential",
     location: "Phase 8, DHA, Karachi",
     year: "2020",
     client: "Shahid Khan Afridi",
@@ -249,6 +258,7 @@ export const projects = [
   {
     slug: "bahrban-hunza",
     title: "BAHRBAN",
+    sector: "Hospitality",
     location: "Hunza, GB, Pakistan",
     year: "2026",
     architect: "Coalesce",
@@ -274,6 +284,7 @@ export const projects = [
   {
     slug: "house-84c",
     title: "House 84C",
+    sector: "Residential",
     location: "Phase 6, DHA, Karachi",
     type: "Real Estate Development Project",
     scope: SCOPE,
@@ -283,6 +294,7 @@ export const projects = [
   {
     slug: "courtyard-home",
     title: "Courtyard Home",
+    sector: "Residential",
     location: "Phase 6, DHA, Karachi",
     type: "Real Estate Development Project",
     scope: SCOPE,
@@ -298,6 +310,7 @@ export const projects = [
   {
     slug: "pool-house",
     title: "Pool House",
+    sector: "Residential",
     location: "Phase 6, DHA, Karachi",
     type: "Real Estate Development Project",
     scope: SCOPE,
@@ -307,6 +320,7 @@ export const projects = [
   {
     slug: "tabbani-house",
     title: "Tabbani House",
+    sector: "Residential",
     location: "Phase 6, DHA, Karachi",
     type: "Turn-key Residential Build",
     scope: SCOPE,

@@ -84,16 +84,16 @@ export const images = {
   ownDevelopmentBahrban: {
     ...portfolioImage(
       "bahrban-hunza",
-      "progress-264a6ebd-bb0b-47dc-8b69-f99d1e418eab",
-      "Bahrban, Hunza, gabled cabins with full-height glazing rising among poplars in the mountain valley"
+      "progress-wip-22",
+      "BAHRBAN, Hunza, gabled cabin with a full-height glazed end against the mountains"
     ),
     fallback: "MAHUM Development",
   },
   clientProjectDusk: {
     ...portfolioImage(
       "casa-solara",
-      "49",
-      "Turn-key residence at dusk, timber-screened upper floor above a lit stone boundary wall"
+      "51",
+      "Casa Solara at dusk, timber screens lit from within"
     ),
     fallback: "Client Project",
   },
@@ -110,7 +110,7 @@ const card = (slug, id, label, tag, alt) => ({
 });
 
 export const carouselMedia = [
-  card("casa-solara", "51", "Casa Solara", "Exterior", "Casa Solara at dusk, lit timber-screened facade"),
+  card("casa-solara", "52", "Casa Solara", "Entrance", "Casa Solara entrance at dusk, lit steps under a timber canopy"),
   card("casa-solara", "9", "Casa Solara", "Interior", "Casa Solara floating timber staircase in a double-height hall"),
   card("house-82b", "31", "House 82B", "Exterior", "House 82B at dusk, cantilevered upper volume"),
   card("house-82b", "43", "House 82B", "Interior", "House 82B timber staircase with glass balustrade"),

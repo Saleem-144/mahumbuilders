@@ -1,16 +1,14 @@
 import Reveal from "../Reveal/Reveal";
 import Photo from "../Photo/Photo";
-import Button from "../Button/Button";
+import Arrow from "../Arrow/Arrow";
+import SectionHeading from "../SectionHeading/SectionHeading";
+import { Link } from "../../router/Router";
 import { images } from "../../data/images";
 
 /**
- * "Two Ways We Build" — purely informational: it explains MAHUM's two lines
- * of work as two premium, self-contained cards. Each card's CTA goes to a
- * general destination — the Projects listing, or Contact — never to an
- * individual project, so this section never sorts any specific project into
- * either bucket. Deliberately compact (controlled image height, tight
- * internal rhythm) so the whole section reads within roughly one viewport
- * on desktop, without feeling cramped.
+ * "Two Ways We Build": MAHUM's two lines of work as two tall, full-bleed
+ * image panels. Each links to a general destination (Projects or Contact),
+ * never to a single project.
  */
 const WAYS = [
   {
@@ -30,73 +28,60 @@ const WAYS = [
     description:
       "We build on the client's behalf and stay responsible for the job from grey structure to handover.",
     image: images.clientProjectDusk,
-    ctaLabel: "Contact Us",
+    ctaLabel: "Start a Project",
     ctaTo: "/contact",
   },
 ];
 
-function WayCard({ way }) {
+function WayPanel({ way }) {
   return (
-    <Reveal
-      as="article"
-      className="group flex h-full flex-col border border-[color:var(--color-line)] transition-colors duration-500 hover:border-[color:var(--color-mist-light)]"
+    <Link
+      to={way.ctaTo}
+      className="group relative flex min-h-[78svh] flex-col justify-end overflow-hidden text-[color:var(--color-paper)] lg:min-h-[92svh]"
     >
-      <div className="relative aspect-[16/9] overflow-hidden lg:aspect-[2.4/1]">
-        <Photo
-          src={way.image.src}
-          srcSet={way.image.large ? `${way.image.src} 960w, ${way.image.large} 2000w` : undefined}
-          sizes="(min-width: 640px) 50vw, 100vw"
-          alt={way.image.alt}
-          fallback={way.image.fallback}
-          zoom={false}
-          className="h-full w-full"
-          imgClassName="transition-transform duration-[650ms] ease-[var(--ease-out-editorial)] group-hover:scale-[1.035]"
-        />
-      </div>
-      <div className="flex flex-1 flex-col border-t border-[color:var(--color-line)] px-5 py-5 sm:px-6 sm:py-4">
-        <div className="flex items-baseline gap-2.5">
-          <span className="font-display text-sm text-[color:var(--color-mist-light)]">{way.number}</span>
-          <span className="eyebrow text-[color:var(--color-brass)]">{way.eyebrow}</span>
-        </div>
-        <h3 className="font-display mt-2 text-lg font-medium leading-snug text-[color:var(--color-ink)] sm:text-xl">
-          {way.title}
-        </h3>
-        <p className="mt-2 text-sm leading-relaxed text-[color:var(--color-mist)] sm:text-[0.9375rem]">
-          {way.description}
+      <Photo
+        src={way.image.large ?? way.image.src}
+        alt={way.image.alt}
+        fallback={way.image.fallback}
+        zoom={false}
+        className="absolute inset-0 h-full w-full"
+        imgClassName="transition-transform duration-[1.4s] ease-[var(--ease-out-editorial)] group-hover:scale-[1.04]"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-[color:var(--color-ink)]/95 via-[color:var(--color-ink)]/55 via-55% to-[color:var(--color-ink)]/10" />
+
+      <div className="relative p-6 sm:p-10 lg:p-12">
+        <p className="index-label flex items-center gap-4 text-[color:var(--color-stone)]">
+          <span>{way.number}</span>
+          <span className="h-px w-8 bg-white/30" />
+          <span>{way.eyebrow}</span>
         </p>
-        <Button
-          to={way.ctaTo}
-          variant="text"
-          className="mt-auto self-start pt-4 transition-colors duration-300 group-hover:text-[color:var(--color-brass)]"
-        >
+        <h3 className="mt-5 max-w-[14ch] text-[clamp(2.25rem,4vw,3.75rem)] font-normal leading-[1.02]">{way.title}</h3>
+        <p className="mt-4 max-w-sm text-[0.9375rem] leading-relaxed text-[color:var(--color-paper)]/80">{way.description}</p>
+        <span className="mt-8 inline-flex items-center gap-4 text-[0.6875rem] font-medium uppercase tracking-[0.2em]">
           {way.ctaLabel}
-        </Button>
+          <Arrow />
+        </span>
       </div>
-    </Reveal>
+    </Link>
   );
 }
 
-export default function Developments() {
+export default function Developments({ index }) {
   return (
-    <section className="border-t border-[color:var(--color-line)] py-8 sm:py-10 lg:py-6">
-      <div className="container-edit">
-        <Reveal className="max-w-2xl">
-          <span className="eyebrow">Two Ways We Build</span>
-          <h2 className="text-balance mt-2 text-[clamp(1.75rem,3vw,2.5rem)] font-medium text-[color:var(--color-ink)]">
-            Our Developments and Client Projects
-          </h2>
-          <p className="mt-2 text-sm leading-relaxed text-[color:var(--color-mist)] sm:text-[0.9375rem]">
-            We work in two ways: we develop our own projects, and we build turn-key projects for
-            clients.
-          </p>
-        </Reveal>
-
-        <div className="mt-6 grid grid-cols-1 gap-6 sm:mt-8 sm:grid-cols-2 sm:gap-6 lg:mt-6 lg:gap-7">
-          {WAYS.map((way) => (
-            <WayCard key={way.number} way={way} />
-          ))}
-        </div>
+    <section className="bg-[color:var(--color-paper)]">
+      <div className="container-edit py-20 sm:py-28">
+        <SectionHeading
+          index={index}
+          eyebrow="Two Ways We Build"
+          title="Our developments and client projects"
+          description="We work in two ways: we develop our own projects, and we build turn-key projects for clients."
+        />
       </div>
+      <Reveal className="grid grid-cols-1 lg:grid-cols-2">
+        {WAYS.map((way) => (
+          <WayPanel key={way.number} way={way} />
+        ))}
+      </Reveal>
     </section>
   );
 }

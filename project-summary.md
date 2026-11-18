@@ -94,6 +94,13 @@ npm run portfolio  # regenerate optimized portfolio images + manifests
 - `vercel.json` rewrites unknown paths to `index.html` so the client-side routes work on direct visits and refreshes. If the site is hosted somewhere other than Vercel, replace it with that host's SPA fallback setting.
 - Keep the originals out of `public/`: everything in `public/` is copied into `dist/` as-is.
 
+## Design system
+
+- Colours and type come from the client's logo guideline: deep umber `#342e26`, stone `#c9c3b9`, light `#ebe8e6`, taupe `#6e6353`; Montserrat for text and labels, Cormorant Garamond for headings (standing in for the guideline's Permian Serif, which has no web font). Tokens live in `src/styles/globals.css`.
+- Layouts are editorial rather than card grids: large serif headings with small index labels (`SectionHeading`), hairline-separated lists (`ProjectIndex`, `StatsStrip`, service and timeline rows), and full-bleed image panels.
+- Home hero: a 10-second silent loop cut from the Casa Solara film (`public/portfolio-web/videos/hero/`, 1600px and 960px encodes plus a poster). Re-cut with FFmpeg if the client supplies new footage.
+- Signature details: first-visit logo intro (`Preloader`, once per session), page fade between routes (`PageTransition`), cursor-following project previews on desktop (`ProjectIndex`), drawn arrows (`Arrow`), and the full-width wordmark in the footer. All motion respects "reduce motion".
+
 ## Projects on sale
 
 A project with a `status` (currently only Casa Bellini) gets a badge on its cards, sorts first on the Projects page, and shows extra sections on its page: `units`, `plans`, `specifications` and a brochure download. Rates and payment schedules stay in the brochure, not on the site.
