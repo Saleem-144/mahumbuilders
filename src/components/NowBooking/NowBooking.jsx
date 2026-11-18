@@ -12,7 +12,7 @@ export default function NowBooking() {
 
   return (
     <section className="grid grid-cols-1 bg-[color:var(--color-umber)] text-[color:var(--color-paper)] lg:grid-cols-2">
-      <div className="relative min-h-[62svh] overflow-hidden lg:min-h-[88svh]">
+      <div className="relative min-h-[50svh] overflow-hidden lg:min-h-[72svh]">
         <Photo
           src={project.cover.large ?? project.cover.src}
           alt={project.cover.alt}
@@ -23,7 +23,7 @@ export default function NowBooking() {
         />
       </div>
 
-      <div className="flex flex-col justify-between gap-12 px-6 py-14 sm:px-12 sm:py-20 lg:px-16 lg:py-20 xl:px-24">
+      <div className="flex flex-col justify-between gap-10 px-6 py-12 sm:px-12 sm:py-16 lg:px-14 xl:px-20">
         <Reveal>
           <p className="index-label flex items-center gap-4 text-[color:var(--color-stone)]">
             <span className="relative flex h-2 w-2">
@@ -32,7 +32,7 @@ export default function NowBooking() {
             </span>
             {project.status}
           </p>
-          <h2 className="mt-6 text-[clamp(3rem,7vw,6.5rem)] font-normal leading-[0.95] tracking-[-0.02em]">
+          <h2 className="mt-5 text-[clamp(2.25rem,4vw,3.25rem)] font-normal leading-[1.05]">
             {project.title}
           </h2>
           <p className="mt-5 max-w-md text-[0.9375rem] leading-relaxed text-[color:var(--color-stone)]">
@@ -49,7 +49,7 @@ export default function NowBooking() {
               >
                 <dt className="index-label text-[color:var(--color-stone)]">{unit.name}</dt>
                 <dd className="mt-2 flex items-baseline gap-1.5 whitespace-nowrap">
-                  <span className="font-display text-[2rem] font-normal leading-none">{unit.size.split(" ")[0]}</span>
+                  <span className="text-[1.5rem] font-light leading-none">{unit.size.split(" ")[0]}</span>
                   <span className="text-xs text-[color:var(--color-stone)]">{unit.size.split(" ").slice(1).join(" ")}</span>
                 </dd>
               </div>

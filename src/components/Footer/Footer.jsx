@@ -23,11 +23,11 @@ export default function Footer() {
 
   return (
     <footer className="overflow-hidden bg-[color:var(--color-umber)] text-[color:var(--color-stone)]">
-      <div className="container-edit pt-20 sm:pt-24">
+      <div className="container-edit pt-14 sm:pt-16">
         <div className="grid grid-cols-2 gap-x-6 gap-y-12 lg:grid-cols-12">
           <div className="col-span-2 lg:col-span-4">
             <Logo variant="stacked" className="text-[color:var(--color-paper)]" />
-            <p className="mt-8 max-w-xs text-[0.875rem] leading-relaxed">
+            <p className="mt-6 max-w-xs text-[0.875rem] leading-relaxed">
               {company.tagline}. Real estate development and construction in Karachi since {company.foundedYear}.
             </p>
           </div>
@@ -75,7 +75,7 @@ export default function Footer() {
         {/* The brand wordmark, set across the full width. */}
         <svg
           viewBox={`0 0 ${WORDMARK.w} ${WORDMARK.h}`}
-          className="mt-20 block w-full text-[color:var(--color-paper)]/[0.07] sm:mt-28"
+          className="mt-12 block w-full text-[color:var(--color-paper)]/[0.07] sm:mt-16"
           fill="currentColor"
           aria-hidden="true"
         >

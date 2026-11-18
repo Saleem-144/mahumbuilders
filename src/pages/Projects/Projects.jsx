@@ -28,11 +28,11 @@ const FILTERS = [
 // reads like a printed portfolio rather than a row of cards.
 function Gallery({ items }) {
   return (
-    <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 sm:gap-y-24">
+    <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16">
       {items.map((project, i) => (
-        <Reveal key={project.slug} className={cn(i % 2 === 1 && "sm:mt-32")}>
+        <Reveal key={project.slug} className={cn(i % 2 === 1 && "sm:mt-20")}>
           <Link to={`/projects/${project.slug}`} className="group block">
-            <div className="relative aspect-[4/5] overflow-hidden">
+            <div className="relative aspect-[4/3] overflow-hidden">
               <Photo
                 src={project.cover.src}
                 srcSet={project.cover.large ? `${project.cover.src} 960w, ${project.cover.large} 2000w` : undefined}
@@ -50,7 +50,7 @@ function Gallery({ items }) {
               )}
             </div>
             <div className="mt-5 flex items-baseline justify-between gap-4 border-t border-[color:var(--color-line)] pt-4">
-              <h2 className="text-[clamp(1.75rem,2.6vw,2.5rem)] font-normal leading-none text-[color:var(--color-ink)]">{project.title}</h2>
+              <h2 className="text-[clamp(1.375rem,1.9vw,1.75rem)] font-normal leading-tight text-[color:var(--color-ink)]">{project.title}</h2>
               <span className="index-label shrink-0 text-[color:var(--color-mist)]">{project.sector}</span>
             </div>
             {project.location && <p className="mt-2 text-sm text-[color:var(--color-mist)]">{project.location}</p>}
@@ -76,10 +76,10 @@ export default function Projects() {
         description="Homes, commercial buildings, office interiors and hospitality projects by MAHUM Builders, in Karachi and the Hunza valley."
       />
 
-      <section className="pb-24 sm:pb-32">
+      <section className="pb-16 sm:pb-24">
         <div className="container-edit">
           {/* Filters and view switch */}
-          <div className="mb-10 flex flex-col gap-6 sm:mb-14 lg:flex-row lg:items-center lg:justify-between">
+          <div className="mb-8 flex flex-col gap-6 sm:mb-10 lg:flex-row lg:items-center lg:justify-between">
             <div role="tablist" aria-label="Filter projects" className="scrollbar-none -mx-6 flex gap-6 overflow-x-auto px-6 sm:mx-0 sm:flex-wrap sm:px-0 sm:gap-x-8">
               {FILTERS.map((f) => (
                 <button
@@ -96,7 +96,7 @@ export default function Projects() {
                   )}
                 >
                   {f.label}
-                  <sup className="font-display text-[0.75rem] normal-case tracking-normal">{f.count}</sup>
+                  <sup className="text-[0.625rem] tracking-normal">{f.count}</sup>
                 </button>
               ))}
             </div>

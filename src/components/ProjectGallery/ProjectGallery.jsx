@@ -31,7 +31,7 @@ export default function ProjectGallery({ title, rows, images, eyebrow = "Project
   if (shown === 0) return null;
 
   return (
-    <section className="py-16 sm:py-24">
+    <section className="py-12 sm:py-16">
       <div className="container-edit">
         <Reveal className="mb-8 flex items-baseline justify-between gap-6 border-t border-[color:var(--color-line)] pt-6 sm:mb-10">
           <span className="eyebrow">{eyebrow}</span>

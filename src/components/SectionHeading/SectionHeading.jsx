@@ -19,7 +19,7 @@ export default function SectionHeading({
   return (
     <Reveal className={cn("max-w-4xl", align === "center" && "mx-auto text-center", className)}>
       {(index || eyebrow) && (
-        <p className={cn("index-label mb-5 flex items-center gap-4 sm:mb-6", align === "center" && "justify-center", muted)}>
+        <p className={cn("index-label mb-4 flex items-center gap-4", align === "center" && "justify-center", muted)}>
           {index && <span>{index}</span>}
           {index && eyebrow && <span className={cn("h-px w-8", light ? "bg-white/30" : "bg-[color:var(--color-ink)]/25")} />}
           {eyebrow && <span>{eyebrow}</span>}
@@ -27,7 +27,7 @@ export default function SectionHeading({
       )}
       <h2
         className={cn(
-          "text-balance text-[clamp(2.25rem,5vw,4.25rem)] font-normal leading-[1.02]",
+          "text-balance text-[clamp(1.75rem,3vw,2.625rem)] font-normal leading-[1.12]",
           light ? "text-[color:var(--color-paper)]" : "text-[color:var(--color-ink)]",
           titleClassName
         )}
@@ -35,7 +35,7 @@ export default function SectionHeading({
         {title}
       </h2>
       {description && (
-        <p className={cn("mt-6 max-w-xl text-[0.9375rem] leading-relaxed", align === "center" && "mx-auto", muted)}>
+        <p className={cn("mt-4 max-w-xl text-[0.9375rem] leading-relaxed", align === "center" && "mx-auto", muted)}>
           {description}
         </p>
       )}

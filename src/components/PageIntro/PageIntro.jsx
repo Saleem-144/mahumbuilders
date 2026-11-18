@@ -5,18 +5,18 @@ import { cn } from "../../lib/cn";
 // description set off to the right on wide screens.
 export default function PageIntro({ eyebrow, title, description, aside, className }) {
   return (
-    <section className={cn("pb-14 pt-32 sm:pb-20 sm:pt-44 lg:pb-24 lg:pt-52", className)}>
+    <section className={cn("pb-10 pt-28 sm:pb-14 sm:pt-36 lg:pt-40", className)}>
       <div className="container-edit">
         <Reveal>
-          {eyebrow && <p className="index-label mb-6 text-[color:var(--color-mist)] sm:mb-8">{eyebrow}</p>}
-          <h1 className="text-balance max-w-[16ch] text-[clamp(3rem,9vw,8rem)] font-normal leading-[0.95] tracking-[-0.025em] text-[color:var(--color-ink)]">
+          {eyebrow && <p className="index-label mb-5 text-[color:var(--color-mist)]">{eyebrow}</p>}
+          <h1 className="text-balance max-w-[20ch] text-[clamp(2.25rem,5vw,3.75rem)] font-normal leading-[1.08] text-[color:var(--color-ink)]">
             {title}
           </h1>
         </Reveal>
         {(description || aside) && (
           <Reveal
             delay={0.08}
-            className="mt-10 grid grid-cols-1 gap-8 border-t border-[color:var(--color-line)] pt-8 sm:mt-14 lg:grid-cols-12"
+            className="mt-8 grid grid-cols-1 gap-6 border-t border-[color:var(--color-line)] pt-6 sm:mt-10 lg:grid-cols-12"
           >
             {aside && <div className="lg:col-span-5">{aside}</div>}
             {description && (

@@ -29,15 +29,15 @@ export default function CTA({
       </div>
       <div className="absolute inset-0 bg-gradient-to-r from-[color:var(--color-ink)] via-[color:var(--color-ink)]/80 to-[color:var(--color-ink)]/40" />
 
-      <div className="container-edit relative py-24 sm:py-32 lg:py-40">
+      <div className="container-edit relative py-16 sm:py-20 lg:py-24">
         <Reveal>
           <p className="index-label text-[color:var(--color-stone)]">{eyebrow}</p>
-          <h2 className="mt-6 max-w-[14ch] text-[clamp(3rem,8vw,7.5rem)] font-normal leading-[0.95] tracking-[-0.02em]">
+          <h2 className="mt-5 max-w-[18ch] text-[clamp(2rem,4vw,3.25rem)] font-normal leading-[1.08]">
             {title}
           </h2>
         </Reveal>
 
-        <Reveal delay={0.08} className="mt-12 grid grid-cols-1 gap-10 border-t border-white/15 pt-8 sm:mt-16 lg:grid-cols-12">
+        <Reveal delay={0.08} className="mt-10 grid grid-cols-1 gap-8 border-t border-white/15 pt-6 sm:mt-12 lg:grid-cols-12">
           <p className="max-w-md text-[0.9375rem] leading-relaxed text-[color:var(--color-stone)] lg:col-span-5">{description}</p>
           <div className="flex flex-col gap-1 text-[0.9375rem] lg:col-span-3">
             <a href={telHref(company.phones[0])} className="link-underline w-fit py-1">
@@ -50,10 +50,10 @@ export default function CTA({
           <div className="lg:col-span-4 lg:text-right">
             <Link
               to={ctaTo}
-              className="group inline-flex items-center gap-5 font-display text-[clamp(1.75rem,3vw,2.5rem)] leading-none"
+              className="group inline-flex items-center gap-4 font-display text-[clamp(1.375rem,2vw,1.75rem)] leading-none"
             >
               <span className="link-underline pb-1">{ctaLabel}</span>
-              <Arrow className="h-3.5 w-9" />
+              <Arrow className="h-3 w-7" />
             </Link>
           </div>
         </Reveal>

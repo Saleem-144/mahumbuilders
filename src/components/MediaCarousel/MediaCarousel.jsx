@@ -149,7 +149,7 @@ export default function MediaCarousel({ items }) {
             </div>
             {item.label && (
               <p className="mt-3 flex items-baseline justify-between gap-3 text-[0.8125rem] text-[color:var(--color-ink)]">
-                <span className="font-display text-[1.125rem]">{item.label}</span>
+                <span className="text-[0.875rem] font-medium">{item.label}</span>
                 {item.tag && <span className="index-label text-[color:var(--color-mist)]">{item.tag}</span>}
               </p>
             )}

@@ -50,7 +50,7 @@ function NextProject({ project }) {
   return (
     <Link
       to={`/projects/${project.slug}`}
-      className="grain group relative flex min-h-[70svh] items-end overflow-hidden bg-[color:var(--color-ink)] text-[color:var(--color-paper)]"
+      className="grain group relative flex min-h-[52svh] items-end overflow-hidden bg-[color:var(--color-ink)] text-[color:var(--color-paper)]"
     >
       <Photo
         src={project.cover.large ?? project.cover.src}
@@ -61,11 +61,11 @@ function NextProject({ project }) {
         imgClassName={`transition-transform duration-[1.6s] ease-[var(--ease-out-editorial)] group-hover:scale-[1.04] ${project.coverClassName ?? ""}`}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-[color:var(--color-ink)] via-[color:var(--color-ink)]/30 to-transparent" />
-      <div className="container-edit relative w-full pb-12 sm:pb-16">
+      <div className="container-edit relative w-full pb-10 sm:pb-12">
         <p className="index-label text-[color:var(--color-stone)]">Next Project</p>
         <div className="mt-5 flex items-end justify-between gap-6">
-          <h2 className="text-[clamp(3rem,9vw,8.5rem)] font-normal leading-[0.92] tracking-[-0.02em]">{project.title}</h2>
-          <Arrow className="mb-4 h-4 w-12 shrink-0 sm:mb-6" />
+          <h2 className="text-[clamp(2.25rem,4.5vw,3.75rem)] font-normal leading-[1.05]">{project.title}</h2>
+          <Arrow className="mb-2 h-3 w-9 shrink-0" />
         </div>
         {project.location && <p className="mt-4 text-sm text-[color:var(--color-stone)]">{project.location}</p>}
       </div>
@@ -97,7 +97,7 @@ export default function ProjectDetails() {
 
   return (
     <>
-      <section className="grain relative flex h-[88svh] min-h-[520px] items-end overflow-hidden bg-[color:var(--color-ink)] text-[color:var(--color-paper)]">
+      <section className="grain relative flex h-[72svh] min-h-[480px] items-end overflow-hidden bg-[color:var(--color-ink)] text-[color:var(--color-paper)]">
         <div className="absolute inset-0">
           <Photo src={project.cover.large ?? project.cover.src} alt={project.cover.alt} fallback={project.title} zoom={false} loading="eager" className="h-full w-full" imgClassName={project.coverClassName} />
           <div className="absolute inset-0 bg-gradient-to-t from-[color:var(--color-ink)] via-[color:var(--color-ink)]/30 to-[color:var(--color-ink)]/5" />
@@ -114,9 +114,9 @@ export default function ProjectDetails() {
                 </span>
               ))}
             </p>
-            <h1 className="mt-5 text-[clamp(3.25rem,11vw,10rem)] font-normal leading-[0.9] tracking-[-0.025em]">{project.title}</h1>
+            <h1 className="mt-4 text-[clamp(2.5rem,6vw,4.75rem)] font-normal leading-[1.02] tracking-[-0.015em]">{project.title}</h1>
           </Reveal>
-          <Reveal delay={0.08} className="mt-8 flex flex-col gap-6 border-t border-white/15 pt-5 sm:flex-row sm:items-center sm:justify-between">
+          <Reveal delay={0.08} className="mt-6 flex flex-col gap-5 border-t border-white/15 pt-5 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-sm text-[color:var(--color-stone)]">
               {[project.location, project.year].filter(Boolean).join(" · ")}
             </p>
@@ -126,12 +126,12 @@ export default function ProjectDetails() {
       </section>
 
       {hasMeta || overview ? (
-        <section className="pt-20 sm:pt-28 lg:pt-32">
-          <div className="container-edit grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-10">
+        <section className="pt-14 sm:pt-20">
+          <div className="container-edit grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-10">
             {overview && (
               <Reveal className="lg:col-span-7">
                 <p className="index-label text-[color:var(--color-mist)]">Overview</p>
-                <p className="statement mt-6 text-[clamp(1.625rem,2.8vw,2.5rem)] text-[color:var(--color-ink)]">{overview}</p>
+                <p className="statement mt-5 text-[clamp(1.25rem,2vw,1.75rem)] text-[color:var(--color-ink)]">{overview}</p>
                 {project.featuredNote && (
                   <p className="mt-6 max-w-xl text-[0.9375rem] leading-relaxed text-[color:var(--color-mist)]">
                     {project.featuredNote}
@@ -147,7 +147,7 @@ export default function ProjectDetails() {
           </div>
         </section>
       ) : (
-        <div className="h-16 sm:h-24" />
+        <div className="h-12 sm:h-16" />
       )}
 
       {project.units && <ProjectUnits units={project.units} brochure={project.brochure} />}

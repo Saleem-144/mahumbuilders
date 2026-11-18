@@ -11,7 +11,7 @@ import Arrow from "../../components/Arrow/Arrow";
 import { trackEvent } from "../../lib/analytics";
 
 const fieldClasses =
-  "w-full border-0 border-b border-[color:var(--color-ink)]/20 bg-transparent py-3 font-display text-[1.375rem] text-[color:var(--color-ink)] focus:border-[color:var(--color-ink)] focus:outline-none transition-colors";
+  "w-full border-0 border-b border-[color:var(--color-ink)]/20 bg-transparent py-3 text-base text-[color:var(--color-ink)] focus:border-[color:var(--color-ink)] focus:outline-none transition-colors";
 
 const labelClasses = "index-label block text-[color:var(--color-mist)]";
 
@@ -20,7 +20,7 @@ function Detail({ label, children }) {
   return (
     <div className="border-t border-[color:var(--color-line)] pt-5">
       <p className="index-label text-[color:var(--color-mist)]">{label}</p>
-      <div className="mt-3 flex flex-col gap-1.5 font-display text-[clamp(1.375rem,2vw,1.75rem)] leading-snug text-[color:var(--color-ink)] [font-variant-numeric:lining-nums]">
+      <div className="mt-3 flex flex-col gap-1 text-[0.9375rem] leading-relaxed text-[color:var(--color-ink)] sm:text-base">
         {children}
       </div>
     </div>
@@ -102,7 +102,7 @@ export default function Contact() {
         description="Tell us what you're planning: a home, a commercial building or an interior. Our team will get back to you."
       />
 
-      <section className="pb-20 sm:pb-28 lg:pb-36">
+      <section className="pb-14 sm:pb-20">
         <div className="container-edit grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-10">
           <Reveal className="space-y-8 lg:col-span-4">
             <Detail label="Phone">
@@ -149,11 +149,11 @@ export default function Contact() {
 
           <Reveal delay={0.08} className="lg:col-span-7 lg:col-start-6">
             {submitted ? (
-              <div className="flex min-h-[420px] flex-col items-start justify-center border-t border-[color:var(--color-ink)] py-16">
+              <div className="flex min-h-[360px] flex-col items-start justify-center border-t border-[color:var(--color-ink)] py-12">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[color:var(--color-ink)] text-[color:var(--color-ink)]">
                   <Check size={20} strokeWidth={1.5} />
                 </div>
-                <h3 className="mt-8 text-[clamp(2.5rem,5vw,4rem)] font-normal leading-none text-[color:var(--color-ink)]">
+                <h3 className="mt-6 text-[clamp(1.875rem,3vw,2.5rem)] font-normal leading-tight text-[color:var(--color-ink)]">
                   Thank you.
                 </h3>
                 <p className="mt-5 max-w-sm text-[0.9375rem] leading-relaxed text-[color:var(--color-mist)]">
@@ -161,7 +161,7 @@ export default function Contact() {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} noValidate className="space-y-10 border-t border-[color:var(--color-ink)] pt-10">
+              <form onSubmit={handleSubmit} noValidate className="space-y-8 border-t border-[color:var(--color-ink)] pt-8">
                 <input
                   type="checkbox"
                   name="botcheck"

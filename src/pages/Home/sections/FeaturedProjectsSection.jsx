@@ -6,7 +6,7 @@ import { featuredProjects, projects } from "../../../data/projects";
 
 export default function FeaturedProjectsSection() {
   return (
-    <section className="py-20 sm:py-28 lg:py-36">
+    <section className="py-12 sm:py-16 lg:py-20">
       <div className="container-edit">
         <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
           <SectionHeading
@@ -22,7 +22,7 @@ export default function FeaturedProjectsSection() {
           </Reveal>
         </div>
 
-        <div className="mt-14 sm:mt-20">
+        <div className="mt-10 sm:mt-12">
           <ProjectIndex projects={featuredProjects} />
         </div>
       </div>

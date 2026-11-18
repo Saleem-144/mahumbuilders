@@ -11,7 +11,7 @@ const stairHall = portfolioImage("casa-solara", "21", "Casa Solara stair hall, t
 // pair of photographs set at different scales.
 export default function AboutSection() {
   return (
-    <section className="py-20 sm:py-28 lg:py-36">
+    <section className="py-12 sm:py-16 lg:py-20">
       <div className="container-edit">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-10">
           <Reveal className="lg:col-span-3">
@@ -22,11 +22,11 @@ export default function AboutSection() {
             </p>
           </Reveal>
           <div className="lg:col-span-9">
-            <Reveal as="p" className="statement text-[clamp(1.875rem,3.6vw,3.375rem)] text-[color:var(--color-ink)]">
+            <Reveal as="p" className="statement text-[clamp(1.375rem,2.3vw,2rem)] text-[color:var(--color-ink)]">
               Since 1988, MAHUM has developed and built more than 300 homes and commercial buildings in
               Karachi. <span className="text-[color:var(--color-mist)]">Today we are building our first hotel, in the Hunza valley.</span>
             </Reveal>
-            <Reveal delay={0.08} className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-10">
+            <Reveal delay={0.08} className="mt-7 grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-10">
               <p className="text-[0.9375rem] leading-relaxed text-[color:var(--color-mist)]">
                 MAHUM was founded by Hasan Mustafa, a civil engineer from NED University. We handle a
                 project from start to finish: the land, design, approvals, construction, finishing and
@@ -41,9 +41,9 @@ export default function AboutSection() {
           </div>
         </div>
 
-        <StatsStrip className="mt-16 sm:mt-24" />
+        <StatsStrip className="mt-12 sm:mt-16" />
 
-        <div className="mt-16 grid grid-cols-12 gap-4 sm:mt-24 sm:gap-6">
+        <div className="mt-12 grid grid-cols-12 gap-4 sm:mt-16 sm:gap-6">
           <Reveal className="col-span-12 sm:col-span-8">
             <Photo
               src={images.homeIntro.src}
@@ -55,7 +55,7 @@ export default function AboutSection() {
             />
             <p className="mt-3 text-xs text-[color:var(--color-mist)]">House 82B, Phase 8, DHA</p>
           </Reveal>
-          <Reveal delay={0.1} className="col-span-7 col-start-6 sm:col-span-4 sm:col-start-9 sm:mt-40">
+          <Reveal delay={0.1} className="col-span-7 col-start-6 sm:col-span-4 sm:col-start-9 sm:mt-24">
             <Photo
               src={stairHall.src}
               srcSet={`${stairHall.src} 960w, ${stairHall.large} 2000w`}

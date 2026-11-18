@@ -24,11 +24,11 @@ export function BrochureButton({ brochure, variant = "primary" }) {
 
 export function ProjectUnits({ units, brochure }) {
   return (
-    <section className="bg-[color:var(--color-paper-dim)] py-20 sm:py-28">
+    <section className="bg-[color:var(--color-paper-dim)] py-14 sm:py-20">
       <div className="container-edit">
         <SectionHeading eyebrow="Available on Booking" title="Apartments and shops" />
 
-        <div className="mt-12 grid grid-cols-1 gap-10 sm:mt-16 sm:grid-cols-3 sm:gap-8">
+        <div className="mt-10 grid grid-cols-1 gap-8 sm:mt-12 sm:grid-cols-3 sm:gap-8">
           {units.map((unit, i) => (
             <Reveal
               key={unit.name}
@@ -37,7 +37,7 @@ export function ProjectUnits({ units, brochure }) {
             >
               <p className="eyebrow">{unit.name}</p>
               <p className="mt-4 flex items-baseline gap-2 whitespace-nowrap text-[color:var(--color-ink)]">
-                <span className="font-display text-[clamp(2.75rem,4vw,3.5rem)] font-light leading-none">{unit.size.split(" ")[0]}</span>
+                <span className="text-[clamp(1.875rem,2.6vw,2.25rem)] font-light leading-none">{unit.size.split(" ")[0]}</span>
                 <span className="text-sm text-[color:var(--color-mist)]">{unit.size.split(" ").slice(1).join(" ")}</span>
               </p>
               <p className="mt-1.5 text-sm text-[color:var(--color-mist)]">{unit.sizeNote}</p>
@@ -106,11 +106,11 @@ export function ProjectPlans({ title, manifest, plans }) {
   const open = (index) => setOverlay({ open: true, start: index });
 
   return (
-    <section className="py-20 sm:py-28">
+    <section className="py-14 sm:py-20">
       <div className="container-edit">
         <SectionHeading eyebrow="Typical Layouts" title="Floor Plans" />
 
-        <div className="mt-10 grid grid-cols-1 items-start gap-8 sm:mt-12 lg:grid-cols-[5fr_6fr] lg:gap-10">
+        <div className="mt-10 grid grid-cols-1 items-start gap-8 lg:grid-cols-[5fr_6fr] lg:gap-10">
           <Reveal>
             <PlanButton plan={images[first.index]} label={first.label} onOpen={() => open(first.index)} large />
           </Reveal>
@@ -135,10 +135,10 @@ export function ProjectPlans({ title, manifest, plans }) {
 
 export function ProjectSpecifications({ items }) {
   return (
-    <section className="py-20 sm:py-28">
+    <section className="py-14 sm:py-20">
       <div className="container-edit">
         <SectionHeading eyebrow="What Is Included" title="Specifications" />
-        <Reveal className="mt-10 sm:mt-12">
+        <Reveal className="mt-8 sm:mt-10">
           <ul className="grid grid-cols-1 gap-x-10 sm:grid-cols-2">
             {items.map((item) => (
               <li

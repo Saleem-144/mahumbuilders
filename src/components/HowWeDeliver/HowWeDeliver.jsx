@@ -13,7 +13,7 @@ export default function HowWeDeliver({ dark = false, index }) {
   return (
     <section
       className={cn(
-        "py-20 sm:py-28 lg:py-36",
+        "py-12 sm:py-16 lg:py-20",
         dark ? "bg-[color:var(--color-umber)] text-[color:var(--color-paper)]" : "border-t border-[color:var(--color-line)]"
       )}
     >
@@ -26,20 +26,20 @@ export default function HowWeDeliver({ dark = false, index }) {
           description="Every project goes through the same five stages, so clients always know what happens next."
         />
 
-        <RevealGroup className="relative mt-16 grid grid-cols-1 gap-0 sm:mt-24 lg:grid-cols-5 lg:gap-8">
+        <RevealGroup className="relative mt-12 grid grid-cols-1 gap-0 sm:mt-16 lg:grid-cols-5 lg:gap-8">
           {/* Desktop: one continuous hairline through the markers. */}
-          <span aria-hidden="true" className={cn("absolute left-0 right-0 top-[89px] hidden h-px lg:block", line)} />
+          <span aria-hidden="true" className={cn("absolute left-0 right-0 top-[57px] hidden h-px lg:block", line)} />
 
           {deliveryStages.map((stage, i) => (
-            <RevealItem key={stage.number} className="group relative grid grid-cols-[3.5rem_1fr] gap-x-5 pb-12 last:pb-0 lg:block lg:pb-0">
+            <RevealItem key={stage.number} className="group relative grid grid-cols-[2.5rem_1fr] gap-x-5 pb-10 last:pb-0 lg:block lg:pb-0">
               {/* Phones: vertical hairline between markers. */}
               {i < deliveryStages.length - 1 && (
-                <span aria-hidden="true" className={cn("absolute bottom-0 left-[1.75rem] top-16 w-px lg:hidden", line)} />
+                <span aria-hidden="true" className={cn("absolute bottom-0 left-[1.1rem] top-12 w-px lg:hidden", line)} />
               )}
 
               <span
                 className={cn(
-                  "font-display text-[3rem] font-light italic leading-none transition-colors duration-500 lg:block lg:text-[4.5rem]",
+                  "text-[2rem] font-light leading-none tabular-nums transition-colors duration-500 lg:block lg:text-[2.5rem]",
                   dark ? "text-[color:var(--color-stone)] group-hover:text-[color:var(--color-paper)]" : "text-[color:var(--color-mist)] group-hover:text-[color:var(--color-ink)]"
                 )}
               >
@@ -57,7 +57,7 @@ export default function HowWeDeliver({ dark = false, index }) {
                   )}
                 />
                 <p className={cn("index-label", dark ? "text-[color:var(--color-stone)]" : "text-[color:var(--color-mist)]")}>{stage.name}</p>
-                <h3 className="mt-3 text-[1.625rem] font-normal leading-tight">{stage.title}</h3>
+                <h3 className="mt-3 text-[1.0625rem] leading-snug font-sans font-medium tracking-normal">{stage.title}</h3>
                 <p className={cn("mt-3 max-w-xs text-[0.875rem] leading-relaxed", dark ? "text-[color:var(--color-stone)]" : "text-[color:var(--color-mist)]")}>
                   {stage.description}
                 </p>

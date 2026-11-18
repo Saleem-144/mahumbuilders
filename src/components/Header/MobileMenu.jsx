@@ -37,8 +37,8 @@ export default function MobileMenu({ open, onClose, location }) {
                     <span className="index-label w-6 text-[color:var(--color-stone)]/70">{String(i + 1).padStart(2, "0")}</span>
                     <span
                       className={cn(
-                        "font-display text-[1.75rem] leading-none sm:text-[2.125rem]",
-                        active ? "italic text-[color:var(--color-stone)]" : "text-[color:var(--color-paper)]"
+                        "font-display text-[1.5rem] leading-none sm:text-[1.75rem]",
+                        active ? "text-[color:var(--color-stone)]" : "text-[color:var(--color-paper)]"
                       )}
                     >
                       {link.label}

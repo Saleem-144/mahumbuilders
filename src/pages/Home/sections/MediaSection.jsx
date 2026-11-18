@@ -7,7 +7,7 @@ import { company } from "../../../data/nav";
 
 export default function MediaSection() {
   return (
-    <section className="py-20 sm:py-28 lg:py-36">
+    <section className="py-12 sm:py-16 lg:py-20">
       <div className="container-edit flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
         <SectionHeading
           index="06"
@@ -23,7 +23,7 @@ export default function MediaSection() {
       </div>
 
       {/* Edge-to-edge: the track runs flush to both viewport edges. */}
-      <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-14 w-screen sm:mt-20">
+      <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-10 w-screen sm:mt-12">
         <MediaCarousel items={carouselMedia} />
       </div>
     </section>

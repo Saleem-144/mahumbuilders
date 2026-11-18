@@ -65,8 +65,8 @@ export default function ProjectIndex({ projects, light = false }) {
               onMouseMove={() => active !== project.slug && setActive(project.slug)}
               onFocus={() => setActive(project.slug)}
               className={cn(
-                "group grid grid-cols-[2rem_minmax(0,1fr)_4.5rem] items-center gap-x-4 border-t py-5 transition-opacity duration-500 sm:grid-cols-[3rem_minmax(0,1fr)_6rem] sm:py-6",
-                "lg:grid-cols-[3.5rem_minmax(0,1.7fr)_minmax(0,1fr)_minmax(0,0.6fr)_3rem] lg:py-7",
+                "group grid grid-cols-[2rem_minmax(0,1fr)_4.5rem] items-center gap-x-4 border-t py-4 transition-opacity duration-500 sm:grid-cols-[3rem_minmax(0,1fr)_6rem] sm:py-5",
+                "lg:grid-cols-[3.5rem_minmax(0,1.5fr)_minmax(0,1fr)_minmax(0,0.6fr)_3rem] lg:py-5",
                 hoverable && "group-hover/list:opacity-35 hover:!opacity-100",
                 line
               )}
@@ -77,11 +77,11 @@ export default function ProjectIndex({ projects, light = false }) {
 
               <span className="min-w-0">
                 <span className={cn("flex flex-wrap items-baseline gap-x-4 gap-y-1", ink)}>
-                  <span className="font-display text-[clamp(1.75rem,4vw,3.5rem)] font-normal leading-[1.05] transition-transform duration-500 ease-[var(--ease-out-editorial)] group-hover:translate-x-2">
+                  <span className="font-display text-[clamp(1.375rem,2.2vw,1.875rem)] font-normal leading-[1.15] transition-transform duration-500 ease-[var(--ease-out-editorial)] group-hover:translate-x-2">
                     {project.title}
                   </span>
                   {project.status && (
-                    <span className={cn("index-label whitespace-nowrap border px-2.5 py-1", light ? "border-white/30" : "border-[color:var(--color-ink)]/30")}>
+                    <span className={cn("index-label whitespace-nowrap border px-2 py-0.5 text-[0.625rem]", light ? "border-white/30" : "border-[color:var(--color-ink)]/30")}>
                       {project.status}
                     </span>
                   )}
@@ -111,7 +111,7 @@ export default function ProjectIndex({ projects, light = false }) {
           ref={preview}
           aria-hidden="true"
           className={cn(
-            "pointer-events-none fixed left-0 top-0 z-30 aspect-[4/3] w-[min(26vw,380px)] overflow-hidden transition-[opacity,scale] duration-500 ease-[var(--ease-out-editorial)]",
+            "pointer-events-none fixed left-0 top-0 z-30 aspect-[4/3] w-[min(22vw,320px)] overflow-hidden transition-[opacity,scale] duration-500 ease-[var(--ease-out-editorial)]",
             active ? "scale-100 opacity-100" : "scale-90 opacity-0"
           )}
         >

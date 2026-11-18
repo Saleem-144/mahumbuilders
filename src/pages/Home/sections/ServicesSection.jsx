@@ -12,7 +12,7 @@ export default function ServicesSection() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="bg-[color:var(--color-paper-dim)] py-20 sm:py-28 lg:py-36">
+    <section className="bg-[color:var(--color-paper-dim)] py-12 sm:py-16 lg:py-20">
       <div className="container-edit">
         <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
           <SectionHeading
@@ -28,10 +28,10 @@ export default function ServicesSection() {
           </Reveal>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-10 sm:mt-20 lg:grid-cols-12 lg:gap-16">
+        <div className="mt-10 grid grid-cols-1 gap-10 sm:mt-12 lg:grid-cols-12 lg:gap-14">
           {/* Photograph for the active service (desktop: sticky beside the list). */}
           <Reveal className="hidden lg:col-span-5 lg:block">
-            <div className="sticky top-28 aspect-[4/5] overflow-hidden bg-[color:var(--color-stone)]">
+            <div className="sticky top-28 aspect-[4/3] overflow-hidden bg-[color:var(--color-stone)]">
               {services.map((s, i) => {
                 const img = images[s.image];
                 return (
@@ -61,15 +61,15 @@ export default function ServicesSection() {
                     onFocus={() => setActive(i)}
                     onClick={() => setActive(i)}
                     aria-expanded={i === active}
-                    className="group grid w-full grid-cols-[2.5rem_1fr] gap-x-4 border-t border-[color:var(--color-line)] py-6 text-left sm:grid-cols-[3.5rem_1fr] sm:py-7"
+                    className="group grid w-full grid-cols-[2.5rem_1fr] gap-x-4 border-t border-[color:var(--color-line)] py-5 text-left sm:grid-cols-[3.5rem_1fr]"
                   >
-                    <span className={cn("index-label pt-2.5 transition-colors", i === active ? "text-[color:var(--color-ink)]" : "text-[color:var(--color-mist)]")}>
+                    <span className={cn("index-label pt-1.5 transition-colors", i === active ? "text-[color:var(--color-ink)]" : "text-[color:var(--color-mist)]")}>
                       {s.number}
                     </span>
                     <span>
                       <span
                         className={cn(
-                          "block font-display text-[clamp(1.625rem,2.8vw,2.5rem)] leading-[1.1] transition-[color,transform] duration-500 ease-[var(--ease-out-editorial)]",
+                          "block text-[1.0625rem] font-medium leading-snug transition-[color,transform] duration-500 ease-[var(--ease-out-editorial)] sm:text-[1.125rem]",
                           i === active ? "translate-x-1 text-[color:var(--color-ink)]" : "text-[color:var(--color-ink)]/45 group-hover:text-[color:var(--color-ink)]/80"
                         )}
                       >

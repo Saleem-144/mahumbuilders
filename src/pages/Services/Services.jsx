@@ -16,7 +16,7 @@ import { cn } from "../../lib/cn";
 function ServiceRow({ service, flip }) {
   const img = images[service.image];
   return (
-    <article className="grid grid-cols-1 items-center gap-8 border-t border-[color:var(--color-line)] py-14 sm:py-20 lg:grid-cols-12 lg:gap-10">
+    <article className="grid grid-cols-1 items-center gap-8 border-t border-[color:var(--color-line)] py-10 sm:py-14 lg:grid-cols-12 lg:gap-10">
       <Reveal className={cn("lg:col-span-6", flip && "lg:order-2 lg:col-start-7")}>
         <Photo
           src={img.src}
@@ -28,15 +28,15 @@ function ServiceRow({ service, flip }) {
         />
       </Reveal>
       <Reveal delay={0.06} className={cn("lg:col-span-5", flip ? "lg:order-1 lg:col-start-1" : "lg:col-start-8")}>
-        <span className="font-display text-[3.5rem] font-light italic leading-none text-[color:var(--color-mist)] sm:text-[4.5rem]">
+        <span className="index-label text-[color:var(--color-mist)]">
           {service.number}
         </span>
-        <h2 className="mt-5 text-[clamp(2rem,3.5vw,3rem)] font-normal leading-[1.05] text-[color:var(--color-ink)]">
+        <h2 className="mt-4 text-[clamp(1.625rem,2.4vw,2.125rem)] font-normal leading-[1.12] text-[color:var(--color-ink)]">
           {service.title}
         </h2>
-        <p className="mt-5 max-w-md text-[0.9375rem] leading-relaxed text-[color:var(--color-mist)]">{service.description}</p>
+        <p className="mt-4 max-w-md text-[0.9375rem] leading-relaxed text-[color:var(--color-mist)]">{service.description}</p>
         {service.tags?.length > 0 && (
-          <p className="index-label mt-7 flex flex-wrap gap-x-5 gap-y-2 text-[color:var(--color-ink)]">
+          <p className="index-label mt-6 flex flex-wrap gap-x-5 gap-y-2 text-[color:var(--color-ink)]">
             {service.tags.map((tag) => (
               <span key={tag}>{tag}</span>
             ))}
@@ -58,7 +58,7 @@ export default function Services() {
         description="We take care of every stage of a construction project, from buying the land to handing over the finished building."
       />
 
-      <section className="pb-12 sm:pb-20">
+      <section className="pb-10 sm:pb-14">
         <div className="container-edit">
           {services.map((s, i) => (
             <ServiceRow key={s.number} service={s} flip={i % 2 === 1} />
@@ -67,7 +67,7 @@ export default function Services() {
       </section>
 
       {/* Interior revamp: a full-bleed band */}
-      <section className="grain relative flex min-h-[80svh] items-end overflow-hidden bg-[color:var(--color-ink)] text-[color:var(--color-paper)]">
+      <section className="grain relative flex min-h-[60svh] items-end overflow-hidden bg-[color:var(--color-ink)] text-[color:var(--color-paper)]">
         <Photo
           src={images.interiorRevamp.large ?? images.interiorRevamp.src}
           alt={images.interiorRevamp.alt}
@@ -76,11 +76,11 @@ export default function Services() {
           className="absolute inset-0 h-full w-full"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[color:var(--color-ink)] via-[color:var(--color-ink)]/45 to-[color:var(--color-ink)]/10" />
-        <div className="container-edit relative w-full py-16 sm:py-24">
+        <div className="container-edit relative w-full py-12 sm:py-16">
           <Reveal className="max-w-2xl">
             <p className="index-label text-[color:var(--color-stone)]">Also Offered</p>
-            <h2 className="mt-5 text-[clamp(2.75rem,6vw,5rem)] font-normal leading-[0.98]">{interiorRevamp.title}</h2>
-            <p className="mt-6 max-w-lg text-[0.9375rem] leading-relaxed text-[color:var(--color-paper)]/85">
+            <h2 className="mt-4 text-[clamp(2rem,3.5vw,3rem)] font-normal leading-[1.08]">{interiorRevamp.title}</h2>
+            <p className="mt-5 max-w-lg text-[0.9375rem] leading-relaxed text-[color:var(--color-paper)]/85">
               {interiorRevamp.description}
             </p>
           </Reveal>
@@ -88,20 +88,20 @@ export default function Services() {
       </section>
 
       {/* The turn-key approach */}
-      <section className="py-20 sm:py-28 lg:py-36">
+      <section className="py-12 sm:py-16 lg:py-20">
         <div className="container-edit">
           <SectionHeading eyebrow="Our Approach" title="The turn-key approach" description="One team responsible for the project, from the first site visit to handover." />
-          <RevealGroup className="mt-14 border-b border-[color:var(--color-line)] sm:mt-20">
+          <RevealGroup className="mt-10 border-b border-[color:var(--color-line)] sm:mt-12">
             {turnkeyStages.map((stage) => (
               <RevealItem
                 key={stage.number}
-                className="grid grid-cols-[3rem_1fr] gap-x-5 border-t border-[color:var(--color-line)] py-6 sm:grid-cols-[5rem_1fr] sm:py-8 lg:grid-cols-12 lg:gap-x-10"
+                className="grid grid-cols-[3rem_1fr] gap-x-5 border-t border-[color:var(--color-line)] py-5 sm:grid-cols-[5rem_1fr] lg:grid-cols-12 lg:gap-x-10"
               >
-                <span className="index-label pt-2 text-[color:var(--color-mist)] lg:col-span-1">{stage.number}</span>
-                <h3 className="text-[clamp(1.5rem,2.4vw,2.125rem)] font-normal leading-tight text-[color:var(--color-ink)] lg:col-span-5">
+                <span className="index-label pt-1 text-[color:var(--color-mist)] lg:col-span-1">{stage.number}</span>
+                <h3 className="text-[1.0625rem] leading-snug text-[color:var(--color-ink)] sm:text-[1.125rem] lg:col-span-5 font-sans font-medium tracking-normal">
                   {stage.title}
                 </h3>
-                <p className="col-start-2 mt-2 max-w-md text-[0.9375rem] leading-relaxed text-[color:var(--color-mist)] lg:col-span-6 lg:col-start-auto lg:mt-0 lg:pt-2">
+                <p className="col-start-2 mt-2 max-w-md text-[0.9375rem] leading-relaxed text-[color:var(--color-mist)] lg:col-span-6 lg:col-start-auto lg:mt-0">
                   {stage.description}
                 </p>
               </RevealItem>

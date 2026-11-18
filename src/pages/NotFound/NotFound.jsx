@@ -10,17 +10,17 @@ export default function NotFound() {
   });
 
   return (
-    <section className="flex min-h-[85svh] items-end pb-20 pt-40 sm:pb-28">
+    <section className="flex min-h-[70svh] items-end pb-16 pt-36 sm:pb-20">
       <div className="container-edit">
         <Reveal>
           <p className="index-label text-[color:var(--color-mist)]">Error 404</p>
-          <h1 className="mt-6 text-[clamp(3.5rem,10vw,9rem)] font-normal leading-[0.92] tracking-[-0.025em] text-[color:var(--color-ink)]">
-            This page <em className="italic text-[color:var(--color-mist)]">isn't here.</em>
+          <h1 className="mt-5 text-[clamp(2.25rem,5vw,3.75rem)] font-normal leading-[1.08] text-[color:var(--color-ink)]">
+            This page isn't here.
           </h1>
-          <p className="mt-8 max-w-md text-[0.9375rem] leading-relaxed text-[color:var(--color-mist)]">
+          <p className="mt-5 max-w-md text-[0.9375rem] leading-relaxed text-[color:var(--color-mist)]">
             The page you're looking for doesn't exist or may have moved.
           </p>
-          <div className="mt-10 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-wrap gap-3">
             <Button to="/">Back Home</Button>
             <Button to="/projects" variant="ghost">
               View Projects

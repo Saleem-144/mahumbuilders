@@ -17,16 +17,16 @@ export default function StatsStrip({ light = false, className }) {
   return (
     <RevealGroup className={cn("grid grid-cols-2 border-t lg:grid-cols-4", line, className)}>
       {stats.map((s, i) => (
-        <RevealItem key={s.label} className={cn("py-7 sm:py-9", CELL[i], line)}>
+        <RevealItem key={s.label} className={cn("py-6 sm:py-7", CELL[i], line)}>
           <div
             className={cn(
-              "font-display text-[clamp(2.75rem,5.5vw,4.75rem)] font-light leading-none tabular-nums",
+              "text-[clamp(1.875rem,3vw,2.5rem)] font-light leading-none tabular-nums",
               light ? "text-[color:var(--color-paper)]" : "text-[color:var(--color-ink)]"
             )}
           >
             <Counter value={s.value} />
           </div>
-          <p className={cn("mt-3 text-[0.8125rem]", light ? "text-[color:var(--color-stone)]" : "text-[color:var(--color-mist)]")}>
+          <p className={cn("mt-2.5 text-[0.8125rem]", light ? "text-[color:var(--color-stone)]" : "text-[color:var(--color-mist)]")}>
             {s.label}
           </p>
           {s.note && (

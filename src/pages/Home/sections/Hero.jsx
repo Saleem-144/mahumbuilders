@@ -81,22 +81,22 @@ export default function Hero() {
       <div className="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-[color:var(--color-ink)]/70 to-transparent" />
 
       <div className="container-edit relative w-full pb-8 sm:pb-10">
-        <p className="hero-fade eyebrow mb-6 text-[color:var(--color-stone)] sm:mb-8">
+        <p className="hero-fade eyebrow mb-5 text-[color:var(--color-stone)]">
           Est. {company.foundedYear} · Karachi
         </p>
 
-        <h1 className="text-[clamp(2.6rem,9.5vw,9rem)] font-normal leading-[0.92] tracking-[-0.025em]">
+        <h1 className="text-[clamp(2.25rem,5.2vw,4.5rem)] font-normal leading-[1.05] tracking-[-0.015em]">
           <span className="block overflow-hidden pb-[0.06em]">
             <span className="hero-line block">Where Innovation</span>
           </span>
           <span className="block overflow-hidden pb-[0.06em]">
             <span className="hero-line block">
-              Meets <em className="font-normal italic text-[color:var(--color-stone)]">Legacy</em>
+              Meets <span className="text-[color:var(--color-stone)]">Legacy</span>
             </span>
           </span>
         </h1>
 
-        <div className="hero-fade mt-10 grid grid-cols-1 items-end gap-8 sm:mt-14 lg:grid-cols-[1fr_auto]">
+        <div className="hero-fade mt-7 grid grid-cols-1 items-end gap-6 sm:mt-9 lg:grid-cols-[1fr_auto]">
           <p className="max-w-md text-[0.9375rem] leading-relaxed text-[color:var(--color-paper)]/80">
             Real estate development and construction in Karachi since 1988. Homes, offices and hotels,
             built and handed over ready to use.
@@ -112,7 +112,7 @@ export default function Hero() {
         </div>
 
         {/* Caption bar: what's on screen, and the loop's progress. */}
-        <div className="hero-fade mt-10 border-t border-white/15 pt-4 sm:mt-14">
+        <div className="hero-fade mt-8 border-t border-white/15 pt-4 sm:mt-10">
           <div className="flex items-center justify-between gap-6 text-[0.6875rem] font-medium uppercase tracking-[0.2em] text-[color:var(--color-paper)]/70">
             <Link to="/projects/casa-solara" className="group inline-flex items-center gap-3 hover:text-[color:var(--color-paper)]">
               <span className="hidden sm:inline">Now showing</span>
