@@ -27,7 +27,7 @@ export default function MobileMenu({ open, onClose, location }) {
             </button>
           </div>
 
-          <nav className="container-edit mt-6 flex flex-col gap-1">
+          <nav className="container-edit mt-4 flex flex-col">
             {navLinks.map((link, i) => (
               <motion.div
                 key={link.path}
@@ -39,7 +39,7 @@ export default function MobileMenu({ open, onClose, location }) {
                   to={link.path}
                   onClick={onClose}
                   className={cn(
-                    "font-display block border-b border-[color:var(--color-line-dark)] py-5 text-4xl font-medium sm:text-5xl",
+                    "font-display block border-b border-[color:var(--color-line-dark)] py-4 text-2xl font-medium sm:text-3xl",
                     location === link.path ? "text-[color:var(--color-brass-light)]" : "text-[color:var(--color-paper)]"
                   )}
                 >
