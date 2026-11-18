@@ -7,12 +7,15 @@
 //   generate_lead   a contact-form inquiry was delivered
 //   contact_click   a phone number or email address was clicked (method: phone | email)
 export const GA_MEASUREMENT_ID = "G-04D5Y544WR";
+const LIVE_HOSTNAME = "www.mbd-pk.com";
 
 let started = false;
 
 export function initAnalytics() {
-  // Production builds only, so local development isn't counted as traffic.
-  if (started || !GA_MEASUREMENT_ID || !import.meta.env.PROD || typeof window === "undefined") return;
+  // Only the live domain is counted: not local development, Vercel preview
+  // deployments or the old *.vercel.app address.
+  if (started || !GA_MEASUREMENT_ID || typeof window === "undefined") return;
+  if (!import.meta.env.PROD || window.location.hostname !== LIVE_HOSTNAME) return;
   started = true;
 
   window.dataLayer = window.dataLayer || [];
